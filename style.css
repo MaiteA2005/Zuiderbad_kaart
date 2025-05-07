@@ -9,7 +9,7 @@ body{
     background-color: #203336;
 }
 
-nav{
+.nav_down{
     background-color: #FFF8E6;
     position: fixed;
     bottom: 0;
@@ -32,20 +32,47 @@ nav{
     align-items: center;
 }
 
-#filter {
+#open-custom-overlay{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: #FFF8E6;
+    background-color: #203336;
+    border: none;
 }
 
-#filter img {
-    width: 40px; /* of wat je wil */
-    height: auto;
-  }
+#custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 20%; /* laat 20% van de linkerkant vrij */
+    width: 80%; /* bedekt de rest */
+    height: 100%;
+    background-color: rgba(255, 248, 230, 0.95);
+    display: none; /* standaard verborgen */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 2000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+}
+  
+#custom-overlay h2 {
+    margin-bottom: 2rem;
+    color: #203336;
+}
+  
+#custom-overlay a {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #203336;
+    text-decoration: none;
+}
 
-#map {
+#map{
     width: 90%; 
     height: 600px;
     border: 2px solid black;

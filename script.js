@@ -43,3 +43,17 @@ var imageBounds = [
     var lng = coord.lng;
     alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
   });
+
+  /*-----------------------Script overlay----------------------------*/
+
+
+  const openBtn = document.getElementById('open-custom-overlay');
+const overlay = document.getElementById('custom-overlay');
+
+openBtn.addEventListener('click', () => {
+  overlay.style.display = 'flex';
+});
+
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
