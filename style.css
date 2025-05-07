@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#map {
+    width: 80%; 
+    height: 600px;
+    border: 2px solid black;
+    margin: 5% auto;
+    position: relative;
+    background-color: white;
+}
+
+.leaflet-rotated {
+    transform-origin: center;
+    transform: scale(1.5) rotate(45deg); /* Pas de schaal en rotatiehoek aan naar wens */
+}
