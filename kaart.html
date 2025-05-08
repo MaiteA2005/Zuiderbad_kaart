@@ -3,47 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zelfgemaakte en Echte Kaart</title>
+  <title>Zuiderbad Kaart</title>
+  <link rel="icon" type="image/x-icon" href="images/zon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
 
   <div class="nav_up">
     <a href="#">
       <img src="images/zon.png" alt="">
-      
     </a>
 
       <button id="open-custom-overlay">
       <img src="images/Filters.png" alt="">
-      filter
+      <p id="filter_text">Filter</p>
       </button>
 
-  
   </div>
- 
+
   <div id="custom-overlay">
-    <h2>Menu</h2>
-    <a href="#">Home</a>
-    <a href="#">Evenementen</a>
-    <a href="#">Parkeren</a>
-    <a href="#">Contact</a>
+    <button class="link_arrow"><p>Activiteiten</p>
+      <img src="images/pijl.png" alt="">
+    </button>
+    <hr class="line">
+    <button  class="link_arrow"><p>Wandelroutes</p>
+      <img src="images/pijl.png" alt="">
+    </button>
+    <hr class="line">
+    <button  class="link_arrow"><p>Cultuur-& Sportlacties</p>
+      <img src="images/pijl.png" alt="">
+    </button>
+    <hr class="line">
+    <button>Toiletten</button>
+    <hr class="line">
+    <button>Openbare douches</button>
+    <hr class="line">
+    <button>Kleedkamers</button>
+    <hr class="line">
+    <button>EHBO</button>
   </div>
 
   <div id="map"></div>
 
   <nav class="nav_down">
-      <a href="#">
+      <button id='filterToilet'>
       <img src="images/Vector.png" alt="Logo" class="logo">
-      </a>
-      <a href="#">
+      </button>
+      <button id="filterActiviteiten">
         <img src="images/Evenementen.png" alt="Logo" class="logo">
-      </a>
-      <a href="#">
+      </button>
+      <button id="filterParking">
         <img src="images/Parking.png" alt="Logo" class="logo">
-      </a>
+      </button>
   </nav>
 
 </body>
