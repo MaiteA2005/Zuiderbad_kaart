@@ -110,6 +110,13 @@ Array.from(overlay.children).forEach((child) => {
     e.stopPropagation();
   });
 });
+
+const closeBtn = document.getElementById('close-overlay');
+
+closeBtn.addEventListener('click', () => {
+  overlay.classList.remove('active');
+});
+
 //------------------------iconen plaatsen------------------------------------------
 // Maak één custom icon voor parking
 var parkingIcon = L.icon({

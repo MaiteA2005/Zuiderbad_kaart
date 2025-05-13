@@ -8,7 +8,6 @@
 
 body{
     background-color: #203336;
-   
 }
 
 button {
@@ -72,13 +71,57 @@ button {
     display: none; 
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
 
     padding: 2rem;
     z-index: 2000;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+}
+
+nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+nav button img {
+  width: 60px; /* of jouw gewenste grootte */
+  height: auto;
+  margin-bottom: 5px; /* ruimte tussen img en p */
+}
+
+nav button p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.overlay-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
 #custom-overlay.active {
