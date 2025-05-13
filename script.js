@@ -12,14 +12,55 @@ var imageBounds = [
     zoom: 14,                   // Beginzoomniveau
     minZoom: 14,                // Minimum zoomniveau
     maxZoom: 20,                // Maximum zoomniveau
-    maxBounds: imageBounds      // Stel de maximale grenzen in
+    maxBounds: imageBounds,
+    zoomControl: false       // Stel de maximale grenzen in
   });
 
+
+  //---------------Knoppen zoemen--------------------
+document.getElementById('zoom-in').addEventListener('click', function() {
+  map.zoomIn();
+});
+
+document.getElementById('zoom-out').addEventListener('click', function() {
+  map.zoomOut();
+});
+
+// Functie om de zichtbaarheid van de zoomknoppen te beheren
+function updateZoomButtons() {
+  const zoomInButton = document.getElementById('zoom-in');
+  const zoomOutButton = document.getElementById('zoom-out');
+
+  // Controleer of inzoomen mogelijk is
+  if (map.getZoom() < map.getMaxZoom()) {
+    zoomInButton.style.display = 'block'; // Toon de knop voor inzoomen
+  } else {
+    zoomInButton.style.display = 'none'; // Verberg de knop voor inzoomen
+  }
+
+  // Controleer of uitzoomen mogelijk is
+  if (map.getZoom() > map.getMinZoom()) {
+    zoomOutButton.style.display = 'block'; // Toon de knop voor uitzoomen
+  } else {
+    zoomOutButton.style.display = 'none'; // Verberg de knop voor uitzoomen
+  }
+}
+
+// Call de functie elke keer dat de zoom verandert
+map.on('zoomend', function() {
+  updateZoomButtons();
+});
+
+// Initieel de zichtbaarheid van de knoppen bij pagina laden
+updateZoomButtons();
+
+//---------------Echter streetview--------------------
   // Voeg de OpenStreetMap tegellaag toe
   /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);*/
 
+//---------------Onze kaart--------------------
   // Voeg de zelfgemaakte kaart als een afbeelding-overlay toe
   var imageUrl = 'images/kaart_8.png';  
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
@@ -27,6 +68,7 @@ var imageBounds = [
   // Voeg een CSS-klasse toe om de afbeelding te draaien
   imageOverlay.getElement().classList.add('leaflet-rotated');
 
+//---------------Markers--------------------
   // Voeg markers toe voor de hoeken
   /*L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
   L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
@@ -36,6 +78,7 @@ var imageBounds = [
   // Voeg een rechthoek toe om de grenzen aan te geven
   //L.polygon(imageBounds, {color: "red", weight: 1}).addTo(map);
 
+//---------------Coordinaten zoeken--------------------
   // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
   map.on('click', function(e) {
     var coord = e.latlng;
@@ -50,16 +93,24 @@ var imageBounds = [
 const openBtn = document.getElementById('open-custom-overlay');
 const overlay = document.getElementById('custom-overlay');
 
-openBtn.addEventListener('click', () => {
-  overlay.style.display = 'flex';
+// Open overlay
+openBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  overlay.classList.add('active');
 });
 
 overlay.addEventListener('click', () => {
-  overlay.style.display = 'none';
+  overlay.classList.remove('active');
 });
 
 
-//------------------------------------------------------------------
+// Stop klikbubbels binnen de overlay (knoppen en andere elementen)
+Array.from(overlay.children).forEach((child) => {
+  child.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
+//------------------------iconen plaatsen------------------------------------------
 // Maak één custom icon voor parking
 var parkingIcon = L.icon({
   iconUrl: 'images/parking_icon.png',  // Hetzelfde PNG bestand voor alle parkeermarkers
