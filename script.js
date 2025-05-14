@@ -56,13 +56,13 @@ updateZoomButtons();
 
 //---------------Echter streetview--------------------
   // Voeg de OpenStreetMap tegellaag toe
-  /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);*/
+  }).addTo(map);
 
 //---------------Onze kaart--------------------
   // Voeg de zelfgemaakte kaart als een afbeelding-overlay toe
-  var imageUrl = 'images/kaart_8.png';  
+  var imageUrl = 'images/kaart_1.png';  
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
   // Voeg een CSS-klasse toe om de afbeelding te draaien
@@ -86,6 +86,25 @@ updateZoomButtons();
     var lng = coord.lng;
     alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
   });
+
+  //---------------Locatie van de gebruiker--------------------
+
+// Functie om de locatie van de gebruiker te verkrijgen en weer te geven
+map.locate({ setView: true, maxZoom: 16 });  // Stel de kaart in om de locatie van de gebruiker te tonen met een maximum zoomniveau van 16
+
+// Event listener wanneer de locatie van de gebruiker is gevonden
+map.on('locationfound', function(e) {
+    // Voeg een marker toe voor de locatie van de gebruiker
+    var userMarker = L.marker(e.latlng).addTo(map);
+
+    // Voeg een popup toe die de gebruiker informeert over hun locatie
+    userMarker.bindPopup("Jouw locatie").openPopup();
+});
+
+// Event listener voor als de locatie niet gevonden kan worden
+map.on('locationerror', function(e) {
+    alert("Locatie kan niet worden gevonden.");
+});
 
   /*-----------------------Script overlay----------------------------*/
 
