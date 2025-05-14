@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuiderbad Kaart</title>
+  <link rel="icon" type="image/x-icon" href="images/zon_plain.png">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <a href="index.html" class="back">
+            <img src="images/close.png" alt="">
+        </a>
+    <div class="container_hulp">
+        
+
+        <h2>In geval van nood</h2>
+        <p>Ongeval gehad? gewond? Of nood aan eerste hulp?</p>
+
+        <img src="images/zon_hulp.png" alt="" id="sun_hulp_img">
+        
+        <div class="ehbo_kaart">
+        <a href="#">EHBO op de kaart bekijken</a>
+        <img src="images/pijl_oranje.png" alt="">
+        </div>
+
+        <p id="nood_note">Alleen bij noodgeval</p>
+    </div>
+      <div class="call_nood">
+        <a href="tel:+32..." class="call"><img src="images/call.png" alt="">BEL NOODNUMMER</a>
+    </div>
+
+    <nav class="nav_down">
+      <button id='filterToilet'>
+        <img src="images/Vector.png" alt="Logo" class="logo">
+        <p>Horeca</p>
+      </button>
+      <button id="filterActiviteiten">
+        <img src="images/Evenementen.png" alt="Logo" class="logo">
+        <p>Eventlocaties</p>
+      </button>
+      <button id="filterParking">
+        <img src="images/Parking.png" alt="Logo" class="logo">
+        <p>Parking</p>
+      </button>
+      <button id="open-custom-overlay">
+        <img src="images/Points.png" alt="Logo" class="logo">
+        <p>Meer</p>
+      </button>
+  </nav>
+</body>
+<script>
+document.querySelectorAll(".question").forEach(function(question) {
+  question.addEventListener("click", function() {
+    this.nextElementSibling.classList.toggle("open");
+    this.classList.toggle("open");
+  });
+});
+</script>
+</html>

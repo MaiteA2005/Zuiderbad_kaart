@@ -7,6 +7,7 @@
 
 body{
     background-color: #FFF8E6;
+      padding-bottom: 120px;
 }
 
 button {
@@ -263,7 +264,7 @@ margin-left: 1em;
 
 .call_descr{
     text-align: center;
-    margin-top: 12%;
+    margin-top: 40px;
     font-size: 1.2rem;	
 }
 
@@ -289,10 +290,131 @@ margin-left: 1em;
 }
 
 /*-----------FAQ-----------*/
-.question{
-    margin: 1em 5em;
+.qa-item {
+  margin-bottom: 1.5em;
+  position: relative;
 }
 
-.answer{
-    margin: 1em 5em;
+.qa-item:not(:last-child) {
+  padding-bottom: 1.5em; /* Ruimte tussen de vraag en de lijn */
+}
+
+.qa-item:not(:last-child)::after {
+  content: ''; /* Zorgt ervoor dat er een lijn komt */
+  position: absolute;
+  bottom: 0;
+  left: 5em; 
+  width: calc(100% - 10em); /* Zorgt ervoor dat de lijn niet helemaal van links naar rechts komt */
+  height: 2px;
+  background-color: #DD5A2B;
+}
+
+.question {
+  margin: 1em 5em;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.question img {
+  height: 20px;
+  width: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.question.open .arrow-container {
+  transform: rotate(90deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 0 5em;
+}
+
+.answer.open {
+  max-height: 500px;
+  border: #203336 solid 4px;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+
+/*-----------hulp-----------*/
+.container_hulp{
+  text-align: center;
+}
+
+.container_hulp h2{
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+#sun_hulp_img{
+    height: 200px;
+    width: auto;
+    margin: 4em 1em;
+}
+
+.ehbo_kaart {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    justify-content: center;
+}
+
+.ehbo_kaart a {
+    font-size: 1.5rem; 
+    text-decoration: underline ; 
+    color: #203336;
+
+}
+
+.ehbo_kaart img {
+    width: 40px; 
+    height: auto;
+}
+
+#nood_note{
+    margin-top: 20%;
+    font-size: 1.2em;
+}
+
+.call_nood{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.call_nood a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DD5A2B;
+  color: white;
+  padding: 2% 15%;
+  width: 80%;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  gap: 10px;
+  margin: 0 auto;/* ruimte tussen img en tekst */
+}
+
+.call_nood a img{
+    height: 35px;
+    width: auto;
+    margin: 0;
 }
