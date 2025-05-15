@@ -167,9 +167,14 @@ var toiletIcon = L.icon({
 
 // ------------------- Markers -------------------
 // Horeca
-var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
-horecaMarker.type = 'horeca';
+var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: horecaIcon }).addTo(map);
+horecaMarkerStrandbar.type = 'horeca';
 
+var horecaMarkerZomerlust = L.marker([50.98277939632882, 4.510990083217622], { icon: horecaIcon }).addTo(map);
+horecaMarkerZomerlust.type = 'horeca';
+
+var horecaMarkerStrandkiosk = L.marker([ 50.98411029466692, 4.514678120613099], { icon: horecaIcon }).addTo(map);
+horecaMarkerStrandkiosk.type = 'horeca';
 
 // Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
@@ -194,7 +199,7 @@ var eventMarkerOudVoetbalveld = L.marker([50.98085433336773, 4.506029835797888],
 eventMarkerOudVoetbalveld.type = 'event';
 
 // Parkeermarkers
-var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
+var parkingMarkerA = L.marker([50.986136341897186, 4.497790932655335], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.type = 'parking';
 
 var parkingMarkerB = L.marker([50.98393345077176, 4.503209715489184], { icon: parkingIcon }).addTo(map);
@@ -209,20 +214,11 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
-
-// Activiteit
-var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
-activiteitMarker.type = 'activiteit';
-
-// Toilet (voorbeeld)
-var toiletMarker = L.marker([50.985, 4.510], { icon: toiletIcon }).addTo(map);
-toiletMarker.type = 'toilet';
-
 // Alles opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
-  horecaMarker, activiteitMarker, toiletMarker
+  horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk
 ];
 
 // ------------------- Filterfunctie -------------------
