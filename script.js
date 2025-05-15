@@ -142,7 +142,6 @@ closeBtn.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-// Sluit het submenu als je op het pijltje terug klikt
 backtomainActiviteiten.addEventListener('click', () => {
   submenuActiviteiten.classList.remove('active');
 });
@@ -157,16 +156,31 @@ openWandelroutesBtn.addEventListener('click', function(e) {
   submenuWandelroutes.classList.toggle('active');
 });
 
-// Sluit het submenu als je op het pijltje terug klikt
 closeBtn.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-// Sluit het submenu als je op het pijltje terug klikt
 backtomainWandelroutes.addEventListener('click', () => {
   submenuWandelroutes.classList.remove('active');
 });
 
+//-------------------- Submenu 'Cultuur & Sportlocaties ' -------------------
+const openCultuurBtn = document.getElementById('filterCultuurSportlocaties'); // Dit is de knop die het submenu ('cultuur & sportlocaties') opent/sluit
+const submenuCultuur = document.getElementById('cultuur-submenu'); // Dit is het submenu ('cultuur & sportlocaties') dat je wilt openen/sluiten
+const backtomainCultuur = document.getElementById('back-to-main-menu-cultuur'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
+
+openCultuurBtn.addEventListener('click', function(e) {
+  e.stopPropagation(); // voorkomt sluiten van overlay
+  submenuCultuur.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  overlay.classList.remove('active');
+});
+
+backtomainCultuur.addEventListener('click', () => {
+  submenuCultuur.classList.remove('active');
+});
 
 //-------------------- Marker iconen -------------------
 var parkingIcon = L.icon({
