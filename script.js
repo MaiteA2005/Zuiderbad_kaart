@@ -103,7 +103,7 @@ map.on('locationfound', function(e) {
 
 // Event listener voor als de locatie niet gevonden kan worden
 map.on('locationerror', function(e) {
-    alert("Locatie kan niet worden gevonden.");
+    alert("Locatie kan niet worden gevonden. Om uw locatie te kunnen vinden, moet u de locatie-instellingen van uw browser inschakelen.");
 });
 
   /*-----------------------Script overlay----------------------------*/
@@ -132,11 +132,27 @@ Array.from(overlay.children).forEach((child) => {
 
 const closeBtn = document.getElementById('close-overlay');
 
+// Toggle submenu voor "Activiteiten & sport"
+const activiteitenBtn = document.getElementById('filterActiviteitenSport');
+// Submenu voor activiteiten-btn
+const submenuActiviteiten = document.getElementById('activiteiten-submenu');
+
+const backtomain = document.getElementById('back-to-main-menu');
+
+activiteitenBtn.addEventListener('click', function(e) {
+  e.stopPropagation(); // voorkomt sluiten van overlay
+  submenuActiviteiten.classList.toggle('active');
+});
+
 closeBtn.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-//------------------------iconen plaatsen------------------------------------------
+backtomain.addEventListener('click', () => {
+  submenuActiviteiten.classList.remove('active');
+});
+
+//-------------------- Marker iconen -------------------
 var parkingIcon = L.icon({
   iconUrl: 'images/icon_parking.png',
   iconSize: [38, 50],
@@ -159,7 +175,7 @@ var horecaIcon = L.icon({
 });
 
 var toiletIcon = L.icon({
-  iconUrl: 'images/icon_toilet.png', // voeg dit toe aan je project
+  iconUrl: 'images/icon_toilet.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
@@ -214,7 +230,7 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
-// Alles opslaan
+// Alle markers opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
@@ -238,23 +254,6 @@ var visibilityStatus = {
   toilet: true,
   activiteit: true
 };
-
-// Algemene toggle functie om markers per type te tonen of verbergen
-function toggleMarkersByType(type) {
-  // Zet eerst alles op false zodat alle markers verborgen worden
-  allMarkers.forEach(function(marker) {
-    if (marker.type !== type) {
-      map.removeLayer(marker); // Verwijder markers die niet bij het type horen
-    }
-  });
-
-  // Voeg de markers van het geselecteerde type toe aan de kaart
-  allMarkers.forEach(function(marker) {
-    if (marker.type === type) {
-      map.addLayer(marker);  // Voeg markers van het geselecteerde type toe
-    }
-  });
-}
 
 // ------------------- Knoppen koppelen -------------------
 document.getElementById('filterParking').addEventListener('click', function() {

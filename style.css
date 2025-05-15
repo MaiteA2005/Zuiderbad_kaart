@@ -198,6 +198,51 @@ nav button p {
   opacity: 1;
 }
 
+/*-----------submenu activiteiten & sport-----------*/
+.submenu {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(255, 248, 230, 0.95);
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.submenu.active {
+  display: flex;
+}
+
+.submenu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.submenu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.submenu-list li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
 /*-----------Zonnetje-----------*/
 .back {
 margin-top: 1em;
