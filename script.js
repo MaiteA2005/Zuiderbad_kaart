@@ -181,6 +181,17 @@ eventMarkerSportimonium.type = 'event';
 var eventMarkerVergaderzaal = L.marker([50.98698229615128, 4.5157897632269774], { icon: eventIcon }).addTo(map);
 eventMarkerVergaderzaal.type = 'event';
 
+var eventMarkerSerre = L.marker([50.985648944160125, 4.515965895816489], { icon: eventIcon }).addTo(map);
+eventMarkerSerre.type = 'event';
+
+var eventMarkerStrandhuis = L.marker([50.98533005882542, 4.515926177179482], { icon: eventIcon }).addTo(map);
+eventMarkerStrandhuis.type = 'event';
+
+var eventMarkerStrandzone = L.marker([50.986191606564894, 4.515712479729678], { icon: eventIcon }).addTo(map);
+eventMarkerStrandzone.type = 'event';
+
+var eventMarkerOudVoetbalveld = L.marker([50.98085433336773, 4.506029835797888], { icon: eventIcon }).addTo(map);
+eventMarkerOudVoetbalveld.type = 'event';
 
 // Parkeermarkers
 var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
@@ -210,7 +221,7 @@ toiletMarker.type = 'toilet';
 // Alles opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
-  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium,
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarker, activiteitMarker, toiletMarker
 ];
 
