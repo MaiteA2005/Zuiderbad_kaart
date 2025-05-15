@@ -221,7 +221,11 @@ margin-left: 1em;
 
 .sun{
     text-align: center;
-    margin: 1em;
+}
+
+.sun img{
+    height: 200px;
+    width: auto;
 }
 
 .sun_options{
@@ -370,9 +374,9 @@ margin-left: 1em;
 }
 
 #sun_hulp_img{
-    height: 200px;
+    height: 250px;
     width: auto;
-    margin: 4em 1em;
+    margin: 3em 1em;
 }
 
 .ehbo_kaart {
