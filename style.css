@@ -430,3 +430,61 @@ margin-left: 1em;
     width: auto;
     margin: 0;
 }
+
+/*-----------intro-----------*/
+
+.intro_tekst {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ballon-tekst {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  color: var(--beige);
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.knoppen {
+  margin-top: 20px;
+}
+
+.knoppen a {
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  color: var(--beige);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.knoppen img{
+  position: absolute;
+  bottom: 15%;
+  right: -12%;
+  height: 80px;
+}
