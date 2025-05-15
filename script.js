@@ -17,7 +17,15 @@ var imageBounds = [
   });
 
 
-  //---------------Knoppen zoemen--------------------
+  //---------------Knoppen reset en zoemen--------------------
+document.getElementById('reset-map').addEventListener('click', function() {
+  map.setView([50.9875, 4.5147], 14);
+  allMarkers.forEach(marker => {
+    if (!map.hasLayer(marker)) { //alle markers die momenteel niet zichtbaar zijn
+      map.addLayer(marker); //toon deze markers^
+    }
+  });
+});
 document.getElementById('zoom-in').addEventListener('click', function() {
   map.zoomIn();
 });

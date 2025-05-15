@@ -2,6 +2,7 @@
   --orange: #E8491F;
   --rood: #651123;
   --beige: #FEEFE3;
+  --roze: #D37FAB;
 }
 
 * {
@@ -55,6 +56,11 @@ button {
     align-items: center;
     z-index: 1000;
     background: none; 
+}
+
+#zoom-reset{
+   display: flex;
+   gap: 10px;
 }
 
 #open-custom-overlay{
@@ -251,6 +257,7 @@ nav button p {
   margin-bottom: 12px;
   font-size: 18px;
   cursor: pointer;
+  color: var(--rood);
 }
 
 
