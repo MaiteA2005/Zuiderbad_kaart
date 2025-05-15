@@ -138,38 +138,46 @@ closeBtn.addEventListener('click', () => {
 
 //------------------------iconen plaatsen------------------------------------------
 
-// Maak één custom icon voor parking
+// ------------------- Icons -------------------
 var parkingIcon = L.icon({
-  iconUrl: 'images/icon_parking.png',  // Hetzelfde PNG bestand voor alle parkeermarkers
-  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
-  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
-  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
+  iconUrl: 'images/icon_parking.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
 });
 
 var eventIcon = L.icon({
-  iconUrl: 'images/icon_event.png',  // Hetzelfde PNG bestand voor alle evenementenmarkers
-  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
-  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
-  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
+  iconUrl: 'images/icon_event.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
 });
 
 var horecaIcon = L.icon({
-  iconUrl: 'images/icon_horeca.png',  // Hetzelfde PNG bestand voor alle horeca markers
-  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
-  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
-  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
+  iconUrl: 'images/icon_horeca.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
 });
-// Maak verschillende parkeermarkers met hetzelfde icoon
-//Eventmarkers
+
+var toiletIcon = L.icon({
+  iconUrl: 'images/icon_toilet.png', // voeg dit toe aan je project
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
+// ------------------- Markers -------------------
+
+// Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
 eventMarkerEvenementenweide.type = 'event';
 
 var eventMarkerSportimonium = L.marker([50.986711253868656, 4.516030006159666], { icon: eventIcon }).addTo(map);
-eventMarkerB.type = 'event';
+eventMarkerSportimonium.type = 'event';
 
 var eventMarkerVergaderzaal = L.marker([50.98698229615128, 4.5157897632269774], { icon: eventIcon }).addTo(map);
-eventMarkerE.type = 'event';
-
+eventMarkerVergaderzaal.type = 'event';
 
 // Parkeermarkers
 var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
@@ -187,16 +195,35 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
-// Andere types (toilet en activiteit)
-var horecaMarker = L.marker([50.986, 4.512], { icon: eventIcon }).addTo(map);
+// Horeca
+var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
 horecaMarker.type = 'horeca';
 
+// Activiteit
 var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
 activiteitMarker.type = 'activiteit';
 
-// Alles opslaan in een array
-var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, horecaMarker, activiteitMarker];
+// Toilet (voorbeeld)
+var toiletMarker = L.marker([50.985, 4.510], { icon: toiletIcon }).addTo(map);
+toiletMarker.type = 'toilet';
 
+// Alles opslaan
+var allMarkers = [
+  parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium,
+  horecaMarker, activiteitMarker, toiletMarker
+];
+
+// ------------------- Filterfunctie -------------------
+function toggleMarkersByType(type) {
+  allMarkers.forEach(marker => {
+    if (marker.type === type) {
+      map.addLayer(marker);
+    } else {
+      map.removeLayer(marker);
+    }
+  });
+}
 
 // Object om bij te houden welke types zichtbaar zijn
 var visibilityStatus = {
@@ -222,7 +249,7 @@ function toggleMarkersByType(type) {
   });
 }
 
-// Koppel knoppen aan de juiste type
+// ------------------- Knoppen koppelen -------------------
 document.getElementById('filterParking').addEventListener('click', function() {
   toggleMarkersByType('parking');
 });
@@ -234,4 +261,3 @@ document.getElementById('filterToilet').addEventListener('click', function() {
 document.getElementById('filterActiviteiten').addEventListener('click', function() {
   toggleMarkersByType('activiteit');
 });
-
