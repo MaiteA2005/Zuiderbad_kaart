@@ -167,23 +167,39 @@ var toiletIcon = L.icon({
 
 // ------------------- Markers -------------------
 // Horeca
-var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
-horecaMarker.type = 'horeca';
+var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: horecaIcon }).addTo(map);
+horecaMarkerStrandbar.type = 'horeca';
 
+var horecaMarkerZomerlust = L.marker([50.98277939632882, 4.510990083217622], { icon: horecaIcon }).addTo(map);
+horecaMarkerZomerlust.type = 'horeca';
+
+var horecaMarkerStrandkiosk = L.marker([ 50.98411029466692, 4.514678120613099], { icon: horecaIcon }).addTo(map);
+horecaMarkerStrandkiosk.type = 'horeca';
 
 // Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
 eventMarkerEvenementenweide.type = 'event';
 
-var eventMarkerSportimonium = L.marker([50.986711253868656, 4.516030006159666], { icon: eventIcon }).addTo(map);
+var eventMarkerSportimonium = L.marker([50.98680139323165, 4.516255259513856], { icon: eventIcon }).addTo(map);
 eventMarkerSportimonium.type = 'event';
 
-var eventMarkerVergaderzaal = L.marker([50.98698229615128, 4.5157897632269774], { icon: eventIcon }).addTo(map);
+var eventMarkerVergaderzaal = L.marker([50.987026032162305, 4.515922665596009], { icon: eventIcon }).addTo(map);
 eventMarkerVergaderzaal.type = 'event';
 
+var eventMarkerSerre = L.marker([50.98561797006336, 4.516198933124543], { icon: eventIcon }).addTo(map);
+eventMarkerSerre.type = 'event';
+
+var eventMarkerStrandhuis = L.marker([50.98537994500934, 4.51627403497696], { icon: eventIcon }).addTo(map);
+eventMarkerStrandhuis.type = 'event';
+
+var eventMarkerStrandzone = L.marker([50.986191606564894, 4.515712479729678], { icon: eventIcon }).addTo(map);
+eventMarkerStrandzone.type = 'event';
+
+var eventMarkerOudVoetbalveld = L.marker([50.98085433336773, 4.506029835797888], { icon: eventIcon }).addTo(map);
+eventMarkerOudVoetbalveld.type = 'event';
 
 // Parkeermarkers
-var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
+var parkingMarkerA = L.marker([50.986136341897186, 4.497790932655335], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.type = 'parking';
 
 var parkingMarkerB = L.marker([50.98393345077176, 4.503209715489184], { icon: parkingIcon }).addTo(map);
@@ -198,20 +214,11 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
-
-// Activiteit
-var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
-activiteitMarker.type = 'activiteit';
-
-// Toilet (voorbeeld)
-var toiletMarker = L.marker([50.985, 4.510], { icon: toiletIcon }).addTo(map);
-toiletMarker.type = 'toilet';
-
 // Alles opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
-  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium,
-  horecaMarker, activiteitMarker, toiletMarker
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
+  horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk
 ];
 
 // ------------------- Filterfunctie -------------------
