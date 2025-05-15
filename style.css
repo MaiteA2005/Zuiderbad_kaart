@@ -219,7 +219,19 @@ nav button p {
 .submenu-header {
   display: flex;
   align-items: center;
+  position: relative; 
   margin-bottom: 20px;
+}
+
+.submenu-header h2 {
+  margin: 16px 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.back-btn img {
+  width: auto;
+  height: 40px;
 }
 
 .back-btn {
@@ -240,6 +252,8 @@ nav button p {
   font-size: 18px;
   cursor: pointer;
 }
+
+
 
 
 

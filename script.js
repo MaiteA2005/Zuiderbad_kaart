@@ -61,7 +61,6 @@ updateZoomButtons();
   }).addTo(map);
 
 //---------------Onze kaart--------------------
-  // Voeg de zelfgemaakte kaart als een afbeelding-overlay toe
   var imageUrl = 'images/kaart_1.png';  
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
@@ -106,11 +105,10 @@ map.on('locationerror', function(e) {
     alert("Locatie kan niet worden gevonden. Om uw locatie te kunnen vinden, moet u de locatie-instellingen van uw browser inschakelen.");
 });
 
-  /*-----------------------Script overlay----------------------------*/
-
-
-const openBtn = document.getElementById('open-custom-overlay');
-const overlay = document.getElementById('custom-overlay');
+//---------------Overlay--------------------
+const openBtn = document.getElementById('open-custom-overlay'); // Dit is de knop die de 'Meer' opent
+const overlay = document.getElementById('custom-overlay'); // Dit is de overlay die je wilt openen/sluiten
+const closeBtn = document.getElementById('close-overlay'); // Dit is de knop die de overlay sluit
 
 // Open overlay
 openBtn.addEventListener('click', (e) => {
@@ -118,10 +116,10 @@ openBtn.addEventListener('click', (e) => {
   overlay.classList.add('active');
 });
 
+// Sluit overlay als je erop klikt
 overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
-
 
 // Stop klikbubbels binnen de overlay (knoppen en andere elementen)
 Array.from(overlay.children).forEach((child) => {
@@ -130,16 +128,12 @@ Array.from(overlay.children).forEach((child) => {
   });
 });
 
-const closeBtn = document.getElementById('close-overlay');
+//-------------------- Submenu 'Activiteiten & Sport' -------------------
+const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit
+const submenuActiviteiten = document.getElementById('activiteiten-submenu'); // Dit is het submenu ('activiteiten & sport') dat je wilt openen/sluiten
+const backtomainActiviteiten = document.getElementById('back-to-main-menu'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
 
-// Toggle submenu voor "Activiteiten & sport"
-const activiteitenBtn = document.getElementById('filterActiviteitenSport');
-// Submenu voor activiteiten-btn
-const submenuActiviteiten = document.getElementById('activiteiten-submenu');
-
-const backtomain = document.getElementById('back-to-main-menu');
-
-activiteitenBtn.addEventListener('click', function(e) {
+openActiviteitenBtn.addEventListener('click', function(e) {
   e.stopPropagation(); // voorkomt sluiten van overlay
   submenuActiviteiten.classList.toggle('active');
 });
@@ -148,9 +142,31 @@ closeBtn.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-backtomain.addEventListener('click', () => {
+// Sluit het submenu als je op het pijltje terug klikt
+backtomainActiviteiten.addEventListener('click', () => {
   submenuActiviteiten.classList.remove('active');
 });
+
+//-------------------- Submenu 'Wandelroutes' -------------------
+const openWandelroutesBtn = document.getElementById('filterWandelroutes'); // Dit is de knop die het submenu ('wandelroutes') opent/sluit
+const submenuWandelroutes = document.getElementById('wandelroutes-submenu'); // Dit is het submenu ('wandelroutes') dat je wilt openen/sluiten
+const backtomainWandelroutes = document.getElementById('back-to-main-menu-wandelroutes'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
+
+openWandelroutesBtn.addEventListener('click', function(e) {
+  e.stopPropagation(); // voorkomt sluiten van overlay
+  submenuWandelroutes.classList.toggle('active');
+});
+
+// Sluit het submenu als je op het pijltje terug klikt
+closeBtn.addEventListener('click', () => {
+  overlay.classList.remove('active');
+});
+
+// Sluit het submenu als je op het pijltje terug klikt
+backtomainWandelroutes.addEventListener('click', () => {
+  submenuWandelroutes.classList.remove('active');
+});
+
 
 //-------------------- Marker iconen -------------------
 var parkingIcon = L.icon({
