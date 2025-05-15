@@ -138,14 +138,6 @@ closeBtn.addEventListener('click', () => {
 
 //------------------------iconen plaatsen------------------------------------------
 
-// maak een custom icon voor event
-var eventIcon = L.icon({
-  iconUrl: 'images/event_icon.png',  // Hetzelfde PNG bestand voor alle eventmarkers
-  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
-  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
-  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
-});
-
 // Maak één custom icon voor parking
 var parkingIcon = L.icon({
   iconUrl: 'images/icon_parking.png',  // Hetzelfde PNG bestand voor alle parkeermarkers
@@ -154,7 +146,6 @@ var parkingIcon = L.icon({
   popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
 });
 
-<<<<<<< Updated upstream
 var eventIcon = L.icon({
   iconUrl: 'images/icon_event.png',  // Hetzelfde PNG bestand voor alle evenementenmarkers
   iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
@@ -169,7 +160,6 @@ var horecaIcon = L.icon({
   popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
 });
 // Maak verschillende parkeermarkers met hetzelfde icoon
-=======
 //Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
 eventMarkerEvenementenweide.type = 'event';
@@ -182,7 +172,6 @@ eventMarkerE.type = 'event';
 
 
 // Parkeermarkers
->>>>>>> Stashed changes
 var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.type = 'parking';
 
@@ -202,16 +191,12 @@ parkingMarkerSportcomplex.type = 'parking';
 var horecaMarker = L.marker([50.986, 4.512], { icon: eventIcon }).addTo(map);
 horecaMarker.type = 'horeca';
 
-<<<<<<< Updated upstream
 var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
 activiteitMarker.type = 'activiteit';
 
 // Alles opslaan in een array
-var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, horecaMarker, activiteitMarker];
-=======
-// Alles opslaan in een array
-var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, toiletMarker, activiteitMarker];
->>>>>>> Stashed changes
+var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, horecaMarker, activiteitMarker];
+
 
 // Object om bij te houden welke types zichtbaar zijn
 var visibilityStatus = {
