@@ -1,3 +1,9 @@
+:root {
+  --orange: #E8491F;
+  --rood: #651123;
+  --beige: #FEEFE3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +12,7 @@
 }
 
 body{
-    background-color: #FFF8E6;
+    background-color: var(--beige);
       padding-bottom: 120px;
 }
 
@@ -21,7 +27,7 @@ button {
 }
 
 .nav_down{
-    background-color: #FFF8E6;
+    background-color: var(--beige);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -132,13 +138,13 @@ nav button p {
   
 #custom-overlay h2 {
     margin-bottom: 2rem;
-    color: #203336;
+    color: var(--rood)
 }
   
 #custom-overlay button {
     font-size: 1.5rem;
     margin: 1rem 0;
-    color: #203336;
+    color: var(--rood);
     text-decoration: none;
     font-weight: bold;
 }
@@ -164,8 +170,8 @@ nav button p {
     width:100%;
     border-width:0.01px; 
     text-align:left;
-    margin-left:0; 
-    border-color: #203336;
+    margin-left:0;
+    border-color: var(--rood);
 
 }
 
@@ -176,7 +182,7 @@ nav button p {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-color: #FFF8E6;
+    background-color: var(--beige);
 }
 
 .leaflet-rotated {
@@ -195,7 +201,7 @@ nav button p {
 margin-top: 1em;
 margin-left: 1em;
   text-decoration: none;
-  color: #203336;
+  color: var(--rood);
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -224,7 +230,7 @@ margin-left: 1em;
 
 .sun_options a{
     text-decoration: none;
-    color: #203336;
+    color: var(--rood);
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -233,7 +239,7 @@ margin-left: 1em;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #203336;
+  color: var(--rood);
   border: none;
   margin: 0.5em 4em;
   padding: 0.5em 1em;
@@ -272,7 +278,7 @@ margin-left: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DD5A2B;
+  background-color: var(--orange);
   color: white;
   padding: 2% 15%;
   width: 80%;
@@ -306,7 +312,7 @@ margin-left: 1em;
   left: 5em; 
   width: calc(100% - 10em); /* Zorgt ervoor dat de lijn niet helemaal van links naar rechts komt */
   height: 2px;
-  background-color: #DD5A2B;
+  background-color: var(--orange);
 }
 
 .question {
@@ -347,7 +353,7 @@ margin-left: 1em;
 
 .answer.open {
   max-height: 500px;
-  border: #203336 solid 4px;
+  border: var(--rood) solid 4px;
   border-radius: 10px;
   padding: 1em;
 }
@@ -379,7 +385,7 @@ margin-left: 1em;
 .ehbo_kaart a {
     font-size: 1.5rem; 
     text-decoration: underline ; 
-    color: #203336;
+    color: var(--rood);
 
 }
 
@@ -402,7 +408,7 @@ margin-left: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DD5A2B;
+  background-color: var(--orange);
   color: white;
   padding: 2% 15%;
   width: 80%;
