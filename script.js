@@ -146,14 +146,20 @@ var parkingIcon = L.icon({
 });
 
 // Maak verschillende parkeermarkers met hetzelfde icoon
-var parkingMarker1 = L.marker([50.985, 4.51], { icon: parkingIcon }).addTo(map);
-parkingMarker1.type = 'parking';
+var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
+parkingMarkerA.type = 'parking';
 
-var parkingMarker2 = L.marker([50.985, 4.515], { icon: parkingIcon }).addTo(map);
-parkingMarker2.type = 'parking';
+var parkingMarkerB = L.marker([50.98393345077176, 4.503209715489184], { icon: parkingIcon }).addTo(map);
+parkingMarkerB.type = 'parking';
 
-var parkingMarker3 = L.marker([50.986, 4.52], { icon: parkingIcon }).addTo(map);
-parkingMarker3.type = 'parking';
+var parkingMarkerE = L.marker([50.985335068286396, 4.518384581268919], { icon: parkingIcon }).addTo(map);
+parkingMarkerE.type = 'parking';
+
+var parkingMarkerD = L.marker([50.9795492747968, 4.508751368038711], { icon: parkingIcon }).addTo(map);
+parkingMarkerD.type = 'parking';
+
+var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
+parkingMarkerSportcomplex.type = 'parking';
 
 // Andere types (toilet en activiteit)
 var toiletMarker = L.marker([50.986, 4.512]).addTo(map);
@@ -163,7 +169,7 @@ var activiteitMarker = L.marker([50.988, 4.515]).addTo(map);
 activiteitMarker.type = 'activiteit';
 
 // Alles opslaan in een array
-var allMarkers = [parkingMarker1, parkingMarker2, parkingMarker3, toiletMarker, activiteitMarker];
+var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, toiletMarker, activiteitMarker];
 
 // Object om bij te houden welke types zichtbaar zijn
 var visibilityStatus = {
