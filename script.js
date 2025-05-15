@@ -139,7 +139,7 @@ closeBtn.addEventListener('click', () => {
 //------------------------iconen plaatsen------------------------------------------
 // Maak één custom icon voor parking
 var parkingIcon = L.icon({
-  iconUrl: 'images/parking_icon.png',  // Hetzelfde PNG bestand voor alle parkeermarkers
+  iconUrl: 'images/icon_parking.png',  // Hetzelfde PNG bestand voor alle parkeermarkers
   iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
   iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
   popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
