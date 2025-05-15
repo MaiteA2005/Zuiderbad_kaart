@@ -175,7 +175,7 @@ var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225]
 parkingMarkerSportcomplex.type = 'parking';
 
 // Andere types (toilet en activiteit)
-var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
+var horecaMarker = L.marker([50.986, 4.512], { icon: eventIcon }).addTo(map);
 horecaMarker.type = 'horeca';
 
 var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
