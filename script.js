@@ -137,8 +137,6 @@ closeBtn.addEventListener('click', () => {
 });
 
 //------------------------iconen plaatsen------------------------------------------
-
-// ------------------- Icons -------------------
 var parkingIcon = L.icon({
   iconUrl: 'images/icon_parking.png',
   iconSize: [38, 50],
@@ -168,6 +166,10 @@ var toiletIcon = L.icon({
 });
 
 // ------------------- Markers -------------------
+// Horeca
+var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
+horecaMarker.type = 'horeca';
+
 
 // Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
@@ -178,6 +180,7 @@ eventMarkerSportimonium.type = 'event';
 
 var eventMarkerVergaderzaal = L.marker([50.98698229615128, 4.5157897632269774], { icon: eventIcon }).addTo(map);
 eventMarkerVergaderzaal.type = 'event';
+
 
 // Parkeermarkers
 var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
@@ -195,9 +198,6 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
-// Horeca
-var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
-horecaMarker.type = 'horeca';
 
 // Activiteit
 var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
@@ -254,10 +254,10 @@ document.getElementById('filterParking').addEventListener('click', function() {
   toggleMarkersByType('parking');
 });
 
-document.getElementById('filterToilet').addEventListener('click', function() {
-  toggleMarkersByType('toilet');
+document.getElementById('filterHoreca').addEventListener('click', function() {
+  toggleMarkersByType('horeca');
 });
 
-document.getElementById('filterActiviteiten').addEventListener('click', function() {
-  toggleMarkersByType('activiteit');
+document.getElementById('filterEventlocaties').addEventListener('click', function() {
+  toggleMarkersByType('event');
 });
