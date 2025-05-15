@@ -106,6 +106,8 @@ nav button p {
   margin: 0;
   font-size: 0.9rem;
   text-align: center;
+  color: var(--rood);
+  font-weight: bold;
 }
 
 .overlay-header {

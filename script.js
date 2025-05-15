@@ -145,6 +145,19 @@ var parkingIcon = L.icon({
   popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
 });
 
+var eventIcon = L.icon({
+  iconUrl: 'images/icon_event.png',  // Hetzelfde PNG bestand voor alle evenementenmarkers
+  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
+  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
+  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
+});
+
+var horecaIcon = L.icon({
+  iconUrl: 'images/icon_horeca.png',  // Hetzelfde PNG bestand voor alle horeca markers
+  iconSize: [38, 50],  // grootte van de afbeelding [breedte, hoogte]
+  iconAnchor: [20, 40],  // het "puntje" van de marker (onderaan in het midden)
+  popupAnchor: [0, -40]  // waar de popup opent relatief tot het icoon
+});
 // Maak verschillende parkeermarkers met hetzelfde icoon
 var parkingMarkerA = L.marker([50.98646467320948, 4.4978996303548], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.type = 'parking';
@@ -162,14 +175,14 @@ var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225]
 parkingMarkerSportcomplex.type = 'parking';
 
 // Andere types (toilet en activiteit)
-var toiletMarker = L.marker([50.986, 4.512]).addTo(map);
-toiletMarker.type = 'toilet';
+var horecaMarker = L.marker([50.986, 4.512], { icon: horecaIcon }).addTo(map);
+horecaMarker.type = 'horeca';
 
-var activiteitMarker = L.marker([50.988, 4.515]).addTo(map);
+var activiteitMarker = L.marker([50.988, 4.515], { icon: horecaIcon }).addTo(map);
 activiteitMarker.type = 'activiteit';
 
 // Alles opslaan in een array
-var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, toiletMarker, activiteitMarker];
+var allMarkers = [parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex, horecaMarker, activiteitMarker];
 
 // Object om bij te houden welke types zichtbaar zijn
 var visibilityStatus = {
