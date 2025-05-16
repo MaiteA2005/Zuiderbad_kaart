@@ -44,6 +44,12 @@ button {
     align-items: center;
 }
 
+#zon_logo{
+    height: 90px;
+    width: auto;
+    margin: 0;
+}
+
 .nav_up{
     position: fixed;
     top: 0;
