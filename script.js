@@ -243,51 +243,51 @@ var doucheIcon = L.icon({
 
 // ------------------- Markers -------------------
 // Horeca
-var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: strandbarIcon }).addTo(map);
+var horecaMarkerStrandbar = L.marker([50.98557, 4.5157], { icon: strandbarIcon }).addTo(map);
 horecaMarkerStrandbar.type = 'horeca';
 
-var horecaMarkerZomerlust = L.marker([50.98277939632882, 4.510990083217622], { icon: zomerlustIcon }).addTo(map);
+var horecaMarkerZomerlust = L.marker([50.98279, 4.51064], { icon: zomerlustIcon }).addTo(map);
 horecaMarkerZomerlust.type = 'horeca';
 
-var horecaMarkerStrandkiosk = L.marker([ 50.98411029466692, 4.514678120613099], { icon: strandkioskIcon }).addTo(map);
+var horecaMarkerStrandkiosk = L.marker([50.9842, 4.5143], { icon: strandkioskIcon }).addTo(map);
 horecaMarkerStrandkiosk.type = 'horeca';
 
 // Eventmarkers
-var eventMarkerEvenementenweide = L.marker([50.9831659968704, 4.5079585038344145], { icon: eventIcon }).addTo(map);
+var eventMarkerEvenementenweide = L.marker([50.98317, 4.50796], { icon: eventIcon }).addTo(map);
 eventMarkerEvenementenweide.type = 'event';
 
-var eventMarkerSportimonium = L.marker([50.98680139323165, 4.516255259513856], { icon: eventIcon }).addTo(map);
+var eventMarkerSportimonium = L.marker([50.98666, 4.51598], { icon: eventIcon }).addTo(map);
 eventMarkerSportimonium.type = 'event';
 
-var eventMarkerVergaderzaal = L.marker([50.987026032162305, 4.515922665596009], { icon: eventIcon }).addTo(map);
+var eventMarkerVergaderzaal = L.marker([50.98689, 4.51569], { icon: eventIcon }).addTo(map);
 eventMarkerVergaderzaal.type = 'event';
 
-var eventMarkerSerre = L.marker([50.98561797006336, 4.516198933124543], { icon: eventIcon }).addTo(map);
+var eventMarkerSerre = L.marker([50.98552, 4.51563], { icon: eventIcon }).addTo(map);
 eventMarkerSerre.type = 'event';
 
-var eventMarkerStrandhuis = L.marker([50.98537994500934, 4.51627403497696], { icon: eventIcon }).addTo(map);
+var eventMarkerStrandhuis = L.marker([50.98527, 4.51578], { icon: eventIcon }).addTo(map);
 eventMarkerStrandhuis.type = 'event';
 
-var eventMarkerStrandzone = L.marker([50.986191606564894, 4.515712479729678], { icon: eventIcon }).addTo(map);
+var eventMarkerStrandzone = L.marker([50.98608, 4.51551], { icon: eventIcon }).addTo(map);
 eventMarkerStrandzone.type = 'event';
 
-var eventMarkerOudVoetbalveld = L.marker([50.98085433336773, 4.506029835797888], { icon: eventIcon }).addTo(map);
+var eventMarkerOudVoetbalveld = L.marker([50.98075, 4.50637], { icon: eventIcon }).addTo(map);
 eventMarkerOudVoetbalveld.type = 'event';
 
 // Parkeermarkers
-var parkingMarkerA = L.marker([50.986136341897186, 4.497790932655335], { icon: parkingIcon }).addTo(map);
+var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.type = 'parking';
 
-var parkingMarkerB = L.marker([50.98393345077176, 4.503209715489184], { icon: parkingIcon }).addTo(map);
+var parkingMarkerB = L.marker([50.98412, 4.50338], { icon: parkingIcon }).addTo(map);
 parkingMarkerB.type = 'parking';
 
-var parkingMarkerE = L.marker([50.985335068286396, 4.518384581268919], { icon: parkingIcon }).addTo(map);
+var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
 parkingMarkerE.type = 'parking';
 
-var parkingMarkerD = L.marker([50.9795492747968, 4.508751368038711], { icon: parkingIcon }).addTo(map);
+var parkingMarkerD = L.marker([50.97957, 4.50878], { icon: parkingIcon }).addTo(map);
 parkingMarkerD.type = 'parking';
 
-var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
+var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
 //Activiteiten & sport
@@ -302,7 +302,7 @@ var toiletMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: to
 toiletMarker.type = 'toilet';
 
 //Openbare douches
-var doucheMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: doucheIcon }).addTo(map);
+var doucheMarker = L.marker([50.985099592014066, 4.515268206596375], { icon: doucheIcon }).addTo(map);
 doucheMarker.type = 'douche';
 
 // Alle markers opslaan
