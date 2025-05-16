@@ -554,3 +554,229 @@ margin-left: 1em;
   font-weight: bold;
   font-size: 1.5em;
 }
+
+/*-----------tutorial-----------*/
+.tutorial_kaart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    
+}
+
+.tutorial_kaart img {
+    height: 420px;
+    width: auto;
+}
+
+.nav_up_tutorial{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: none; 
+    
+}
+
+#zoom-reset_tutorial {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#zoom-buttons_tutorial {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+
+#zoom-reset_tutorial button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24%;
+  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
+  z-index: 1001; /* lager dan je nav, hoger dan je kaart */
+}
+
+.overlay2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
+  z-index: 500; /* lager dan je nav, hoger dan je kaart */
+}
+
+.overlay3 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
+  z-index: 500; /* lager dan je nav, hoger dan je kaart */
+}
+
+.skip_tutorial {
+  position: fixed;
+  bottom: 200px;
+  left: 20px;
+  z-index: 2000;
+  background: var(--orange);
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.skip_tutorial a {
+  text-decoration: none;
+  color: var(--beige);
+}
+
+.button_tutorial_next{
+  z-index: 2000;
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+}
+
+.button_tutorial_back{
+  z-index: 2000;
+  position: fixed;
+  bottom: 50%;
+  left: 10px;
+}
+
+#sun_tutorial1{
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  z-index: 2000;
+}
+
+#sun_tutorial1 img{
+  height: 150px;
+  width: auto;
+}
+
+#text_ballon1 {
+  position: fixed;
+  top: 80px;
+  left: 150px;
+  z-index: 2000;
+}
+
+#text_ballon1 img {
+  height: 130px;
+  width: auto;
+  display: block;
+}
+
+#text_tutorial1 {
+  position: absolute;
+  text-align: center;
+  top: 33px; 
+  left: 25px;
+  right: 0px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial1 p {
+  margin: 0;
+}
+
+
+#sun_tutorial2{
+  position: fixed;
+  top: 140px;
+  left: 20px;
+  z-index: 2000;
+}
+
+#sun_tutorial2 img{
+  height: 150px;
+  width: auto;
+}
+
+#text_ballon2 {
+  position: fixed;
+  top: 80px;
+  left: 150px;
+  z-index: 2000;
+}
+
+#text_ballon2 img {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+
+#text_tutorial2 {
+  position: absolute;
+  text-align: center;
+  top: 33px; 
+  left: 10px;
+  right: 5px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial2 p {
+  margin: 0;
+}
+
+#arrow_tutorial2{
+  position: fixed;
+  top: 120px;
+  right: 40px;
+  z-index: 2000;
+}
+
+#text_tutorial3 {
+  position: absolute;
+  text-align: center;
+  top: 33px; 
+  left: 30px;
+  right: 2px;
+  color: #333;
+  font-size: 1.3em;
+  line-height: 1.5;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial3 p {
+  margin: 0;
+}

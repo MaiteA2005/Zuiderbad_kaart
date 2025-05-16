@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuiderbad Kaart</title>
+  <link rel="icon" type="image/x-icon" href="images/zon_plain.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+
+<div class="overlay1"></div>
+<div class="overlay2"></div>
+
+<div class="button_tutorial_next">
+    <a href="tutorial_2.html">
+    <img src="images/next_tutorial.svg" alt="">
+    </a>
+</div>
+
+<div id="sun_tutorial1">
+    <img src="images/zon_plain.png" alt="">
+</div>
+
+<div id="text_ballon1">
+  <img src="images/text_tutorial1.png" alt="">
+  <div id="text_tutorial1">
+    <p>We beginnen met de <b>kaart.</b> Een mooi overzicht van het domein Hofstade.</p>
+  </div>
+</div>
+
+  <div class="nav_up_tutorial">
+    <a></a>
+    <div id="zoom-reset_tutorial">
+      <button>
+      <img src="images/Reset-pijl.png" alt="Reset" class="logo">
+      </button>
+      <div id="zoom-buttons_tutorial">
+        <button>
+          <img src="images/plus.png" alt="Zoom in" class="logo">
+        </button>
+        <button>
+          <img src="images/min.png" alt="Zoom out" class="logo">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tutorial_kaart">
+    <img src="images/kaart.svg" alt="">
+  </div>
+
+  <div class="skip_tutorial">
+    <a href="index.html">Uitleg overslaan</a>
+  </div>
+
+  <nav class="nav_down">
+      <button>
+      <img src="images/Vector.png" alt="Logo" class="logo">
+      <p>Horeca</p>
+      </button>
+      <button>
+        <img src="images/Evenementen.png" alt="Logo" class="logo">
+        <p>Eventlocaties</p>
+      </button>
+      <button>
+        <img src="images/Parking.png" alt="Logo" class="logo">
+        <p>Parking</p>
+      </button>
+      <button>
+        <img src="images/Points.png" alt="Logo" class="logo">
+        <p>Meer</p>
+      </button>
+  </nav>
+
+</body>
+</html>
