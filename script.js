@@ -234,6 +234,13 @@ var toiletIcon = L.icon({
   popupAnchor: [0, -40]
 });
 
+var doucheIcon = L.icon({
+  iconUrl: 'images/icon_douches.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
 // ------------------- Markers -------------------
 // Horeca
 var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: strandbarIcon }).addTo(map);
@@ -283,11 +290,24 @@ parkingMarkerD.type = 'parking';
 var parkingMarkerSportcomplex = L.marker([50.98375722468085, 4.5052900212819225], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.type = 'parking';
 
+//Activiteiten & sport
+
+
+//Wandelroutes
+
+// Cultuur & sportlocaties
+
+// Toiletten
+var toiletMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: toiletIcon }).addTo(map);
+toiletMarker.type = 'toilet';
+
 // Alle markers opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
-  horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk
+  horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
+
+
 ];
 
 // ------------------- Filterfunctie -------------------
@@ -309,14 +329,19 @@ var visibilityStatus = {
 };
 
 // ------------------- Knoppen koppelen -------------------
-document.getElementById('filterParking').addEventListener('click', function() {
-  toggleMarkersByType('parking');
-});
-
 document.getElementById('filterHoreca').addEventListener('click', function() {
   toggleMarkersByType('horeca');
 });
 
 document.getElementById('filterEventlocaties').addEventListener('click', function() {
   toggleMarkersByType('event');
+});
+
+document.getElementById('filterParking').addEventListener('click', function() {
+  toggleMarkersByType('parking');
+});
+
+document.getElementById('filterToiletten').addEventListener('click', function() {
+  toggleMarkersByType('toilet');
+  overlay.classList.remove('active');
 });
