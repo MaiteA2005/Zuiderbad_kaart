@@ -69,7 +69,7 @@ updateZoomButtons();
   }).addTo(map);
 
 //---------------Onze kaart--------------------
-  var imageUrl = 'images/kaart_1.png';  
+  var imageUrl = 'images/kaart.svg';  
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
   // Voeg een CSS-klasse toe om de afbeelding te draaien
