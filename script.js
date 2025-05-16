@@ -205,8 +205,23 @@ var eventIcon = L.icon({
   popupAnchor: [0, -40]
 });
 
-var horecaIcon = L.icon({
+//Horeca
+var strandbarIcon = L.icon({
   iconUrl: 'images/icon_horeca.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
+var strandkioskIcon = L.icon({
+  iconUrl: 'images/icon_strandkiosk.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
+var zomerlustIcon = L.icon({
+  iconUrl: 'images/icon_zomerlust.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
@@ -221,13 +236,13 @@ var toiletIcon = L.icon({
 
 // ------------------- Markers -------------------
 // Horeca
-var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: horecaIcon }).addTo(map);
+var horecaMarkerStrandbar = L.marker([50.985634754671985, 4.516260623931886], { icon: strandbarIcon }).addTo(map);
 horecaMarkerStrandbar.type = 'horeca';
 
-var horecaMarkerZomerlust = L.marker([50.98277939632882, 4.510990083217622], { icon: horecaIcon }).addTo(map);
+var horecaMarkerZomerlust = L.marker([50.98277939632882, 4.510990083217622], { icon: zomerlustIcon }).addTo(map);
 horecaMarkerZomerlust.type = 'horeca';
 
-var horecaMarkerStrandkiosk = L.marker([ 50.98411029466692, 4.514678120613099], { icon: horecaIcon }).addTo(map);
+var horecaMarkerStrandkiosk = L.marker([ 50.98411029466692, 4.514678120613099], { icon: strandkioskIcon }).addTo(map);
 horecaMarkerStrandkiosk.type = 'horeca';
 
 // Eventmarkers
