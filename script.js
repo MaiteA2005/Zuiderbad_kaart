@@ -241,6 +241,13 @@ var doucheIcon = L.icon({
   popupAnchor: [0, -40]
 });
 
+var kleedkamersIcon = L.icon({
+  iconUrl: 'images/icon_kleedkamers.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
 // ------------------- Markers -------------------
 // Horeca
 var horecaMarkerStrandbar = L.marker([50.98557, 4.5157], { icon: strandbarIcon }).addTo(map);
@@ -305,15 +312,20 @@ toiletMarker.type = 'toilet';
 var doucheMarker = L.marker([50.985099592014066, 4.515268206596375], { icon: doucheIcon }).addTo(map);
 doucheMarker.type = 'douche';
 
+//Kleedkamers
+var kleedkamers1Marker = L.marker([50.98632156606132, 4.5161622835904955], { icon: kleedkamersIcon }).addTo(map);
+kleedkamers1Marker.type = 'kleedkamers';
+
+var kleedkamers2Marker = L.marker([50.984185859372815, 4.506065830925175], { icon: kleedkamersIcon }).addTo(map);
+kleedkamers2Marker.type = 'kleedkamers';
+
 // Alle markers opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
 
-  doucheMarker, toiletMarker
-
-
+  doucheMarker, toiletMarker, kleedkamers1Marker, kleedkamers2Marker
 ];
 
 // ------------------- Filterfunctie -------------------
@@ -354,5 +366,10 @@ document.getElementById('filterToiletten').addEventListener('click', function() 
 
 document.getElementById('filterDouche').addEventListener('click', function() {
   toggleMarkersByType('douche');
+  overlay.classList.remove('active');
+});
+
+document.getElementById('filterKleedkamers').addEventListener('click', function() {
+  toggleMarkersByType('kleedkamers');
   overlay.classList.remove('active');
 });
