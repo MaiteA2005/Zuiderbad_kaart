@@ -3,6 +3,9 @@
   --rood: #651123;
   --beige: #FEEFE3;
   --roze: #D37FAB;
+  --geel: #FDC759;
+  --blauw: #C4D4DB;
+  --lichtroze: #DEACAA;
 }
 
 * {
@@ -37,7 +40,7 @@ button {
     padding: 1rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    box-shadow: 0px -3px 10px 0px rgba(230, 215, 174, 0.8);
+    box-shadow: 0px -3px 10px 0px rgba(254, 239, 227, 0.8);
 
     display: flex;
     justify-content: space-around; 
@@ -86,7 +89,7 @@ button {
     left: 20%; 
     width: 80%; 
     height: 100%;
-    background-color: rgba(255, 248, 230, 0.95);
+    background-color: var(--beige);
     display: none; 
     flex-direction: column;
     justify-content: flex-start;
@@ -217,7 +220,7 @@ nav button p {
   top: 0;
   width: 80%;
   height: 100%;
-  background-color: rgba(255, 248, 230, 0.95);
+  background-color: var(--beige);
   z-index: 9999;
   display: none;
   flex-direction: column;
@@ -266,9 +269,6 @@ nav button p {
   cursor: pointer;
   color: var(--rood);
 }
-
-
-
 
 
 /*-----------Zonnetje-----------*/
@@ -369,136 +369,6 @@ margin-left: 1em;
 }
 
 .call a img{
-    height: 35px;
-    width: auto;
-    margin: 0;
-}
-
-/*-----------FAQ-----------*/
-.qa-item {
-  margin-bottom: 1.5em;
-  position: relative;
-}
-
-.qa-item:not(:last-child) {
-  padding-bottom: 1.5em; /* Ruimte tussen de vraag en de lijn */
-}
-
-.qa-item:not(:last-child)::after {
-  content: ''; /* Zorgt ervoor dat er een lijn komt */
-  position: absolute;
-  bottom: 0;
-  left: 5em; 
-  width: calc(100% - 10em); /* Zorgt ervoor dat de lijn niet helemaal van links naar rechts komt */
-  height: 2px;
-  background-color: var(--orange);
-}
-
-.question {
-  margin: 1em 5em;
-  cursor: pointer;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.arrow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  transition: transform 0.3s ease;
-}
-
-.question img {
-  height: 20px;
-  width: auto;
-  transition: transform 0.3s ease;
-  transform-origin: center;
-}
-
-.question.open .arrow-container {
-  transform: rotate(90deg);
-}
-
-.answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  margin: 0 5em;
-}
-
-.answer.open {
-  max-height: 500px;
-  border: var(--rood) solid 4px;
-  border-radius: 10px;
-  padding: 1em;
-}
-
-
-/*-----------hulp-----------*/
-.container_hulp{
-  text-align: center;
-}
-
-.container_hulp h2{
-  font-size: 2em;
-  text-decoration: underline;
-}
-
-#sun_hulp_img{
-    height: 250px;
-    width: auto;
-    margin: 3em 1em;
-}
-
-.ehbo_kaart {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    justify-content: center;
-}
-
-.ehbo_kaart a {
-    font-size: 1.5rem; 
-    text-decoration: underline ; 
-    color: var(--rood);
-
-}
-
-.ehbo_kaart img {
-    width: 40px; 
-    height: auto;
-}
-
-#nood_note{
-    margin-top: 20%;
-    font-size: 1.2em;
-}
-
-.call_nood{
-    margin-top: 2%;
-    text-align: center;
-}
-
-.call_nood a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--orange);
-  color: white;
-  padding: 2% 15%;
-  width: 80%;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  gap: 10px;
-  margin: 0 auto;/* ruimte tussen img en tekst */
-}
-
-.call_nood a img{
     height: 35px;
     width: auto;
     margin: 0;
