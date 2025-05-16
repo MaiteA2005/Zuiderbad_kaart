@@ -301,11 +301,17 @@ parkingMarkerSportcomplex.type = 'parking';
 var toiletMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: toiletIcon }).addTo(map);
 toiletMarker.type = 'toilet';
 
+//Openbare douches
+var doucheMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: doucheIcon }).addTo(map);
+doucheMarker.type = 'douche';
+
 // Alle markers opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
+
+  doucheMarker, toiletMarker
 
 
 ];
@@ -343,5 +349,10 @@ document.getElementById('filterParking').addEventListener('click', function() {
 
 document.getElementById('filterToiletten').addEventListener('click', function() {
   toggleMarkersByType('toilet');
+  overlay.classList.remove('active');
+});
+
+document.getElementById('filterDouche').addEventListener('click', function() {
+  toggleMarkersByType('douche');
   overlay.classList.remove('active');
 });
