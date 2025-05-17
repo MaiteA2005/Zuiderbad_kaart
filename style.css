@@ -294,12 +294,12 @@ margin-left: 1em;
   margin: 0;
 }
 
-.sun{
+.sun_menu{
     text-align: center;
 }
 
-.sun img{
-    height: 200px;
+.sun_menu img{
+    height: 180px;
     width: auto;
 }
 
@@ -320,7 +320,7 @@ margin-left: 1em;
   text-decoration: none;
   color: var(--rood);
   border: none;
-  margin: 0.5em 4em;
+  margin: 0.5em 3em;
   padding: 0.5em 1em;
   border-radius: 10px;
 }
