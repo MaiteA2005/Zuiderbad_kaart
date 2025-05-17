@@ -30,42 +30,10 @@ button {
     cursor: pointer;   
 }
 
-.nav_down{
-    background-color: var(--beige);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    box-shadow: 0px -3px 10px 0px rgba(254, 239, 227, 0.8);
-
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    z-index: 2;
-}
-
 #zon_logo{
     height: 90px;
     width: auto;
     margin: 0;
-}
-
-.nav_up{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    background: none; 
 }
 
 #zoom-reset{
@@ -73,125 +41,7 @@ button {
    gap: 10px;
 }
 
-#open-custom-overlay{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    text-align: left;
-    color: #203336;
-    border: none;
-}
-
-#custom-overlay {
-    position: fixed;
-    top: 0;
-    left: 20%; 
-    width: 80%; 
-    height: 100%;
-    background-color: var(--beige);
-    display: none; 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: left;
-
-    padding: 2rem;
-    z-index: 2000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-}
-
-nav button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-nav button img {
-  width: 60px; /* of jouw gewenste grootte */
-  height: auto;
-  margin-bottom: 5px; /* ruimte tussen img en p */
-}
-
-nav button p {
-  margin: 0;
-  font-size: 0.9rem;
-  text-align: center;
-  color: var(--rood);
-  font-weight: bold;
-}
-
-.overlay-header {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-btn img {
-  width: 40px;
-  height: 40px;
-  display: block;
-}
-
-#custom-overlay.active {
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
-}
-  
-#custom-overlay h2 {
-    margin-bottom: 2rem;
-    color: var(--rood)
-}
-  
-#custom-overlay button {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: var(--rood);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#open-custom-overlay p{
-    font-family: 'Poppins';
-}
-
-.link_arrow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    gap: 20px; 
-}
-
-.link_arrow img {
-    height: 20px;
-    width: auto;
-  }
-
-.line{
-    width:100%;
-    border-width:0.01px; 
-    text-align:left;
-    margin-left:0;
-    border-color: var(--rood);
-
-}
+/*-----------map-----------*/
 
 #map {
     position: fixed;
@@ -207,69 +57,6 @@ nav button p {
     transform-origin: center;
     transform: scale(1.5) rotate(45deg);
 }
-
-#custom-overlay.active {
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
-}
-
-/*-----------submenu activiteiten & sport-----------*/
-.submenu {
-  position: fixed;
-  top: 0;
-  width: 80%;
-  height: 100%;
-  background-color: var(--beige);
-  z-index: 9999;
-  display: none;
-  flex-direction: column;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.submenu.active {
-  display: flex;
-}
-
-.submenu-header {
-  display: flex;
-  align-items: center;
-  position: relative; 
-  margin-bottom: 20px;
-}
-
-.submenu-header h2 {
-  margin: 16px 10px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.back-btn img {
-  width: auto;
-  height: 40px;
-}
-
-.back-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.submenu-list {
-  list-style: none;
-  padding: 0;
-}
-
-.submenu-list li {
-  margin-bottom: 12px;
-  font-size: 18px;
-  cursor: pointer;
-  color: var(--rood);
-}
-
 
 /*-----------Zonnetje-----------*/
 .back {
