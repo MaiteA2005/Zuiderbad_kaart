@@ -330,56 +330,73 @@ var zeilclubIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
+//Wandelroutes
+var wandelIcon = L.icon({
+  iconUrl: 'images/icon_wandelen.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 // ------------------- Markers -------------------
-// Horeca
+//Horeca
 var horecaMarkerStrandbar = L.marker([50.98557, 4.5157], { icon: strandbarIcon }).addTo(map);
-horecaMarkerStrandbar.type = 'horeca';
-
+horecaMarkerStrandbar.types = ['horeca'];
 var horecaMarkerZomerlust = L.marker([50.98279, 4.51064], { icon: zomerlustIcon }).addTo(map);
-horecaMarkerZomerlust.type = 'horeca';
-
+horecaMarkerZomerlust.types = ['horeca'];
 var horecaMarkerStrandkiosk = L.marker([50.9842, 4.5143], { icon: strandkioskIcon }).addTo(map);
-horecaMarkerStrandkiosk.type = 'horeca';
-
-// Eventmarkers
+horecaMarkerStrandkiosk.types = ['horeca'];
+//Eventmarkers
 var eventMarkerEvenementenweide = L.marker([50.98317, 4.50796], { icon: eventIcon }).addTo(map);
-eventMarkerEvenementenweide.type = 'event';
-
+eventMarkerEvenementenweide.types = ['event'];
 var eventMarkerSportimonium = L.marker([50.98666, 4.51598], { icon: eventIcon }).addTo(map);
-eventMarkerSportimonium.type = 'event';
-
+eventMarkerSportimonium.types = ['event'];
 var eventMarkerVergaderzaal = L.marker([50.98689, 4.51569], { icon: eventIcon }).addTo(map);
-eventMarkerVergaderzaal.type = 'event';
-
+eventMarkerVergaderzaal.types = ['event'];
 var eventMarkerSerre = L.marker([50.98552, 4.51563], { icon: eventIcon }).addTo(map);
-eventMarkerSerre.type = 'event';
-
+eventMarkerSerre.types = ['event'];
 var eventMarkerStrandhuis = L.marker([50.98527, 4.51578], { icon: eventIcon }).addTo(map);
-eventMarkerStrandhuis.type = 'event';
-
+eventMarkerStrandhuis.types = ['event'];
 var eventMarkerStrandzone = L.marker([50.98608, 4.51551], { icon: eventIcon }).addTo(map);
-eventMarkerStrandzone.type = 'event';
-
+eventMarkerStrandzone.types = ['event'];
 var eventMarkerOudVoetbalveld = L.marker([50.98075, 4.50637], { icon: eventIcon }).addTo(map);
-eventMarkerOudVoetbalveld.type = 'event';
-
-// Parkeermarkers
+eventMarkerOudVoetbalveld.types = ['event'];
+//Parkeermarkers
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
-parkingMarkerA.type = 'parking';
-
+parkingMarkerA.types = ['parking'];
 var parkingMarkerB = L.marker([50.98412, 4.50338], { icon: parkingIcon }).addTo(map);
-parkingMarkerB.type = 'parking';
-
+parkingMarkerB.types = ['parking'];
 var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
-parkingMarkerE.type = 'parking';
-
+parkingMarkerE.types = ['parking'];
 var parkingMarkerD = L.marker([50.97957, 4.50878], { icon: parkingIcon }).addTo(map);
-parkingMarkerD.type = 'parking';
-
+parkingMarkerD.types = ['parking'];
 var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIcon }).addTo(map);
-parkingMarkerSportcomplex.type = 'parking';
-
+parkingMarkerSportcomplex.types = ['parking'];
 //Activiteiten & sport
+var basketVoetbalMarker = L.marker([50.98238462833598, 4.506588578224183], { icon: basketbalIcon }).addTo(map);
+basketVoetbalMarker.types = ['activiteit', 'basketVoetbal'];
+var boogschietenMarker = L.marker([50.98328097641515, 4.506073594093324], { icon: boogschietenIcon }).addTo(map);
+boogschietenMarker.types = ['activiteit', 'boogschieten'];
+// Finse piste --> Bij wandelroutes zetten?
+var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
+hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenparcours'];
+var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
+megaSpeeltuinMarker.types = ['activiteit', 'megaspeeltuin'];
+//MTBroute --> Bij wandelroutes zetten?
+var muurklimmenMarker = L.marker([50.98340925174416, 4.505848288536073], { icon: muurklimmenIcon }).addTo(map);
+muurklimmenMarker.types = ['activiteit', 'muurklimmen'];
+var openwaterzwemmenMarker = L.marker([50.984424278799814, 4.512274861335755], { icon: openwaterzwemmenIcon }).addTo(map);
+openwaterzwemmenMarker.types = ['activiteit', 'openwaterzwemmen'];
+var pingpongMarker = L.marker([50.98360862237425, 4.505816102027894], { icon: pingpongIcon }).addTo(map);
+pingpongMarker.types = ['activiteit', 'pingpong'];
+var piratenSpeeltuinMarker = L.marker([50.983944675917876, 4.513455033302308], { icon: speeltuinIcon }).addTo(map);
+piratenSpeeltuinMarker.types = ['activiteit', 'piratenspeeltuin'];
+var skaterampMarker = L.marker([50.98329448033371, 4.506408870220185], { icon: skaterampIcon }).addTo(map);
+skaterampMarker.types = ['activiteit', 'skateramp'];
+var voetbalveldMarker = L.marker([50.9841065666959, 4.505711495876313], { icon: voetbalveldIcon }).addTo(map);
+voetbalveldMarker.types = ['activiteit', 'voetbalveld'];
+//waterpretparkMarker
+var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
+zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 
 //Wandelroutes
 
@@ -388,35 +405,39 @@ parkingMarkerSportcomplex.type = 'parking';
 // Toiletten
 var toiletMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: toiletIcon }).addTo(map);
 toiletMarker.type = 'toilet';
-
 //Openbare douches
 var doucheMarker = L.marker([50.985099592014066, 4.515268206596375], { icon: doucheIcon }).addTo(map);
 doucheMarker.type = 'douche';
-
 //Kleedkamers
 var kleedkamers1Marker = L.marker([50.98632156606132, 4.5161622835904955], { icon: kleedkamersIcon }).addTo(map);
 kleedkamers1Marker.type = 'kleedkamers';
-
 var kleedkamers2Marker = L.marker([50.984185859372815, 4.506065830925175], { icon: kleedkamersIcon }).addTo(map);
 kleedkamers2Marker.type = 'kleedkamers';
-
 // Alle markers opslaan
 var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
-
+  basketVoetbalMarker, boogschietenMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, zensportplatformMarker,
   doucheMarker, toiletMarker, kleedkamers1Marker, kleedkamers2Marker
 ];
 
 // ------------------- Filterfunctie -------------------
 function toggleMarkersByType(type) {
   allMarkers.forEach(marker => {
-    if (marker.type === type) {
-      map.addLayer(marker);
+    const markerTypes = marker.types || [marker.type]; // Zorg dat je altijd een array hebt
+    if (markerTypes.includes(type)) {
+      map.addLayer(marker);    // Toon marker
     } else {
-      map.removeLayer(marker);
+      map.removeLayer(marker); // Verberg marker
     }
+  });
+}
+// ------------------- Toggle functie voor de knoppen -------------------
+function showPin(id, type) {
+  document.getElementById(id).addEventListener('click', () => {
+    toggleMarkersByType(type);
+    overlay.classList.remove('active'); //het hoofmenu wordt gesloten
   });
 }
 
@@ -428,29 +449,48 @@ var visibilityStatus = {
 };
 
 // ------------------- Knoppen koppelen -------------------
+//Horeca
 document.getElementById('filterHoreca').addEventListener('click', function() {
   toggleMarkersByType('horeca');
 });
-
+//Eventlocaties
 document.getElementById('filterEventlocaties').addEventListener('click', function() {
   toggleMarkersByType('event');
 });
-
+//Parking
 document.getElementById('filterParking').addEventListener('click', function() {
   toggleMarkersByType('parking');
 });
-
+//Sanitair
 document.getElementById('filterToiletten').addEventListener('click', function() {
   toggleMarkersByType('toilet');
   overlay.classList.remove('active');
 });
-
 document.getElementById('filterDouche').addEventListener('click', function() {
   toggleMarkersByType('douche');
   overlay.classList.remove('active');
 });
-
 document.getElementById('filterKleedkamers').addEventListener('click', function() {
   toggleMarkersByType('kleedkamers');
   overlay.classList.remove('active');
 });
+//Activiteiten & sport
+document.getElementById('alleActiviteiten').addEventListener('click', function() {
+  toggleMarkersByType('activiteit');
+  //submenuActiviteiten.classList.remove('active'); --> het submenu 'activiteiten en sport' blijft actief
+  overlay.classList.remove('active');
+});
+showPin('basketActiviteit', 'basketVoetbal');
+showPin('boogschietActiviteit', 'boogschieten');
+//Finse piste?
+showPin('hoogtouwparcoursActiviteit', 'hoogtouwenparcours');
+showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
+//MTB?
+showPin('muurklimActiviteit', 'muurklimmen');
+showPin('openwaterzwemmenActiviteit', 'openwaterzwemmen');
+showPin('pinpongActiviteit', 'pingpong');
+showPin('piratenspeeltuinActiviteit', 'piratenspeeltuin');
+showPin('skaterampActiviteit', 'skateramp');
+showPin('voetbalveldActiviteit', 'voetbalveld');
+//Waterpretpark(?)
+showPin('zensportplatformActiviteit', 'zensportplatform');
