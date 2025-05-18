@@ -226,7 +226,7 @@ var zomerlustIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
+//Sanitair
 var toiletIcon = L.icon({
   iconUrl: 'images/icon_toilet.png',
   iconSize: [38, 50],
@@ -247,6 +247,8 @@ var kleedkamersIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
+
+//Activiteiten & sport
 
 // ------------------- Markers -------------------
 // Horeca
