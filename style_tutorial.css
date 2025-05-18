@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 180px;
+    margin-top: 220px;
     
 }
 
@@ -112,7 +112,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
-  z-index: 500; /* lager dan je nav, hoger dan je kaart */
+  z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
 
 .overlay4 {
@@ -217,6 +217,20 @@
   top: 120px;
   right: 40px;
   z-index: 2000;
+}
+
+.nav_up_tutorial2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001;
+    background: none; 
 }
 
 /*---------stap 3---------*/
@@ -348,17 +362,211 @@
   width: auto;
 }
 
+.nav_up_tutorial5{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    background: none; 
+}
+
 /*---------stap 6---------*/
 
+#sun_tutorial6{
+  position: fixed;
+  top: 190px;
+  right: 100px;
+  z-index: 2000;
+}
+
+#sun_tutorial6 img{
+  height: 200px;
+  width: auto;
+}
+
+#text_ballon6 {
+  position: fixed;
+  top: 100px;
+  left: 60px;
+  z-index: 2000;
+}
+
+#text_ballon6 img {
+  height: 180px;
+  width: auto;
+  display: block;
+}
+
+#text_tutorial6 {
+  position: absolute;
+  text-align: center;
+  top: 32px; 
+  left: 8px;
+  right: 6px;
+  color: var(--rood);
+  font-size: 16px;
+  line-height: 1.4;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial6 p {
+  margin: 0;
+}
+
+#arrow_tutorial6{
+  position: fixed;
+  top: 360px;
+  left: 180px;
+  z-index: 2000;
+}
+
+#arrow_tutorial6 img{
+  height: 120px;
+  width: auto;
+}
+
+.tutorial_kaart_6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.tutorial_kaart_6 img {
+    height: 850px;
+    width: auto;
+}
+
+#icon_tutorial6{
+  position: fixed;
+  z-index: 2000;
+  bottom: 350px;
+  right: 180px;
+
+}
+
+#icon_tutorial6 img{
+  height: 80px;
+  width: auto;
+}
 /*---------stap 7---------*/
 #arrow_tutorial7{
   position: fixed;
   top: 20px;
-  left: 100px;
+  left: 120px;
   z-index: 2000;
 }
 
 #arrow_tutorial7 img{
   height: 120px;
   width: auto;
+}
+
+#zon_logo_tutorial{
+    height: 90px;
+    width: auto;
+    margin: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 10px;
+    left: 10px;
+}
+
+#sun_tutorial7{
+  position: fixed;
+  bottom: 370px;
+  left: 150px;
+  z-index: 2000;
+}
+
+#sun_tutorial7 img{
+  height: 200px;
+  width: auto;
+}
+
+#text_ballon7 {
+  position: fixed;
+  top: 130px;
+  left: 60px;
+  z-index: 2000;
+}
+
+#text_ballon7 img {
+  height: 220px;
+  width: auto;
+}
+
+#text_tutorial7 {
+  position: absolute;
+  text-align: center;
+  top: 40px; 
+  left: 8px;
+  right: 6px;
+  color: var(--rood);
+  font-size: 18px;
+  line-height: 1.4;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial7 p {
+  margin: 0;
+}
+
+/*---------stap 8---------*/
+
+#text_ballon8 {
+  position: fixed;
+  top: 130px;
+  left: 100px;
+  z-index: 2000;
+}
+
+#text_ballon8 img {
+  height: 200px;
+  width: auto;
+}
+
+#text_tutorial8 {
+  position: absolute;
+  text-align: center;
+  top: 22px; 
+  left: 35px;
+  right: 6px;
+  color: var(--rood);
+  font-size: 18px;
+  line-height: 1.4;
+  z-index: 2001;
+  max-width: 200px;
+}
+
+#text_tutorial8 p {
+  margin: 0;
+}
+
+.btn_kaart {
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  background: var(--orange);
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn_kaart a {
+  text-decoration: none;
+  color: var(--beige);
 }
