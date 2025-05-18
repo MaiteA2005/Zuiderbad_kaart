@@ -191,20 +191,20 @@ backtomainCultuur.addEventListener('click', () => {
 });
 
 //-------------------- Marker iconen -------------------
+//Parking
 var parkingIcon = L.icon({
   iconUrl: 'images/icon_parking.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
+//Eventlocaties
 var eventIcon = L.icon({
   iconUrl: 'images/icon_event.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 //Horeca
 var strandbarIcon = L.icon({
   iconUrl: 'images/icon_horeca.png',
@@ -212,14 +212,12 @@ var strandbarIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 var strandkioskIcon = L.icon({
   iconUrl: 'images/icon_strandkiosk.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 var zomerlustIcon = L.icon({
   iconUrl: 'images/icon_zomerlust.png',
   iconSize: [38, 50],
@@ -233,23 +231,105 @@ var toiletIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 var doucheIcon = L.icon({
   iconUrl: 'images/icon_douches.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 var kleedkamersIcon = L.icon({
   iconUrl: 'images/icon_kleedkamers.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-
 //Activiteiten & sport
-
+var basketbalIcon = L.icon({
+  iconUrl: 'images/icon_basket.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var boogschietenIcon = L.icon({
+  iconUrl: 'images/icon_boogschieten.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var hoogtouwenparcoursIcon = L.icon({
+  iconUrl: 'images/icon_hoogteparcours.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var speeltuinIcon = L.icon({ //Megaspeeltuin - Piratenspeeltuin
+  iconUrl: 'images/icon_speeltuin.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+  //MTBroute
+var muurklimmenIcon = L.icon({
+  iconUrl: 'images/icon_klimmuur.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var openwaterzwemmenIcon = L.icon({
+  iconUrl: 'images/icon_openwaterzwemmen.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var pingpongIcon = L.icon({
+  iconUrl: 'images/icon_pingpong.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var skaterampIcon = L.icon({
+  iconUrl: 'images/icon_skatepark.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var voetbalveldIcon = L.icon({
+  iconUrl: 'images/icon_voetbal.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+// var waterpretparkIcon = L.icon({
+//   iconUrl: 'images/icon_waterpretpark.png',
+//   iconSize: [38, 50],
+//   iconAnchor: [20, 40],
+//   popupAnchor: [0, -40]
+// });
+var zensportplatformIcon = L.icon({
+  iconUrl: 'images/icon_zensportplatform.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+//Cutuur & sportlocaties
+  //Documentatiecentrum Sport Vlaanderen
+var hondenweideIcon = L.icon({
+  iconUrl: 'images/icon_hond.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+  //sportcomplex
+  //sportverblijf
+  //sportweide
+  //Survivalkamp
+  //Uitleendienst Sport Vlaanderen
+var zeilclubIcon = L.icon({
+  iconUrl: 'images/icon_zeilen.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 // ------------------- Markers -------------------
 // Horeca
 var horecaMarkerStrandbar = L.marker([50.98557, 4.5157], { icon: strandbarIcon }).addTo(map);
@@ -300,7 +380,6 @@ var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIco
 parkingMarkerSportcomplex.type = 'parking';
 
 //Activiteiten & sport
-
 
 //Wandelroutes
 
