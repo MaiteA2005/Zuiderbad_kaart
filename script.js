@@ -527,6 +527,9 @@ function showPin(id, type) {
 // ------------------- Toggle functie voor wandelroutes -------------------
 function showWandelroute(id, kaart) {
   document.getElementById(id).addEventListener('click', () => {
+    if (map.hasLayer(imageOverlay)) {
+      map.removeLayer(imageOverlay);
+    }
     imageOverlay = L.imageOverlay(kaart, imageBounds).addTo(map);
     overlay.classList.remove('active'); //het hoofmenu wordt gesloten
   });
@@ -566,7 +569,7 @@ showPin('voetbalveldActiviteit', 'voetbalveld');
 showPin('waterpretparkActiviteit', 'waterpretpark');
 showPin('zensportplatformActiviteit', 'zensportplatform');
 //Wandelroutes
-showWandelroute('alleWandelroutes', alleWandelroutes_kaart);
+showWandelroute('alleWandelroutes', alleWandelroutes_kaart); //alle wandelroutes
 showWandelroute('domeinpadWandelroute', domeinpad_kaart);
 showWandelroute('historischpadWandelroute', historischpad_kaart);
 showWandelroute('ijsvogelpadWandelroute', ijsvogelpad_kaart);
@@ -574,11 +577,7 @@ showWandelroute('loop3Wandelroute', looproute3_kaart);
 showWandelroute('loop4Wandelroute', looproute4_kaart);
 showWandelroute('loop5Wandelroute', looproute5_kaart);
 //Cultuur & sportlocaties
-document.getElementById('alleCultuur').addEventListener('click', function() {
-  toggleMarkersByType('cultuur');
-  //submenuCultuur.classList.remove('active'); --> het submenu 'cultuur en sportlocaties' blijft actief
-  overlay.classList.remove('active');
-});
+showPin('alleCultuur','cultuur'); //alle cultuur- & sportlocaties
 showPin('documentatiecentrumCultuur', 'documentatiecentrum');
 showPin('hondenweideCultuur', 'hondenweide');
 showPin('sportcomplexCultuur', 'sportcomplex');
