@@ -411,9 +411,6 @@ var waterpretparkMarker = L.marker([50.98346581850775, 4.512130022048951], { ico
 waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
-
-//Wandelroutes
-
 // Cultuur & sportlocaties
 var hondenweideMarker = L.marker([50.989371343719, 4.502254128456117], { icon: hondenweideIcon }).addTo(map);
 hondenweideMarker.types = ['cultuur', 'hondenweide'];
@@ -430,6 +427,8 @@ var kleedkamers1Marker = L.marker([50.98632156606132, 4.5161622835904955], { ico
 kleedkamers1Marker.type = 'kleedkamers';
 var kleedkamers2Marker = L.marker([50.984185859372815, 4.506065830925175], { icon: kleedkamersIcon }).addTo(map);
 kleedkamers2Marker.type = 'kleedkamers';
+var EHBOMarker = L.marker([50.98512996684507, 4.515520334243775], { icon: EHBOIcon }).addTo(map);
+EHBOMarker.type = 'EHBO';
 // Alle markers opslaan
 var allMarkers = [
   //Horeca
@@ -444,7 +443,7 @@ var allMarkers = [
   //Cultuur & sportlocaties
   hondenweideMarker, 
   //Sanitair
-  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker,
+  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
   
 ];
 
@@ -499,6 +498,11 @@ document.getElementById('filterKleedkamers').addEventListener('click', function(
   toggleMarkersByType('kleedkamers');
   overlay.classList.remove('active');
 });
+//
+document.getElementById('filterEHBO').addEventListener('click', function() {
+  toggleMarkersByType('EHBO');
+  overlay.classList.remove('active');
+});
 //Activiteiten & sport
 document.getElementById('alleActiviteiten').addEventListener('click', function() {
   toggleMarkersByType('activiteit');
@@ -527,7 +531,6 @@ showWandelroute('ijsvogelpadWandelroute', ijsvogelpad_kaart);
 showWandelroute('loop3Wandelroute', looproute3_kaart);
 showWandelroute('loop4Wandelroute', looproute4_kaart);
 showWandelroute('loop5Wandelroute', looproute5_kaart);
-
 //Cultuur & sportlocaties
 document.getElementById('alleCultuur').addEventListener('click', function() {
   toggleMarkersByType('cultuur');
