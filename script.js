@@ -113,7 +113,7 @@ map.on('locationfound', function(e) {
 
 // Event listener voor als de locatie niet gevonden kan worden
 map.on('locationerror', function(e) {
-    alert("Locatie kan niet worden gevonden. Om uw locatie te kunnen vinden, moet u de locatie-instellingen van uw browser inschakelen.");
+    alert("Locatie kan niet gevonden worden. Om uw locatie te kunnen vinden, moet u de locatie-instellingen van uw browser inschakelen.");
 });
 
 //---------------Overlay--------------------
@@ -338,12 +338,12 @@ var sportIcon = L.icon({ //sportcomplex - sportverblijf - sportweide - uitleendi
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-// var documentatiecentrumIcon = L.icon({
-//   iconUrl: 'images/icon_documentatiecentrum.png',
-//   iconSize: [38, 50],
-//   iconAnchor: [20, 40],
-//   popupAnchor: [0, -40]
-// });
+var documentatiecentrumIcon = L.icon({
+  iconUrl: 'images/icon_documentatie.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 var hondenweideIcon = L.icon({
   iconUrl: 'images/icon_hond.png',
   iconSize: [38, 50],
@@ -458,7 +458,7 @@ waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 // Cultuur & sportlocaties
-var documentatiecentrumMarker = L.marker([50.98630890987, 4.517129659652711], { icon: sportIcon }).addTo(map);
+var documentatiecentrumMarker = L.marker([50.98630890987, 4.517129659652711], { icon: documentatiecentrumIcon }).addTo(map);
 documentatiecentrumMarker.types = ['cultuur', 'documentatiecentrum'];
 var hondenweideMarker = L.marker([50.989371343719, 4.502254128456117], { icon: hondenweideIcon }).addTo(map);
 hondenweideMarker.types = ['cultuur', 'hondenweide'];
