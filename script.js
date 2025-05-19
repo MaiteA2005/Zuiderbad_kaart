@@ -404,8 +404,10 @@ zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 // Cultuur & sportlocaties
 
 // Toiletten
-var toiletMarker = L.marker([50.984454251754734, 4.5148720245430916], { icon: toiletIcon }).addTo(map);
-toiletMarker.type = 'toilet';
+var toilet1Marker = L.marker([50.985454343982965, 4.5159788914792385], { icon: toiletIcon }).addTo(map);
+toilet1Marker.type = 'toilet';
+var toilet2Marker = L.marker([50.982655090237145, 4.510526353483929], { icon: toiletIcon }).addTo(map);
+toilet2Marker.type = 'toilet';
 //Openbare douches
 var doucheMarker = L.marker([50.985099592014066, 4.515268206596375], { icon: doucheIcon }).addTo(map);
 doucheMarker.type = 'douche';
@@ -420,7 +422,7 @@ var allMarkers = [
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
   basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, zensportplatformMarker,
-  doucheMarker, toiletMarker, kleedkamers1Marker, kleedkamers2Marker
+  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker
 ];
 
 // ------------------- Filterfunctie -------------------
