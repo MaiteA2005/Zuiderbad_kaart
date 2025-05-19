@@ -139,6 +139,44 @@ Array.from(overlay.children).forEach((child) => {
   });
 });
 
+// Selecteer knoppen
+const horecaBtn = document.getElementById('filterHoreca');
+const eventlocatiesBtn = document.getElementById('filterEventlocaties');
+const parkingBtn = document.getElementById('filterParking');
+const meerBtn = document.getElementById('open-custom-overlay');
+
+// Selecteer overlay containers
+const horecaMenu = document.getElementById('horeca-menu');
+const eventlocatiesMenu = document.getElementById('eventlocaties-menu');
+const parkingsMenu = document.getElementById('parkings-menu');
+
+// Helperfunctie om alle overlays te sluiten
+function sluitAlleMenus() {
+  horecaMenu.classList.add('hidden');
+  eventlocatiesMenu.classList.add('hidden');
+  parkingsMenu.classList.add('hidden');
+}
+
+// Event listeners
+horecaBtn.addEventListener('click', () => {
+  sluitAlleMenus();
+  horecaMenu.classList.remove('hidden');
+});
+
+eventlocatiesBtn.addEventListener('click', () => {
+  sluitAlleMenus();
+  eventlocatiesMenu.classList.remove('hidden');
+});
+
+parkingBtn.addEventListener('click', () => {
+  sluitAlleMenus();
+  parkingsMenu.classList.remove('hidden');
+});
+
+meerBtn.addEventListener('click', () => {
+  sluitAlleMenus(); // sluit alle als je op 'Meer' klikt
+});
+
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
 const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit
 const submenuActiviteiten = document.getElementById('activiteiten-submenu'); // Dit is het submenu ('activiteiten & sport') dat je wilt openen/sluiten

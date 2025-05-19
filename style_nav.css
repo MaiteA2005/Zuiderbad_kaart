@@ -210,3 +210,57 @@ nav button p {
   cursor: pointer;
   color: var(--rood);
 }
+
+
+.overlay-menu {
+  position: fixed;
+  bottom: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fef1e7;
+  border-radius: 15px;
+  padding: 1em;
+  width: 450px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overlay-menu.hidden {
+  display: none;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #631f1f;
+  margin-bottom: 0.1em;
+}
+
+.overlay-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-menu ul li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #d3bfbf;
+  cursor: pointer;
+  color: #4a2b2b;
+}
+
+.overlay-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #631f1f;
+}
