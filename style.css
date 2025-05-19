@@ -62,6 +62,15 @@ button {
   height: 35px;
 }
 
+#reset-map{
+  background-color: var(--orange);
+  color: var(--beige);
+  padding: 0em 1em;
+  border-radius: 10px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
 /*-----------map-----------*/
 
 #map {
