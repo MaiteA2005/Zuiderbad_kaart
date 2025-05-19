@@ -51,14 +51,14 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  margin: 0 4em;
+  margin: 0 3em;
 }
 
 .answer.open {
   max-height: 500px;
   border: var(--rood) solid 4px;
   border-radius: 10px;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 
