@@ -100,7 +100,7 @@
   bottom: 0;
   left: 0;
   width: 100vh;
-  height: 32vh;
+  height: 15vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 500; /* lager dan je nav, hoger dan je kaart */
 }
@@ -154,7 +154,7 @@
 
 #text_tutorial1 {
   position: absolute;
-  top: 5vh;     
+  top: 4vh;     
   left: 7vw;
   text-align: center;
   color: var(--rood);
