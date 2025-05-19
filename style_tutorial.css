@@ -89,8 +89,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 26%;
+  width: 100vh;
+  height: 26vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
@@ -99,8 +99,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 32%;
+  width: 100vh;
+  height: 32vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 500; /* lager dan je nav, hoger dan je kaart */
 }
@@ -109,8 +109,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
@@ -154,11 +154,11 @@
 
 #text_tutorial1 {
   position: absolute;
-  top: 4vh;     
+  top: 5vh;     
   left: 7vw;
   text-align: center;
   color: var(--rood);
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.4;
   z-index: 2001;
   max-width: 200px;
