@@ -91,7 +91,7 @@
   left: 0;
   width: 100vh;
   height: 26vh;
-  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
+  background: rgba(10, 9, 9, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
 
@@ -214,8 +214,8 @@
 
 #arrow_tutorial2{
   position: fixed;
-  top: 120px;
-  right: 40px;
+  top: 18vh;
+  right: 5vh;
   z-index: 2000;
 }
 
