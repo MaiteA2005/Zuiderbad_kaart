@@ -76,8 +76,8 @@ nav button {
 }
 
 nav button img {
-  width: 60px; /* of jouw gewenste grootte */
-  height: auto;
+  width: 45px; /* of jouw gewenste grootte */
+  height: 45px;
   margin-bottom: 5px; /* ruimte tussen img en p */
 }
 
@@ -131,7 +131,7 @@ nav button p {
 }
 
 #open-custom-overlay p{
-    font-family: 'Poppins';
+    font-family: 'poppins', sans-serif;
 }
 
 .link_arrow{

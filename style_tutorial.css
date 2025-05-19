@@ -89,9 +89,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 26%;
-  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
+  width: 100vh;
+  height: 26vh;
+  background: rgba(10, 9, 9, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
 
@@ -99,8 +99,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 32%;
+  width: 100vh;
+  height: 15vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 500; /* lager dan je nav, hoger dan je kaart */
 }
@@ -109,8 +109,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
@@ -127,39 +127,38 @@
 
 /*---------stap 1---------*/
 
-#sun_tutorial1{
+#sun_tutorial1 {
   position: fixed;
-  top: 40px;
-  left: 20px;
+  top: 4vh;     /* 8% van de hoogte van het scherm */
+  left: 10vw;    /* 2% van de breedte van het scherm */
   z-index: 2000;
 }
 
-#sun_tutorial1 img{
-  height: 150px;
+#sun_tutorial1 img {
+  height: 20vh; /* schaalbaar met schermhoogte */
   width: auto;
 }
 
 #text_ballon1 {
   position: fixed;
-  top: 80px;
-  left: 150px;
+  top: 6vh;
+  left: 38vw;
   z-index: 2000;
 }
 
 #text_ballon1 img {
-  height: 130px;
+  height: 18vh;
   width: auto;
   display: block;
 }
 
 #text_tutorial1 {
   position: absolute;
+  top: 4vh;     
+  left: 7vw;
   text-align: center;
-  top: 33px; 
-  left: 25px;
-  right: 0px;
   color: var(--rood);
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.4;
   z-index: 2001;
   max-width: 200px;
@@ -168,6 +167,7 @@
 #text_tutorial1 p {
   margin: 0;
 }
+
 
 /*---------stap 2---------*/
 #sun_tutorial2{
@@ -214,8 +214,8 @@
 
 #arrow_tutorial2{
   position: fixed;
-  top: 120px;
-  right: 40px;
+  top: 20vh;
+  right: 5vh;
   z-index: 2000;
 }
 
@@ -256,8 +256,8 @@
 
 #sun_tutorial4{
   position: fixed;
-  bottom: 300px;
-  left: 180px;
+  top: 15vh;
+  right: 8vh;
   z-index: 2000;
 }
 
@@ -268,13 +268,13 @@
 
 #text_ballon4 {
   position: fixed;
-  top: 200px;
-  left: 100px;
+  top: 2vh;
+  left: 10vh;
   z-index: 2000;
 }
 
 #text_ballon4 img {
-  height: 180px;
+  height: 190px;
   width: auto;
   display: block;
 }
@@ -311,8 +311,8 @@
 /*---------stap 5---------*/
 #sun_tutorial5{
   position: fixed;
-  bottom: 300px;
-  left: 150px;
+  bottom: 40vh;
+  right: 12vh;
   z-index: 2000;
 }
 
@@ -322,7 +322,7 @@
 }
 #text_ballon5 {
   position: fixed;
-  top: 200px;
+  top: 16vh;
   left: 80px;
   z-index: 2000;
 }
@@ -380,8 +380,8 @@
 
 #sun_tutorial6{
   position: fixed;
-  top: 190px;
-  right: 100px;
+  top: 23vh;
+  right: 10vh;
   z-index: 2000;
 }
 
@@ -392,8 +392,8 @@
 
 #text_ballon6 {
   position: fixed;
-  top: 10%;
-  left: 25%;
+  top: 8vh;
+  left: 5vh;
   z-index: 2000;
 }
 
@@ -421,8 +421,8 @@
 }
 
 #arrow_tutorial6{
-  position: fixed;
-  top: 380px;
+  position: absolute;
+  bottom: 35vh;
   right: 250px;
   z-index: 2000;
 }
@@ -445,10 +445,10 @@
 }
 
 #icon_tutorial6{
-  position: fixed;
+  position: absolute;
   z-index: 2000;
-  bottom: 350px;
-  right: 180px;
+  bottom: 25vh;
+  right: 25vh;
 
 }
 
@@ -553,12 +553,12 @@
 
 .btn_kaart {
   position: fixed;
-  bottom: 200px;
+  bottom: 20vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2000;
   background: var(--orange);
-  padding: 15px 20px;
+  padding: 15px 24px;
   border-radius: 30px;
   font-size: 1.2em;
   text-decoration: none;
