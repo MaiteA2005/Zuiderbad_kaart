@@ -392,8 +392,8 @@
 
 #text_ballon6 {
   position: fixed;
-  top: 100px;
-  left: 60px;
+  top: 10%;
+  left: 25%;
   z-index: 2000;
 }
 
@@ -422,8 +422,8 @@
 
 #arrow_tutorial6{
   position: fixed;
-  top: 360px;
-  left: 180px;
+  top: 380px;
+  right: 250px;
   z-index: 2000;
 }
 
@@ -481,8 +481,8 @@
 
 #sun_tutorial7{
   position: fixed;
-  bottom: 370px;
-  left: 150px;
+  top: 35%;
+  left: 32%;
   z-index: 2000;
 }
 
@@ -524,8 +524,8 @@
 
 #text_ballon8 {
   position: fixed;
-  top: 130px;
-  left: 100px;
+  top: 12%;
+  left: 25%;
   z-index: 2000;
 }
 
