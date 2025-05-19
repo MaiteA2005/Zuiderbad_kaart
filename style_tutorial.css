@@ -127,39 +127,38 @@
 
 /*---------stap 1---------*/
 
-#sun_tutorial1{
+#sun_tutorial1 {
   position: fixed;
-  top: 40px;
-  left: 20px;
+  top: 4vh;     /* 8% van de hoogte van het scherm */
+  left: 10vw;    /* 2% van de breedte van het scherm */
   z-index: 2000;
 }
 
-#sun_tutorial1 img{
-  height: 150px;
+#sun_tutorial1 img {
+  height: 20vh; /* schaalbaar met schermhoogte */
   width: auto;
 }
 
 #text_ballon1 {
   position: fixed;
-  top: 80px;
-  left: 150px;
+  top: 6vh;
+  left: 38vw;
   z-index: 2000;
 }
 
 #text_ballon1 img {
-  height: 130px;
+  height: 18vh;
   width: auto;
   display: block;
 }
 
 #text_tutorial1 {
   position: absolute;
+  top: 4vh;     
+  left: 7vw;
   text-align: center;
-  top: 33px; 
-  left: 25px;
-  right: 0px;
   color: var(--rood);
-  font-size: 14px;
+  font-size: 1.2rem;
   line-height: 1.4;
   z-index: 2001;
   max-width: 200px;
@@ -168,6 +167,7 @@
 #text_tutorial1 p {
   margin: 0;
 }
+
 
 /*---------stap 2---------*/
 #sun_tutorial2{
