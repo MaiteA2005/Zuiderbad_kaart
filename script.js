@@ -16,6 +16,27 @@ var map = L.map('map', {
   zoomControl: false       // Stel de maximale grenzen in
 });
 
+//---------------Onze kaart + wandelpaden/looproutes--------------------
+  var imageUrl = 'images/kaart.svg';
+  var alleWandelroutes_kaart = 'images/alleWandelroutes_kaart.svg';
+  var domeinpad_kaart = 'images/domeinpad_kaart.svg';
+  var historischpad_kaart = 'images/historischpad_kaart.svg';
+  var ijsvogelpad_kaart = 'images/ijsvogelpad_kaart.svg';
+  var looproute3_kaart = 'images/looproute(3,2)_kaart.svg';
+  var looproute4_kaart = 'images/looproute(4,5)_kaart.svg';
+  var looproute5_kaart = 'images/looproute(5)_kaart.svg';
+  var MBTroute_kaart = 'images/MTBroute_kaart.svg';
+  var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+  // Voeg een CSS-klasse toe om de afbeelding te draaien
+  imageOverlay.getElement().classList.add('leaflet-rotated');
+
+//---------------Markers--------------------
+  // Voeg markers toe voor de hoeken
+  // L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
+  // L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
+  // L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
+  // L.marker([50.978074609081055, 4.508256912231446]).addTo(map).bindPopup('Linkeronderhoek');
 
 //---------------Knoppen reset en zoemen--------------------
 document.getElementById('reset-map').addEventListener('click', function() {
@@ -25,6 +46,7 @@ document.getElementById('reset-map').addEventListener('click', function() {
       map.addLayer(marker); //toon deze markers^
     }
   });
+  imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map); //reset de kaart
 });
 document.getElementById('zoom-in').addEventListener('click', function() {
   map.zoomIn();
@@ -64,27 +86,6 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
-//---------------Onze kaart + wandelpaden/looproutes--------------------
-  var imageUrl = 'images/kaart.svg';
-  var domeinpad_kaart = 'images/domeinpad_kaart.svg';
-  var historischpad_kaart = 'images/historischpad_kaart.svg';
-  var ijsvogelpad_kaart = 'images/ijsvogelpad_kaart.svg';
-  var looproute3_kaart = 'images/looproute(3,2)_kaart.svg';
-  var looproute4_kaart = 'images/looproute(4,5)_kaart.svg';
-  var looproute5_kaart = 'images/looproute(5)_kaart.svg';
-  var MBTroute_kaart = 'images/MTBroute_kaart.svg';
-  var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
-
-  // Voeg een CSS-klasse toe om de afbeelding te draaien
-  imageOverlay.getElement().classList.add('leaflet-rotated');
-
-//---------------Markers--------------------
-  // Voeg markers toe voor de hoeken
-  // L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
-  // L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
-  // L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
-  // L.marker([50.978074609081055, 4.508256912231446]).addTo(map).bindPopup('Linkeronderhoek');
 
 //---------------Coordinaten zoeken--------------------
 // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
@@ -410,9 +411,6 @@ var waterpretparkMarker = L.marker([50.98346581850775, 4.512130022048951], { ico
 waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
-
-//Wandelroutes
-
 // Cultuur & sportlocaties
 var hondenweideMarker = L.marker([50.989371343719, 4.502254128456117], { icon: hondenweideIcon }).addTo(map);
 hondenweideMarker.types = ['cultuur', 'hondenweide'];
@@ -429,14 +427,24 @@ var kleedkamers1Marker = L.marker([50.98632156606132, 4.5161622835904955], { ico
 kleedkamers1Marker.type = 'kleedkamers';
 var kleedkamers2Marker = L.marker([50.984185859372815, 4.506065830925175], { icon: kleedkamersIcon }).addTo(map);
 kleedkamers2Marker.type = 'kleedkamers';
+var EHBOMarker = L.marker([50.98512996684507, 4.515520334243775], { icon: EHBOIcon }).addTo(map);
+EHBOMarker.type = 'EHBO';
 // Alle markers opslaan
 var allMarkers = [
-  parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
-  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
+  //Horeca
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
+  //Eventlocaties
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
+  //Parking
+  parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
+  //Activiteiten & sport
   basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
-  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker,
-  hondenweideMarker
+  //Wandelroutes?
+  //Cultuur & sportlocaties
+  hondenweideMarker, 
+  //Sanitair
+  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
+  
 ];
 
 // ------------------- Filterfunctie -------------------
@@ -454,6 +462,13 @@ function toggleMarkersByType(type) {
 function showPin(id, type) {
   document.getElementById(id).addEventListener('click', () => {
     toggleMarkersByType(type);
+    overlay.classList.remove('active'); //het hoofmenu wordt gesloten
+  });
+}
+// ------------------- Toggle functie voor wandelroutes -------------------
+function showWandelroute(id, kaart) {
+  document.getElementById(id).addEventListener('click', () => {
+    imageOverlay = L.imageOverlay(kaart, imageBounds).addTo(map);
     overlay.classList.remove('active'); //het hoofmenu wordt gesloten
   });
 }
@@ -483,6 +498,11 @@ document.getElementById('filterKleedkamers').addEventListener('click', function(
   toggleMarkersByType('kleedkamers');
   overlay.classList.remove('active');
 });
+//
+document.getElementById('filterEHBO').addEventListener('click', function() {
+  toggleMarkersByType('EHBO');
+  overlay.classList.remove('active');
+});
 //Activiteiten & sport
 document.getElementById('alleActiviteiten').addEventListener('click', function() {
   toggleMarkersByType('activiteit');
@@ -504,7 +524,13 @@ showPin('voetbalveldActiviteit', 'voetbalveld');
 showPin('waterpretparkActiviteit', 'waterpretpark');
 showPin('zensportplatformActiviteit', 'zensportplatform');
 //Wandelroutes
-
+showWandelroute('alleWandelroutes', alleWandelroutes_kaart);
+showWandelroute('domeinpadWandelroute', domeinpad_kaart);
+showWandelroute('historischpadWandelroute', historischpad_kaart);
+showWandelroute('ijsvogelpadWandelroute', ijsvogelpad_kaart);
+showWandelroute('loop3Wandelroute', looproute3_kaart);
+showWandelroute('loop4Wandelroute', looproute4_kaart);
+showWandelroute('loop5Wandelroute', looproute5_kaart);
 //Cultuur & sportlocaties
 document.getElementById('alleCultuur').addEventListener('click', function() {
   toggleMarkersByType('cultuur');
