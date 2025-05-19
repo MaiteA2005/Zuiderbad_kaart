@@ -64,12 +64,18 @@ updateZoomButtons();
 
 //---------------Echter streetview--------------------
   // Voeg de OpenStreetMap tegellaag toe
-  /*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);*/
+  }).addTo(map);
 
-//---------------Onze kaart--------------------
-  var imageUrl = 'images/kaart.svg';  
+//---------------Onze kaart + wandelpaden/looproutes--------------------
+  var imageUrl = 'images/kaart.svg';
+  var domeinpad_kaart = 'images/domeinpad_kaart.svg';
+  var historischpad_kaart = 'images/historischpad_kaart.svg';
+  var ijsvogelpad_kaart = 'images/ijsvogelpad_kaart.svg';
+  var looproute3_kaart = 'images/looproute(3,2)_kaart.svg';
+  var looproute4_kaart = 'images/looproute(4,5)_kaart.svg';
+  var looproute5_kaart = 'images/looproute(5)_kaart.svg';
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
   // Voeg een CSS-klasse toe om de afbeelding te draaien
@@ -77,16 +83,13 @@ updateZoomButtons();
 
 //---------------Markers--------------------
   // Voeg markers toe voor de hoeken
-  /*L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
-  L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
-  L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
-  L.marker([50.978074609081055, 4.508256912231446]).addTo(map).bindPopup('Linkeronderhoek');*/
-
-  // Voeg een rechthoek toe om de grenzen aan te geven
-  //L.polygon(imageBounds, {color: "red", weight: 1}).addTo(map);
+  // L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
+  // L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
+  // L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
+  // L.marker([50.978074609081055, 4.508256912231446]).addTo(map).bindPopup('Linkeronderhoek');
 
 //---------------Coordinaten zoeken--------------------
-  // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
+// Voeg een klikgebeurtenis toe om de coördinaten weer te geven
   map.on('click', function(e) {
     var coord = e.latlng;
     var lat = coord.lat;
@@ -94,8 +97,7 @@ updateZoomButtons();
     alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
   });
 
-  //---------------Locatie van de gebruiker--------------------
-
+//---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
 map.locate({ setView: true, maxZoom: 16 });  // Stel de kaart in om de locatie van de gebruiker te tonen met een maximum zoomniveau van 16
 
@@ -268,7 +270,12 @@ var speeltuinIcon = L.icon({ //Megaspeeltuin - Piratenspeeltuin
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-  //MTBroute
+var MTBIcon = L.icon({
+  iconUrl: 'images/icon_MTB.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 var muurklimmenIcon = L.icon({
   iconUrl: 'images/icon_klimmuur.png',
   iconSize: [38, 50],
@@ -333,6 +340,12 @@ var zeilclubIcon = L.icon({
 //Wandelroutes
 var wandelIcon = L.icon({
   iconUrl: 'images/icon_wandelen.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var EHBOIcon = L.icon({
+  iconUrl: 'images/icon_EHBO.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
@@ -443,14 +456,6 @@ function showPin(id, type) {
     overlay.classList.remove('active'); //het hoofmenu wordt gesloten
   });
 }
-
-// Object om bij te houden welke types zichtbaar zijn
-var visibilityStatus = {
-  parking: true,
-  toilet: true,
-  activiteit: true
-};
-
 // ------------------- Knoppen koppelen -------------------
 //Horeca
 document.getElementById('filterHoreca').addEventListener('click', function() {
@@ -488,7 +493,7 @@ showPin('boogschietActiviteit', 'boogschieten');
 showPin('finsePisteActiviteit', 'finsePiste');
 showPin('hoogtouwparcoursActiviteit', 'hoogtouwenparcours');
 showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
-//MTB?
+//showPin('MTBActiviteit', '')
 showPin('muurklimActiviteit', 'muurklimmen');
 showPin('openwaterzwemmenActiviteit', 'openwaterzwemmen');
 showPin('pinpongActiviteit', 'pingpong');
