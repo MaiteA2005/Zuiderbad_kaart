@@ -256,8 +256,8 @@
 
 #sun_tutorial4{
   position: fixed;
-  bottom: 300px;
-  left: 180px;
+  top: 15vh;
+  right: 12vh;
   z-index: 2000;
 }
 
@@ -268,13 +268,13 @@
 
 #text_ballon4 {
   position: fixed;
-  top: 200px;
-  left: 100px;
+  top: 2vh;
+  left: 12vh;
   z-index: 2000;
 }
 
 #text_ballon4 img {
-  height: 180px;
+  height: 190px;
   width: auto;
   display: block;
 }
