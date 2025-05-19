@@ -73,9 +73,9 @@
 }
 
 #sun_hulp_img{
-    height: 250px;
+    height: 200px;
     width: auto;
-    margin: 3em 1em;
+    margin: 1em 1em;
 }
 
 .ehbo_kaart {
@@ -98,7 +98,7 @@
 }
 
 #nood_note{
-    margin-top: 20%;
+    margin-top: 10vh;
     font-size: 1.2em;
 }
 
