@@ -1,23 +1,23 @@
-// De coördinaten van de hoeken van de afbeelding (nu in decimale coördinaten)
+//De coördinaten van de hoeken van de afbeelding (nu in decimale coördinaten)
 var imageBounds = [
-    [50.98717954450199, 4.495553970336915],  // Linkerbovenhoek
-    [50.995580437743314, 4.517011642456056], // Rechterbovenhoek
-    [50.9886383295914, 4.529027938842774],   // Rechteronderhoek
-    [50.978074609081055, 4.508256912231446]  // Linkeronderhoek
-  ];
+  [50.98717954450199, 4.495553970336915],  // Linkerbovenhoek
+  [50.995580437743314, 4.517011642456056], // Rechterbovenhoek
+  [50.9886383295914, 4.529027938842774],   // Rechteronderhoek
+  [50.978074609081055, 4.508256912231446]  // Linkeronderhoek
+];
 
-  // Maak de kaart en stel het initiële zoomniveau in
-  var map = L.map('map', {
-    center: [50.9875, 4.5147],  // Dit is ongeveer het midden van de afbeelding
-    zoom: 14,                   // Beginzoomniveau
-    minZoom: 14,                // Minimum zoomniveau
-    maxZoom: 20,                // Maximum zoomniveau
-    maxBounds: imageBounds,
-    zoomControl: false       // Stel de maximale grenzen in
-  });
+//Maak de kaart en stel het initiële zoomniveau in
+var map = L.map('map', {
+  center: [50.9875, 4.5147],  // Dit is ongeveer het midden van de afbeelding
+  zoom: 14,                   // Beginzoomniveau
+  minZoom: 14,                // Minimum zoomniveau
+  maxZoom: 20,                // Maximum zoomniveau
+  maxBounds: imageBounds,
+  zoomControl: false       // Stel de maximale grenzen in
+});
 
 
-  //---------------Knoppen reset en zoemen--------------------
+//---------------Knoppen reset en zoemen--------------------
 document.getElementById('reset-map').addEventListener('click', function() {
   map.setView([50.9875, 4.5147], 14);
   allMarkers.forEach(marker => {
@@ -34,19 +34,19 @@ document.getElementById('zoom-out').addEventListener('click', function() {
   map.zoomOut();
 });
 
-// Functie om de zichtbaarheid van de zoomknoppen te beheren
+//Functie om de zichtbaarheid van de zoomknoppen te beheren
 function updateZoomButtons() {
   const zoomInButton = document.getElementById('zoom-in');
   const zoomOutButton = document.getElementById('zoom-out');
 
-  // Controleer of inzoomen mogelijk is
+  //Controleer of inzoomen mogelijk is
   if (map.getZoom() < map.getMaxZoom()) {
     zoomInButton.style.display = 'block'; // Toon de knop voor inzoomen
   } else {
     zoomInButton.style.display = 'none'; // Verberg de knop voor inzoomen
   }
 
-  // Controleer of uitzoomen mogelijk is
+  //Controleer of uitzoomen mogelijk is
   if (map.getZoom() > map.getMinZoom()) {
     zoomOutButton.style.display = 'block'; // Toon de knop voor uitzoomen
   } else {
@@ -54,16 +54,13 @@ function updateZoomButtons() {
   }
 }
 
-// Call de functie elke keer dat de zoom verandert
+//Call de functie elke keer dat de zoom verandert
 map.on('zoomend', function() {
   updateZoomButtons();
 });
+updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
-// Initieel de zichtbaarheid van de knoppen bij pagina laden
-updateZoomButtons();
-
-//---------------Echter streetview--------------------
-  // Voeg de OpenStreetMap tegellaag toe
+//---------------Echte streetview--------------------
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
@@ -76,6 +73,7 @@ updateZoomButtons();
   var looproute3_kaart = 'images/looproute(3,2)_kaart.svg';
   var looproute4_kaart = 'images/looproute(4,5)_kaart.svg';
   var looproute5_kaart = 'images/looproute(5)_kaart.svg';
+  var MBTroute_kaart = 'images/MTBroute_kaart.svg';
   var imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
   // Voeg een CSS-klasse toe om de afbeelding te draaien
@@ -306,12 +304,12 @@ var voetbalveldIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-// var waterpretparkIcon = L.icon({
-//   iconUrl: 'images/icon_waterpretpark.png',
-//   iconSize: [38, 50],
-//   iconAnchor: [20, 40],
-//   popupAnchor: [0, -40]
-// });
+var waterpretparkIcon = L.icon({
+  iconUrl: 'images/icon_waterpark.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 var zensportplatformIcon = L.icon({
   iconUrl: 'images/icon_zensportplatform.png',
   iconSize: [38, 50],
@@ -408,14 +406,16 @@ var skaterampMarker = L.marker([50.98329448033371, 4.506408870220185], { icon: s
 skaterampMarker.types = ['activiteit', 'skateramp'];
 var voetbalveldMarker = L.marker([50.9841065666959, 4.505711495876313], { icon: voetbalveldIcon }).addTo(map);
 voetbalveldMarker.types = ['activiteit', 'voetbalveld'];
-//waterpretparkMarker
+var waterpretparkMarker = L.marker([50.98346581850775, 4.512130022048951], { icon: waterpretparkIcon }).addTo(map);
+waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 
 //Wandelroutes
 
 // Cultuur & sportlocaties
-
+var hondenweideMarker = L.marker([50.989371343719, 4.502254128456117], { icon: hondenweideIcon }).addTo(map);
+hondenweideMarker.types = ['cultuur', 'hondenweide'];
 // Toiletten
 var toilet1Marker = L.marker([50.985454343982965, 4.5159788914792385], { icon: toiletIcon }).addTo(map);
 toilet1Marker.type = 'toilet';
@@ -434,8 +434,9 @@ var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
-  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, zensportplatformMarker,
-  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker
+  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
+  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker,
+  hondenweideMarker
 ];
 
 // ------------------- Filterfunctie -------------------
@@ -500,5 +501,14 @@ showPin('pinpongActiviteit', 'pingpong');
 showPin('piratenspeeltuinActiviteit', 'piratenspeeltuin');
 showPin('skaterampActiviteit', 'skateramp');
 showPin('voetbalveldActiviteit', 'voetbalveld');
-//Waterpretpark(?)
+showPin('waterpretparkActiviteit', 'waterpretpark');
 showPin('zensportplatformActiviteit', 'zensportplatform');
+//Wandelroutes
+
+//Cultuur & sportlocaties
+document.getElementById('alleCultuur').addEventListener('click', function() {
+  toggleMarkersByType('cultuur');
+  //submenuCultuur.classList.remove('active'); --> het submenu 'cultuur en sportlocaties' blijft actief
+  overlay.classList.remove('active');
+});
+showPin('hondenweideCultuur', 'hondenweide');
