@@ -46,12 +46,14 @@ document.getElementById('reset-map').addEventListener('click', function() {
       map.addLayer(marker); //toon deze markers^
     }
   });
+  if (map.hasLayer(imageOverlay)) {
+    map.removeLayer(imageOverlay);
+  } 
   imageOverlay = L.imageOverlay(imageUrl, imageBounds).addTo(map); //reset de kaart
 });
 document.getElementById('zoom-in').addEventListener('click', function() {
   map.zoomIn();
 });
-
 document.getElementById('zoom-out').addEventListener('click', function() {
   map.zoomOut();
 });
@@ -439,18 +441,15 @@ var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   //Activiteiten & sport
   basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
-  //Wandelroutes?
   //Cultuur & sportlocaties
   hondenweideMarker, 
   //Sanitair
   doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
-  
 ];
-
 // ------------------- Filterfunctie -------------------
 function toggleMarkersByType(type) {
   allMarkers.forEach(marker => {
-    const markerTypes = marker.types || [marker.type]; // Zorg dat je altijd een array hebt
+    const markerTypes = marker.types || [marker.type];
     if (markerTypes.includes(type)) {
       map.addLayer(marker);    // Toon marker
     } else {
@@ -486,35 +485,18 @@ document.getElementById('filterParking').addEventListener('click', function() {
   toggleMarkersByType('parking');
 });
 //Sanitair
-document.getElementById('filterToiletten').addEventListener('click', function() {
-  toggleMarkersByType('toilet');
-  overlay.classList.remove('active');
-});
-document.getElementById('filterDouche').addEventListener('click', function() {
-  toggleMarkersByType('douche');
-  overlay.classList.remove('active');
-});
-document.getElementById('filterKleedkamers').addEventListener('click', function() {
-  toggleMarkersByType('kleedkamers');
-  overlay.classList.remove('active');
-});
-//
-document.getElementById('filterEHBO').addEventListener('click', function() {
-  toggleMarkersByType('EHBO');
-  overlay.classList.remove('active');
-});
+showPin('filterToiletten', 'toilet');
+showPin('filterDouche', 'douche');
+showPin('filterKleedkamers', 'kleedkamers');
+showPin('filterEHBO', 'EHBO');
 //Activiteiten & sport
-document.getElementById('alleActiviteiten').addEventListener('click', function() {
-  toggleMarkersByType('activiteit');
-  //submenuActiviteiten.classList.remove('active'); --> het submenu 'activiteiten en sport' blijft actief
-  overlay.classList.remove('active');
-});
+showPin('alleActiviteiten', 'activiteit'); //alle activiteiten
 showPin('basketActiviteit', 'basketVoetbal');
 showPin('boogschietActiviteit', 'boogschieten');
 showPin('finsePisteActiviteit', 'finsePiste');
 showPin('hoogtouwparcoursActiviteit', 'hoogtouwenparcours');
 showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
-//showPin('MTBActiviteit', '')
+showWandelroute('MTBActiviteit', MBTroute_kaart);
 showPin('muurklimActiviteit', 'muurklimmen');
 showPin('openwaterzwemmenActiviteit', 'openwaterzwemmen');
 showPin('pinpongActiviteit', 'pingpong');
