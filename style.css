@@ -8,11 +8,26 @@
   --lichtroze: #DEACAA;
 }
 
+@font-face {
+  font-family: 'GG Sans 2';
+  src: url('fonts/GGSans2.ttf') format('truetype'); /* pas bestandsnaam aan als nodig */
+}
+
+@font-face {
+  font-family: 'Mono and Friends DO';
+  src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chunky Monkey';
+  src: url('fonts/ChunkyMonkey.otf') format('opentype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
