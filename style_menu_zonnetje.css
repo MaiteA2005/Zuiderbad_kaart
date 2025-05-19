@@ -12,14 +12,14 @@
   content: ''; /* Zorgt ervoor dat er een lijn komt */
   position: absolute;
   bottom: 0;
-  left: 5em; 
-  width: calc(100% - 10em); /* Zorgt ervoor dat de lijn niet helemaal van links naar rechts komt */
+  left: 3em; 
+  width: calc(100% - 6em); /* Zorgt ervoor dat de lijn niet helemaal van links naar rechts komt */
   height: 2px;
   background-color: var(--orange);
 }
 
 .question {
-  margin: 1em 5em;
+  margin: 1em 3em;
   cursor: pointer;
   font-weight: bold;
   display: flex;
