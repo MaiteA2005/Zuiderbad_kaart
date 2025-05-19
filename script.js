@@ -201,6 +201,18 @@ var parkingIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
+var ingangIcon = L.icon({
+  iconUrl: 'images/icon_ingang.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+var betaalterminalIcon = L.icon({
+  iconUrl: 'images/icon_betaalautomaat.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 //Eventlocaties
 var eventIcon = L.icon({
   iconUrl: 'images/icon_event.png',
@@ -320,25 +332,37 @@ var zensportplatformIcon = L.icon({
   popupAnchor: [0, -40]
 });
 //Cutuur & sportlocaties
-  //Documentatiecentrum Sport Vlaanderen
+var sportIcon = L.icon({ //sportcomplex - sportverblijf - sportweide - uitleendienst
+  iconUrl: 'images/icon_sport.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+// var documentatiecentrumIcon = L.icon({
+//   iconUrl: 'images/icon_documentatiecentrum.png',
+//   iconSize: [38, 50],
+//   iconAnchor: [20, 40],
+//   popupAnchor: [0, -40]
+// });
 var hondenweideIcon = L.icon({
   iconUrl: 'images/icon_hond.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-  //sportcomplex
-  //sportverblijf
-  //sportweide
-  //Survivalkamp
-  //Uitleendienst Sport Vlaanderen
+var survivalIcon = L.icon({
+  iconUrl: 'images/icon_survivalkamp.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 var zeilclubIcon = L.icon({
   iconUrl: 'images/icon_zeilen.png',
   iconSize: [38, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
-//Wandelroutes
+//
 var wandelIcon = L.icon({
   iconUrl: 'images/icon_wandelen.png',
   iconSize: [38, 50],
@@ -377,14 +401,35 @@ eventMarkerOudVoetbalveld.types = ['event'];
 //Parkeermarkers
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.types = ['parking'];
+var ingangMarkerA = L.marker([50.987912566298824, 4.497474431991578], { icon: ingangIcon }).addTo(map);
+ingangMarkerA.types = ['parking'];
 var parkingMarkerB = L.marker([50.98412, 4.50338], { icon: parkingIcon }).addTo(map);
 parkingMarkerB.types = ['parking'];
+var ingangMarkerB = L.marker([50.98388038152604, 4.503541588783265], { icon: ingangIcon }).addTo(map);
+ingangMarkerB.types = ['parking'];
 var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
 parkingMarkerE.types = ['parking'];
+var ingangMarkerE = L.marker([50.985943748848975, 4.519549012184144], { icon: ingangIcon }).addTo(map);
+ingangMarkerE.types = ['parking'];
 var parkingMarkerD = L.marker([50.97957, 4.50878], { icon: parkingIcon }).addTo(map);
 parkingMarkerD.types = ['parking'];
+var ingangMarkerD = L.marker([50.979753653065636, 4.506293535232545], { icon: ingangIcon }).addTo(map);
+ingangMarkerD.types = ['parking'];
 var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.types = ['parking'];
+var ingangMarkerC = L.marker([50.982340417116006, 4.504458904266358], { icon: ingangIcon }).addTo(map);
+ingangMarkerC.types = ['parking'];
+//Betaalterminals
+var betaalterminalMarker1 = L.marker([50.98320842346658, 4.51439380645752], { icon: betaalterminalIcon }).addTo(map);
+betaalterminalMarker1.types = ['parking', 'betaalterminal'];
+var betaalterminalMarker2 = L.marker([50.9857715209928, 4.518867731094361], { icon: betaalterminalIcon }).addTo(map);
+betaalterminalMarker2.types = ['parking', 'betaalterminal'];
+var betaalterminalMarker3 = L.marker([50.98253330770319, 4.512966871261598], { icon: betaalterminalIcon }).addTo(map);
+betaalterminalMarker3.types = ['parking', 'betaalterminal'];
+var betaalterminalMarker4 = L.marker([50.979346365935555, 4.507120996713639], { icon: betaalterminalIcon }).addTo(map);
+betaalterminalMarker4.types = ['parking', 'betaalterminal'];
+var betaalterminalMarker5 = L.marker([50.98387019598249, 4.50366497039795], { icon: betaalterminalIcon }).addTo(map);
+betaalterminalMarker5.types = ['parking', 'betaalterminal'];
 //Activiteiten & sport
 var basketVoetbalMarker = L.marker([50.98238462833598, 4.506588578224183], { icon: basketbalIcon }).addTo(map);
 basketVoetbalMarker.types = ['activiteit', 'basketVoetbal'];
@@ -396,7 +441,6 @@ var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], 
 hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenparcours'];
 var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
 megaSpeeltuinMarker.types = ['activiteit', 'megaspeeltuin'];
-//MTBroute --> Bij wandelroutes zetten?
 var muurklimmenMarker = L.marker([50.98340925174416, 4.505848288536073], { icon: muurklimmenIcon }).addTo(map);
 muurklimmenMarker.types = ['activiteit', 'muurklimmen'];
 var openwaterzwemmenMarker = L.marker([50.984424278799814, 4.512274861335755], { icon: openwaterzwemmenIcon }).addTo(map);
@@ -414,8 +458,22 @@ waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 // Cultuur & sportlocaties
+var documentatiecentrumMarker = L.marker([50.98630890987, 4.517129659652711], { icon: sportIcon }).addTo(map);
+documentatiecentrumMarker.types = ['cultuur', 'documentatiecentrum'];
 var hondenweideMarker = L.marker([50.989371343719, 4.502254128456117], { icon: hondenweideIcon }).addTo(map);
 hondenweideMarker.types = ['cultuur', 'hondenweide'];
+var sportcomplexMarker = L.marker([50.98706159632641, 4.497211575508119], { icon: sportIcon }).addTo(map);
+sportcomplexMarker.types = ['cultuur', 'sportcomplex'];
+var sportverblijfMarker = L.marker([50.98383993387205, 4.505513012409211], { icon: sportIcon }).addTo(map);
+sportverblijfMarker.types = ['cultuur', 'sportverblijf'];
+var sportweideMarker = L.marker([50.98194033672298, 4.507720470428468], { icon: sportIcon }).addTo(map);
+sportweideMarker.types = ['cultuur', 'sportweide'];
+var survivalkampMarker = L.marker([50.98541062997392, 4.505188465118409], { icon: survivalIcon }).addTo(map);
+survivalkampMarker.types = ['cultuur', 'survivalkamp'];
+var uitleendienstMarker = L.marker([50.987301371188366, 4.5168399810791025], { icon: sportIcon }).addTo(map);
+uitleendienstMarker.types = ['cultuur', 'uitleendienst'];
+var zeilclubMarker = L.marker([50.98456104612578, 4.506390094757081], { icon: zeilclubIcon }).addTo(map);
+zeilclubMarker.types = ['cultuur', 'zeilclub'];
 // Toiletten
 var toilet1Marker = L.marker([50.985454343982965, 4.5159788914792385], { icon: toiletIcon }).addTo(map);
 toilet1Marker.type = 'toilet';
@@ -431,7 +489,7 @@ var kleedkamers2Marker = L.marker([50.984185859372815, 4.506065830925175], { ico
 kleedkamers2Marker.type = 'kleedkamers';
 var EHBOMarker = L.marker([50.98512996684507, 4.515520334243775], { icon: EHBOIcon }).addTo(map);
 EHBOMarker.type = 'EHBO';
-// Alle markers opslaan
+//Alle markers opslaan
 var allMarkers = [
   //Horeca
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
@@ -439,10 +497,12 @@ var allMarkers = [
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   //Parking
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
+  ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
+  betaalterminalMarker1, betaalterminalMarker2, betaalterminalMarker3, betaalterminalMarker4, betaalterminalMarker5,
   //Activiteiten & sport
   basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
   //Cultuur & sportlocaties
-  hondenweideMarker, 
+  documentatiecentrumMarker, hondenweideMarker, sportcomplexMarker, sportverblijfMarker, sportweideMarker, survivalkampMarker, uitleendienstMarker, zeilclubMarker,
   //Sanitair
   doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
 ];
@@ -519,4 +579,11 @@ document.getElementById('alleCultuur').addEventListener('click', function() {
   //submenuCultuur.classList.remove('active'); --> het submenu 'cultuur en sportlocaties' blijft actief
   overlay.classList.remove('active');
 });
+showPin('documentatiecentrumCultuur', 'documentatiecentrum');
 showPin('hondenweideCultuur', 'hondenweide');
+showPin('sportcomplexCultuur', 'sportcomplex');
+showPin('sportverblijfCultuur', 'sportverblijf');
+showPin('sportweideCultuur', 'sportweide');
+showPin('survivalkampCultuur', 'survivalkamp');
+showPin('uitleendienstCultuur', 'uitleendienst');
+showPin('zeilclubCultuur', 'zeilclub');
