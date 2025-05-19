@@ -376,7 +376,8 @@ var basketVoetbalMarker = L.marker([50.98238462833598, 4.506588578224183], { ico
 basketVoetbalMarker.types = ['activiteit', 'basketVoetbal'];
 var boogschietenMarker = L.marker([50.98328097641515, 4.506073594093324], { icon: boogschietenIcon }).addTo(map);
 boogschietenMarker.types = ['activiteit', 'boogschieten'];
-// Finse piste --> Bij wandelroutes zetten?
+var finsePistMarker = L.marker([50.98651911759529, 4.518476261767087], { icon: wandelIcon }).addTo(map);
+finsePistMarker.types = ['activiteit', 'finsePiste'];
 var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
 hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenparcours'];
 var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
@@ -418,7 +419,7 @@ var allMarkers = [
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
-  basketVoetbalMarker, boogschietenMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, zensportplatformMarker,
+  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, zensportplatformMarker,
   doucheMarker, toiletMarker, kleedkamers1Marker, kleedkamers2Marker
 ];
 
@@ -482,7 +483,7 @@ document.getElementById('alleActiviteiten').addEventListener('click', function()
 });
 showPin('basketActiviteit', 'basketVoetbal');
 showPin('boogschietActiviteit', 'boogschieten');
-//Finse piste?
+showPin('finsePisteActiviteit', 'finsePiste');
 showPin('hoogtouwparcoursActiviteit', 'hoogtouwenparcours');
 showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
 //MTB?
