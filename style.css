@@ -107,7 +107,7 @@ margin-left: 1em;
 }
 
 .sun_menu img{
-    height: 180px;
+    height: 120px;
     width: auto;
 }
 
@@ -151,13 +151,13 @@ margin-left: 1em;
 }
 
 .call{
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
 }
 
 .call_descr{
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 1.2rem;	
 }
 
