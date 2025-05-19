@@ -32,7 +32,7 @@ var map = L.map('map', {
   imageOverlay.getElement().classList.add('leaflet-rotated');
 
 //---------------Markers--------------------
-  // Voeg markers toe voor de hoeken
+  //Voeg markers toe voor de hoeken
   // L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
   // L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
   // L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
