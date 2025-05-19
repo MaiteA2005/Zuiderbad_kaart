@@ -311,8 +311,8 @@
 /*---------stap 5---------*/
 #sun_tutorial5{
   position: fixed;
-  bottom: 300px;
-  left: 150px;
+  bottom: 40vh;
+  right: 12vh;
   z-index: 2000;
 }
 
@@ -322,7 +322,7 @@
 }
 #text_ballon5 {
   position: fixed;
-  top: 200px;
+  top: 20vh;
   left: 80px;
   z-index: 2000;
 }
