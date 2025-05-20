@@ -1,3 +1,13 @@
+:root {
+  --orange: #E8491F;
+  --rood: #651123;
+  --beige: #FEEFE3;
+  --roze: #D37FAB;
+  --geel: #FDC759;
+  --blauw: #C4D4DB;
+  --lichtroze: #DEACAA;
+}
+
 #info-overlay {
   position: fixed;
    padding-top: 1em;
@@ -73,4 +83,57 @@
   padding: 20px;
   overflow-y: auto;
   max-height: calc(80vh - 60px);
+}
+
+.info-overlay-information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  gap: 10px;
+}
+
+.info-overlay-information img{
+  width: 30px;
+  height: auto;
+}
+
+.info-overlay-information a{
+ color: var(--rood);
+}
+
+.info-overlay-advice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.info-overlay-advice .sun-icon {
+  width: 170px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.speech-bubble {
+  position: relative;
+  width: 230px; /* of wat jij wil */
+}
+
+.speech-bubble .ballon-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.speech-bubble p {
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  right: 30px;
+  left: 10px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--rood); /* of een passende kleur */
+  line-height: 1.4;
 }
