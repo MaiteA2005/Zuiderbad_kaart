@@ -67,6 +67,33 @@ document.querySelectorAll('.close-btn').forEach((btn) => {
   });
 });
 
+//-------------------- Toggle pins -------------------
+// ------------------- Toggle functie voor de knoppen -------------------
+function showPin(id, type) {
+  document.getElementById(id).addEventListener('click', () => {
+    toggleMarkersByType(type);
+    sluitAlleMenus();
+  });
+}
+//Horeca
+showPin('alleHoreca', 'horeca');
+showPin('strandbarHoreca', 'strandbar');
+showPin('strandkioskHoreca', 'strandkiosk');
+showPin('zomerlustHoreca', 'zomerlust');
+//Eventlocaties
+showPin('alleEventlocaties', 'event');
+showPin('serreEvent', 'serre');
+showPin('strandhuisEvent', 'strandhuis');
+showPin('sportimoniumEvent', 'sportimonium');
+showPin('vergaderzaalEvent', 'vergaderzaal');
+showPin('eventweideEvent', 'evenementenweide');
+showPin('strandzoneEvent', 'strandzone');
+showPin('ouvoetbalveldEvent', 'oudvoetbalveld');
+//Parking
+document.getElementById('filterParking').addEventListener('click', function() {
+  toggleMarkersByType('parking');
+});
+
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
 const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit
 const submenuActiviteiten = document.getElementById('activiteiten-submenu'); // Dit is het submenu ('activiteiten & sport') dat je wilt openen/sluiten
