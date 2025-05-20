@@ -59,6 +59,14 @@ meerBtn.addEventListener('click', () => {
   sluitAlleMenus(); // sluit alle als je op 'Meer' klikt
 });
 
+document.querySelectorAll('.close-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const menu = btn.closest('.overlay-menu');
+    if (menu) menu.classList.add('hidden');
+  });
+});
+
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
 const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit
 const submenuActiviteiten = document.getElementById('activiteiten-submenu'); // Dit is het submenu ('activiteiten & sport') dat je wilt openen/sluiten
