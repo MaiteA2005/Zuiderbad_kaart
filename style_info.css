@@ -134,7 +134,7 @@
   left: 30px;
   right: 45px;
   bottom: 20px;
-  font-size: 0.85rem;
+  font-size: clamp(0.6rem, 2.7vw, 2rem);
   line-height: 1.4;
   color: var(--rood);
   text-align: center;
