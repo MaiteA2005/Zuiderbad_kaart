@@ -364,7 +364,7 @@ var betaalterminalMarker5 = L.marker([50.98387019598249, 4.50366497039795], { ic
 betaalterminalMarker5.types = ['betaalterminal'];
 
 //Activiteiten & sport
-var basketVoetbalMarker = L.marker([50.98238462833598, 4.506588578224183], { icon: basketbalIcon }).addTo(map);
+var basketVoetbalMarker = L.marker([50.98241132464609, 4.5064759254455575], { icon: basketbalIcon }).addTo(map);
 basketVoetbalMarker.types = ['activiteit', 'basketVoetbal'];
 var boogschietenMarker = L.marker([50.98328097641515, 4.506073594093324], { icon: boogschietenIcon }).addTo(map);
 boogschietenMarker.types = ['activiteit', 'boogschieten'];
