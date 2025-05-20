@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking - Parking D - Info</title>
+  <link rel="icon" type="image/x-icon" href="../../images/zon_plain.png">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style_nav.css">
+  <link rel="stylesheet" href="../../style_info.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+<!-- Navigatie -->
+  <div id="custom-overlay">
+    <button id="close-overlay" class="close-btn">
+        <img src="../../images/close.png" alt="Sluiten">
+    </button>
+    <button id="filterActiviteitenSport" class="link_arrow">
+      <p>Activiteiten & sport</p>
+      <img src="../../images/pijl.png" alt="Meer">
+    </button>
+      <div id="activiteiten-submenu" class="submenu">
+        <div class="submenu-header">
+          <button id="back-to-main-menu" class="back-btn">
+            <img src="../../images/pijl_ander.png" alt="Terug">
+          </button>
+          <h2>Activiteiten & sport</h2>
+        </div>
+        <ul class="submenu-list">
+          <li id="alleActiviteiten">Alle locaties</li>
+          <li id="basketActiviteit">Basket- en voetbalplein</li>
+          <li id="boogschietActiviteit">Boogschieten</li>
+          <li id="finsePisteActiviteit">Finse piste (1km)</li>
+          <li id="hoogtouwparcoursActiviteit">Hoogtouwenparcours</li>
+          <li id="megaSpeeltuinActiviteit">Mega-speeltuin</li>
+          <li id="MTBActiviteit">Mountainbikeroute</li>
+          <li id="muurklimActiviteit">Muurklimmen</li>
+          <li id="openwaterzwemmenActiviteit">Openwaterzwemmen</li>
+          <li id="pinpongActiviteit">Pingpongtafel</li>
+          <li id="piratenspeeltuinActiviteit">Piratenspeeltuin</li>
+          <li id="skaterampActiviteit">Skateramp</li>
+          <li id="voetbalveldActiviteit">Voetbalveldje</li>
+          <li id="waterpretparkActiviteit">Waterpretpark</li>
+          <li id="zensportplatformActiviteit">Zensportplatform</li>
+        </ul>
+    </div>
+    <hr class="line">
+    <button id="filterWandelroutes" class="link_arrow">
+      <p>Wandelroutes</p>
+      <img src="../../images/pijl.png" alt="Meer">
+    </button>
+    <div id="wandelroutes-submenu" class="submenu">
+      <div class="submenu-header">
+        <button id="back-to-main-menu-wandelroutes" class="back-btn">
+          <img src="../../images/pijl_ander.png" alt="Terug">
+        </button>
+        <h2>Wandelroutes</h2>
+      </div>
+      <ul class="submenu-list">
+        <li id="alleWandelroutes">Alle wandelroutes</li>
+        <li id="domeinpadWandelroute">‘t Domeinpad (4,4 km)</li>
+        <li id="historischpadWandelroute">Historische wandeling (6 km)</li>
+        <li id="ijsvogelpadWandelroute">IJsvogelwandeling (3,43 km)</li>
+        <li id="loop3Wandelroute">Loop/Wandelroute (3,2 km)</li>
+        <li id="loop4Wandelroute">Loop/Wandelroute (4,5 km)</li>
+        <li id="loop5Wandelroute">Loop/Wandelroute (5 km)</li>
+      </ul>
+    </div>
+    <hr class="line">
+    <button id="filterCultuurSportlocaties" class="link_arrow">
+      <p>Cultuur- & Sportlocaties</p>
+      <img src="../../images/pijl.png" alt="Meer">
+    </button>
+    <div id="cultuur-submenu" class="submenu">
+      <div class="submenu-header">
+        <button id="back-to-main-menu-cultuur" class="back-btn">
+          <img src="../../images/pijl_ander.png" alt="Terug">
+        </button>
+        <h2>Cultuur- & Sportlocaties</h2>
+      </div>
+      <ul class="submenu-list">
+        <li id="alleCultuur">Alle locaties</li>
+        <li id="documentatiecentrumCultuur">Documentatiecentrum Sport Vlaanderen</li>
+        <li id="hondenweideCultuur">Hondenweide</li>
+        <li id="sportcomplexCultuur">Sportcomplex: Sporthal + Gymnastiekhal</li>
+        <li id="sportverblijfCultuur">Sportverblijf</li>
+        <li id="sportweideCultuur">Sportweide</li>
+        <li id="survivalkampCultuur">Survivalkamp</li>
+        <li id="uitleendienstCultuur">Uitleendienst Sport Vlaanderen</li>
+        <li id="zeilclubCultuur">Zeilclub</li>
+      </ul>
+    </div>
+    <hr class="line">
+    <button id="filterToiletten">Toiletten</button>
+    <hr class="line">
+    <button id="filterDouche">Openbare douches</button>
+    <hr class="line">
+    <button id="filterKleedkamers">Kleedkamers</button>
+    <hr class="line">
+    <button id="filterEHBO">EHBO</button>
+  </div>
+
+  <nav class="nav_down">
+      <button id='filterHoreca'>
+      <img src="../../images/Vector.png" alt="Logo" class="logo">
+      <p>Horeca</p>
+      </button>
+      <button id="filterEventlocaties">
+        <img src="../../images/Evenementen.png" alt="Logo" class="logo">
+        <p>Eventlocaties</p>
+      </button>
+      <button id="filterParking">
+        <img src="../../images/Parking.png" alt="Logo" class="logo">
+        <p>Parking</p>
+      </button>
+      <button id="open-custom-overlay">
+        <img src="../../images/points.png" alt="Logo" class="logo">
+        <p>Meer</p>
+      </button>
+  </nav>
+
+  <!-- Overlays -->
+  <div id="horeca-menu" class="overlay-menu hidden">
+    <div class="menu-header">
+      <h2>Horeca</h2>
+      <button class="close-btn">
+        <img src="../../images/close.png" alt="Sluiten">
+      </button>
+    </div>
+    <ul>
+      <li id="alleHoreca">Alle locaties</li>
+      <li id="strandbarHoreca">Zuiderbad Strandbar</li>
+      <li id="strandkioskHoreca">Zuiderbad Strandkiosk</li>
+      <li id="zomerlustHoreca">Zuiderbad Zomerlust</li>
+    </ul>
+  </div>
+
+  <div id="eventlocaties-menu" class="overlay-menu hidden">
+    <div class="menu-header">
+      <h2>Eventlocaties</h2>
+      <button class="close-btn">
+        <img src="../../images/close.png" alt="Sluiten">
+      </button>
+    </div>
+    <ul>
+      <li id="alleEventlocaties">Alle locaties</li>
+      <li id="serreEvent">De Serre</li>
+      <li id="strandhuisEvent">Het Strandhuis</li>
+      <li id="sportimoniumEvent">Het Sportimonium</li>
+      <li id="vergaderzaalEvent">De Vergaderzaal</li>
+      <li id="eventweideEvent">Eventweide</li>
+      <li id="strandzoneEvent">De Strandzone</li>
+      <li id="hoogtouwenparcoursEvent">Hoogtouwenparcours</li>
+    </ul>
+  </div>
+
+  <div id="parkings-menu" class="overlay-menu hidden">
+    <div class="menu-header">
+      <h2>Parkings</h2>
+      <button class="close-btn">
+        <img src="../../images/close.png" alt="Sluiten">
+      </button>
+    </div>
+    <ul>
+      <li id="alleParking">Alle locaties</li>
+      <li id="parkingA">Parking A (gratis)</li>
+      <li id="ingangA">Ingang A</li>
+      <li id="parkingB">Parking B (betalend)</li>
+      <li id="ingangB">Ingang B</li>
+      <li id="parkingD">Parking D (betalend)</li>
+      <li id="ingangD">Ingang D</li>
+      <li id="parkingE">Parking E (betalend)</li>
+      <li id="ingangE">Ingang E</li>
+      <li id="parkingSportcomplex">Parking Sportcomplex</li>
+      <li id="betaalterminalsParking">Betaalterminals</li>
+      <li id="ingangC">Ingang C (leveranciers)</li>
+    </ul>
+  </div>
+
+  <!-- Informatie pagina-->
+  <div class="container">
+    <!-- Terug knop -->
+    <a href="../../index.html" class="back-button">
+      <span class="arrow"><img src="../../images/back_advies.svg" alt=""></span>
+      <span>Terug naar vorige pagina</span>
+    </a>
+    <!-- Titel & Beschrijving -->
+    <div class="info-box">
+      
+      <!-- Hoofdfoto -->
+      <img src="" alt="" class="main-image">
+
+      <h2>Parking D</h2>
+      <p>Tekst.</p>
+
+      <!-- Twee kleine afbeeldingen -->
+      <div class="image-grid">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+  <script src="script.js"></script>
+  <script src="script_nav.js"></script>
+  <script src="script_overlay.js"></script>
+</html>
