@@ -1,18 +1,26 @@
-function openInfoOverlay(content) {
+document.getElementById('info-overlay-toggle-btn').addEventListener('click', function(e) {
+  e.stopPropagation(); // voorkom dat de header click mee gaat
+  document.getElementById('info-overlay').classList.toggle('open');
+});
+
+document.getElementById('info-overlay-close-btn').addEventListener('click', function(e) {
+  e.stopPropagation();
+  document.getElementById('info-overlay').style.display = 'none';
+});
+
+function openInfoOverlay(title, content) {
+  document.getElementById('info-overlay-title').innerText = title;
   document.getElementById('info-overlay-content').innerHTML = content;
   document.getElementById('info-overlay').style.display = 'block';
+  document.getElementById('info-overlay').classList.add('open');
 }
 
-function closeInfoOverlay() {
-  document.getElementById('info-overlay').style.display = 'none';
-}
 
 horecaMarkerStrandbar.on('click', function(e) {
   map.setView(e.latlng, 18);
-  openInfoOverlay(`
-    <h2>Zuiderbad Strandbar</h2>
-    <p>Geniet van een verfrissend drankje en een gezellig terrasje met zicht op het water.</p>
-    <p><strong>Advies:</strong> Neem voldoende zonnecrème mee en drink genoeg water bij warm weer!</p>
-    <a href="https://www.zuiderbad.be" target="_blank">Informatie over zuiderbad</a>
-  `);
+  openInfoOverlay(
+    'Zuiderbad Strandbar',
+    `<p>Geniet van een verfrissend drankje aan het water.</p>
+     <p><strong>Advies:</strong> Vergeet je zonnebril niet!</p>`
+  );
 });
