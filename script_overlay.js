@@ -20,7 +20,7 @@ function openInfoOverlay(title, content) {
   document.getElementById('info-overlay-content').innerHTML = content;
   document.getElementById('info-overlay').style.display = 'block';
   document.getElementById('info-overlay').classList.add('open');
-  document.getElementById('info-overlay-close-btn').style.display = 'block';
+  document.getElementById('info-overlay-close-btn').style.display = 'flex';
 
   document.getElementsByClassName('nav_up')[0].style.display = 'none';
 }
@@ -32,6 +32,11 @@ horecaMarkerStrandbar.on('click', function(e) {
   openInfoOverlay(
     'Zuiderbad Strandbar',
     `<p>Geniet van een verfrissend drankje aan het water.</p>
-     <p><strong>Advies:</strong> Vergeet je zonnebril niet!</p>`
+     <p><strong>Advies:</strong> Vergeet je zonnebril niet!</p>
+     <div class="info-overlay-information">
+     <a href="#" target="_blank">Meer informatie over de strandbar</a>
+     <img src="images/go_advies.svg" alt="Zuiderbad Strandbar" />
+     </div>`
+     
   );
 });
