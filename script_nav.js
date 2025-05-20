@@ -76,12 +76,12 @@ function showPin(id, type) {
   });
 }
 //Horeca
-showPin('alleHoreca', 'horeca');
+showPin('alleHoreca', 'horeca'); //alle horeca
 showPin('strandbarHoreca', 'strandbar');
 showPin('strandkioskHoreca', 'strandkiosk');
 showPin('zomerlustHoreca', 'zomerlust');
 //Eventlocaties
-showPin('alleEventlocaties', 'event');
+showPin('alleEventlocaties', 'event'); //alle eventlocaties
 showPin('serreEvent', 'serre');
 showPin('strandhuisEvent', 'strandhuis');
 showPin('sportimoniumEvent', 'sportimonium');
@@ -90,9 +90,18 @@ showPin('eventweideEvent', 'evenementenweide');
 showPin('strandzoneEvent', 'strandzone');
 showPin('ouvoetbalveldEvent', 'oudvoetbalveld');
 //Parking
-document.getElementById('filterParking').addEventListener('click', function() {
-  toggleMarkersByType('parking');
-});
+showPin('alleParking', 'parking'); //alle parking
+showPin('parkingA', 'parkingA');
+showPin('ingangA', 'parkingA');
+showPin('parkingB', 'parkingB');
+showPin('ingangB', 'parkingB');
+showPin('parkingD', 'parkingD');
+showPin('ingangD', 'parkingD');
+showPin('parkingE', 'parkingE');
+showPin('ingangE', 'parkingE');
+showPin('parkingSportcomplex', 'parkingSportcomplex');
+showPin('ingangC', 'ingangC');
+
 
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
 const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit

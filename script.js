@@ -333,35 +333,35 @@ eventMarkerOudVoetbalveld.types = ['event', 'oudvoetbalveld'];
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
 parkingMarkerA.types = ['parking', 'parkingA'];
 var ingangMarkerA = L.marker([50.987912566298824, 4.497474431991578], { icon: ingangIcon }).addTo(map);
-ingangMarkerA.types = ['parking', 'parkingA'];
+ingangMarkerA.types = ['parkingA'];
 var parkingMarkerB = L.marker([50.98412, 4.50338], { icon: parkingIcon }).addTo(map);
 parkingMarkerB.types = ['parking', 'parkingB'];
 var ingangMarkerB = L.marker([50.98388038152604, 4.503541588783265], { icon: ingangIcon }).addTo(map);
-ingangMarkerB.types = ['parking', 'parkingB'];
+ingangMarkerB.types = ['parkingB'];
 var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
 parkingMarkerE.types = ['parking', 'parkingE'];
 var ingangMarkerE = L.marker([50.985943748848975, 4.519549012184144], { icon: ingangIcon }).addTo(map);
-ingangMarkerE.types = ['parking', 'parkingE'];
+ingangMarkerE.types = ['parkingE'];
 var parkingMarkerD = L.marker([50.97957, 4.50878], { icon: parkingIcon }).addTo(map);
 parkingMarkerD.types = ['parking', 'parkingD'];
 var ingangMarkerD = L.marker([50.979753653065636, 4.506293535232545], { icon: ingangIcon }).addTo(map);
-ingangMarkerD.types = ['parking', 'parkingD'];
+ingangMarkerD.types = ['parkingD'];
 var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.types = ['parking', 'parkingSportcomplex'];
 var ingangMarkerC = L.marker([50.982340417116006, 4.504458904266358], { icon: ingangIcon }).addTo(map);
-ingangMarkerC.types = ['parking', 'ingangC'];
+ingangMarkerC.types = ['ingangC'];
 
 //Betaalterminals
 var betaalterminalMarker1 = L.marker([50.98320842346658, 4.51439380645752], { icon: betaalterminalIcon }).addTo(map);
-betaalterminalMarker1.types = ['parking', 'betaalterminal'];
+betaalterminalMarker1.types = ['betaalterminal'];
 var betaalterminalMarker2 = L.marker([50.9857715209928, 4.518867731094361], { icon: betaalterminalIcon }).addTo(map);
-betaalterminalMarker2.types = ['parking', 'betaalterminal'];
+betaalterminalMarker2.types = ['betaalterminal'];
 var betaalterminalMarker3 = L.marker([50.98253330770319, 4.512966871261598], { icon: betaalterminalIcon }).addTo(map);
-betaalterminalMarker3.types = ['parking', 'betaalterminal'];
+betaalterminalMarker3.types = ['betaalterminal'];
 var betaalterminalMarker4 = L.marker([50.979346365935555, 4.507120996713639], { icon: betaalterminalIcon }).addTo(map);
-betaalterminalMarker4.types = ['parking', 'betaalterminal'];
+betaalterminalMarker4.types = ['betaalterminal'];
 var betaalterminalMarker5 = L.marker([50.98387019598249, 4.50366497039795], { icon: betaalterminalIcon }).addTo(map);
-betaalterminalMarker5.types = ['parking', 'betaalterminal'];
+betaalterminalMarker5.types = ['betaalterminal'];
 
 //Activiteiten & sport
 var basketVoetbalMarker = L.marker([50.98238462833598, 4.506588578224183], { icon: basketbalIcon }).addTo(map);
