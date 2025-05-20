@@ -3,28 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activiteiten & sport - Finse piste - Info</title>
-  <link rel="icon" type="image/x-icon" href="../../images/zon_plain.png">
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../style_nav.css">
-  <link rel="stylesheet" href="../../style_info.css">
+  <title>Zuiderbad Kaart</title>
+  <link rel="icon" type="image/x-icon" href="images/zon_plain.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_nav.css">
+  <link rel="stylesheet" href="style_info.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
-<!-- Navigatie -->
+
+  <div class="nav_up">
+    <a href="zonnetje.html">
+      <img src="images/zon.png" id="zon_logo" alt="">
+    </a>
+    
+    <div id="zoom-reset">
+      <button id="reset-map">Reset kaart</button>
+      <div id="zoom-buttons">
+        <button id="zoom-in">
+          <img src="images/plus.png" alt="Zoom in" class="logo plus">
+        </button>
+        <button id="zoom-out">
+          <img src="images/min.png" alt="Zoom out" class="logo min">
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div id="custom-overlay">
     <button id="close-overlay" class="close-btn">
-        <img src="../../images/close.png" alt="Sluiten">
+        <img src="images/close.png" alt="Sluiten">
     </button>
     <button id="filterActiviteitenSport" class="link_arrow">
       <p>Activiteiten & sport</p>
-      <img src="../../images/pijl.png" alt="Meer">
+      <img src="images/pijl.png" alt="Meer">
     </button>
       <div id="activiteiten-submenu" class="submenu">
         <div class="submenu-header">
           <button id="back-to-main-menu" class="back-btn">
-            <img src="../../images/pijl_ander.png" alt="Terug">
+            <img src="images/pijl_ander.png" alt="Terug">
           </button>
           <h2>Activiteiten & sport</h2>
         </div>
@@ -49,12 +68,12 @@
     <hr class="line">
     <button id="filterWandelroutes" class="link_arrow">
       <p>Wandelroutes</p>
-      <img src="../../images/pijl.png" alt="Meer">
+      <img src="images/pijl.png" alt="Meer">
     </button>
     <div id="wandelroutes-submenu" class="submenu">
       <div class="submenu-header">
         <button id="back-to-main-menu-wandelroutes" class="back-btn">
-          <img src="../../images/pijl_ander.png" alt="Terug">
+          <img src="images/pijl_ander.png" alt="Terug">
         </button>
         <h2>Wandelroutes</h2>
       </div>
@@ -71,12 +90,12 @@
     <hr class="line">
     <button id="filterCultuurSportlocaties" class="link_arrow">
       <p>Cultuur- & Sportlocaties</p>
-      <img src="../../images/pijl.png" alt="Meer">
+      <img src="images/pijl.png" alt="Meer">
     </button>
     <div id="cultuur-submenu" class="submenu">
       <div class="submenu-header">
         <button id="back-to-main-menu-cultuur" class="back-btn">
-          <img src="../../images/pijl_ander.png" alt="Terug">
+          <img src="images/pijl_ander.png" alt="Terug">
         </button>
         <h2>Cultuur- & Sportlocaties</h2>
       </div>
@@ -102,21 +121,23 @@
     <button id="filterEHBO">EHBO</button>
   </div>
 
+  <div id="map"></div>
+
   <nav class="nav_down">
       <button id='filterHoreca'>
-      <img src="../../images/Vector.png" alt="Logo" class="logo">
+      <img src="images/Vector.png" alt="Logo" class="logo">
       <p>Horeca</p>
       </button>
       <button id="filterEventlocaties">
-        <img src="../../images/Evenementen.png" alt="Logo" class="logo">
+        <img src="images/Evenementen.png" alt="Logo" class="logo">
         <p>Eventlocaties</p>
       </button>
       <button id="filterParking">
-        <img src="../../images/Parking.png" alt="Logo" class="logo">
+        <img src="images/Parking.png" alt="Logo" class="logo">
         <p>Parking</p>
       </button>
       <button id="open-custom-overlay">
-        <img src="../../images/points.png" alt="Logo" class="logo">
+        <img src="images/points.png" alt="Logo" class="logo">
         <p>Meer</p>
       </button>
   </nav>
@@ -126,7 +147,7 @@
     <div class="menu-header">
       <h2>Horeca</h2>
       <button class="close-btn">
-        <img src="../../images/close.png" alt="Sluiten">
+        <img src="images/close.png" alt="Sluiten">
       </button>
     </div>
     <ul>
@@ -141,7 +162,7 @@
     <div class="menu-header">
       <h2>Eventlocaties</h2>
       <button class="close-btn">
-        <img src="../../images/close.png" alt="Sluiten">
+        <img src="images/close.png" alt="Sluiten">
       </button>
     </div>
     <ul>
@@ -160,7 +181,7 @@
     <div class="menu-header">
       <h2>Parkings</h2>
       <button class="close-btn">
-        <img src="../../images/close.png" alt="Sluiten">
+        <img src="images/close.png" alt="Sluiten">
       </button>
     </div>
     <ul>
@@ -179,30 +200,19 @@
     </ul>
   </div>
 
-  <!-- Informatie pagina-->
-  <div class="container">
-    <!-- Terug knop -->
-    <a href="../../index.html" class="back-button">
-      <span class="arrow"><img src="../../images/back_advies.svg" alt=""></span>
-      <span>Terug naar vorige pagina</span>
-    </a>
-    <!-- Titel & Beschrijving -->
-    <div class="info-box">
-      
-      <!-- Hoofdfoto -->
-      <img src="" alt="" class="main-image">
+  <img src="images/back_advies.svg" alt="Sluiten" id="info-overlay-close-btn">
 
-      <h2>Finse piste</h2>
-      <p>Tekst.</p>
-
-      <!-- Twee kleine afbeeldingen -->
-      <div class="image-grid">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
+<div id="info-overlay">
+  <div id="info-overlay-header">
+    <h2 id="info-overlay-title">Titel</h2>
+    <div class="header-buttons">
+      <img src="images/down.svg" alt="Toggle" id="info-overlay-toggle-btn">
     </div>
-
   </div>
+
+  <div id="info-overlay-content"></div>
+</div>
+
 
 
 </body>

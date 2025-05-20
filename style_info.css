@@ -1,3 +1,28 @@
+:root {
+  --orange: #E8491F;
+  --rood: #651123;
+  --beige: #FEEFE3;
+  --roze: #D37FAB;
+  --geel: #FDC759;
+  --blauw: #C4D4DB;
+  --lichtroze: #DEACAA;
+}
+
+@font-face {
+  font-family: 'GG Sans 2';
+  src: url('fonts/GGSans2.ttf') format('truetype'); /* pas bestandsnaam aan als nodig */
+}
+
+@font-face {
+  font-family: 'Mono and Friends DO';
+  src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chunky Monkey';
+  src: url('fonts/ChunkyMonkey.otf') format('opentype');
+}
+
 /* opmaak advies */
 #info-overlay {
   position: fixed;
@@ -82,11 +107,12 @@
   display: flex;
   align-items: center;
   color: #6c1222;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   margin-bottom: 16px;
   text-decoration: none;
   gap: 8px;
+  font-family: 'GG Sans 2';
 }
 
 .back-button img {
@@ -118,7 +144,16 @@
 .info-box h2 {
   margin-top: 0;
   margin-bottom: 8px;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: 'GG Sans';
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'GG Sans';
+  font-weight: 200;
 }
 
 .image-grid {

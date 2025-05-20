@@ -88,7 +88,7 @@ showPin('sportimoniumEvent', 'sportimonium');
 showPin('vergaderzaalEvent', 'vergaderzaal');
 showPin('eventweideEvent', 'evenementenweide');
 showPin('strandzoneEvent', 'strandzone');
-showPin('ouvoetbalveldEvent', 'oudvoetbalveld');
+showPin('hoogtouwenparcoursEvent', 'hoogtouwenparcours');
 //Parking
 showPin('alleParking', 'parking'); //alle parking
 showPin('parkingA', 'parkingA');
