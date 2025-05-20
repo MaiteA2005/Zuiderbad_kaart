@@ -201,11 +201,17 @@
   </div>
 
 <div id="info-overlay">
-  <button class="info-close-btn" onclick="closeInfoOverlay()">
-    <img src="images/close.png" alt="Sluiten">
-  </button>
+  <div id="info-overlay-header">
+    <img src="images/close.png" alt="Sluiten" id="info-overlay-close-btn">
+    <h2 id="info-overlay-title">Titel</h2>
+    <div class="header-buttons">
+      <img src="images/down.svg" alt="Toggle" id="info-overlay-toggle-btn">
+      
+    </div>
+  </div>
   <div id="info-overlay-content"></div>
 </div>
+
 
 
 </body>
