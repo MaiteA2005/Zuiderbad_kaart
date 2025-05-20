@@ -118,21 +118,27 @@
 /* ✅ Nieuwe versie zonder aparte img */
 .speech-bubble {
   width: 230px;
-  height: 180px; /* pas dit aan op basis van je ballonvorm */
+  height: 180px;
   background-image: url('images/ballon_advies.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 35px 40px 20px 25px; /* finetunen naar je ballonvorm */
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+
+  position: relative;
 }
 
 .speech-bubble p {
-  font-size: 0.9rem;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  right: 45px;
+  bottom: 20px;
+  font-size: 0.85rem;
   line-height: 1.4;
   color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
