@@ -109,31 +109,30 @@
   margin-bottom: 1em;
 }
 
-.info-overlay-advice .sun-icon {
+.sun-icon {
   width: 170px;
   height: auto;
   flex-shrink: 0;
 }
 
+/* ✅ Nieuwe versie zonder aparte img */
 .speech-bubble {
-  position: relative;
-  width: 230px; /* of wat jij wil */
-}
-
-.speech-bubble .ballon-bg {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 230px;
+  height: 180px; /* pas dit aan op basis van je ballonvorm */
+  background-image: url('images/ballon_advies.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 35px 40px 20px 25px; /* finetunen naar je ballonvorm */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .speech-bubble p {
-  position: absolute;
-  text-align: center;
-  top: 3px;
-  right: 30px;
-  left: 10px;
-  padding: 20px;
   font-size: 0.9rem;
-  color: var(--rood); /* of een passende kleur */
   line-height: 1.4;
+  color: var(--rood);
 }

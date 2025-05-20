@@ -30,19 +30,21 @@ function openInfoOverlay(title, content) {
 horecaMarkerStrandbar.on('click', function(e) {
   map.setView(e.latlng, 18);
   openInfoOverlay(
-    'Zuiderbad Strandbar',
-    `<div class="info-overlay-advice">
-      <div class="speech-bubble">
-        <img src="images/ballon_advies.svg" alt="Ballon achtergrond" class="ballon-bg" />
-        <p>Een <b>gezellige plek</b> aan het water, met een <b>zomerse vibe.</b> Ideaal voor een <b>drankje of aperitiefje</b> met zicht op het water.</p>
-      </div>
-      <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-    </div>
-    
-    <div class="info-overlay-information">
-    <a href=""#" target="_blank" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
-    <img src="images/go_advies.svg" alt="Sluiten" />
-    </div>`
+'Zuiderbad Strandbar',
+`<div class="info-overlay-advice">
+  <div class="speech-bubble">
+    <p>
+      Een <b>gezellige plek</b> aan het water, met een <b>zomerse vibe.</b> Ideaal voor een <b>drankje of aperitiefje</b> met zicht op het water.
+    </p>
+  </div>
+  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+</div>
+
+<div class="info-overlay-information">
+  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
+  <img src="images/go_advies.svg" alt="Sluiten" />
+</div>`
+
 
   );
 });
