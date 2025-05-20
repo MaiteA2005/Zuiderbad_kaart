@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="images/zon_plain.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style_nav.css">
+  <link rel="stylesheet" href="style_info.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -199,7 +200,16 @@
     </ul>
   </div>
 
+<div id="info-overlay">
+  <button class="info-close-btn" onclick="closeInfoOverlay()">
+    <img src="images/close.png" alt="Sluiten">
+  </button>
+  <div id="info-overlay-content"></div>
+</div>
+
+
 </body>
   <script src="script.js"></script>
   <script src="script_nav.js"></script>
+  <script src="script_overlay.js"></script>
 </html>

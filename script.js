@@ -1,19 +1,17 @@
 //De coördinaten van de hoeken van de afbeelding (nu in decimale coördinaten)
 var imageBounds = [
-  [50.98717954450199, 4.495553970336915],  // Linkerbovenhoek
-  [50.995580437743314, 4.517011642456056], // Rechterbovenhoek
-  [50.9886383295914, 4.529027938842774],   // Rechteronderhoek
-  [50.978074609081055, 4.508256912231446]  // Linkeronderhoek
+  [50.978074609081055, 4.495553970336915], // SouthWest
+  [50.995580437743314, 4.529027938842774]  // NorthEast
 ];
 
 //Maak de kaart en stel het initiële zoomniveau in
 var map = L.map('map', {
-  center: [50.9875, 4.5147],  // Dit is ongeveer het midden van de afbeelding
-  zoom: 14,                   // Beginzoomniveau
-  minZoom: 14,                // Minimum zoomniveau
-  maxZoom: 20,                // Maximum zoomniveau
+  center: [50.987, 4.512], // Middelpunt van de afbeelding
+  zoom: 14,
+  minZoom: 14,
+  maxZoom: 20,
   maxBounds: imageBounds,
-  zoomControl: false       // Stel de maximale grenzen in
+  zoomControl: false
 });
 
 //---------------Onze kaart + wandelpaden/looproutes--------------------
@@ -91,12 +89,12 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
 //---------------Coordinaten zoeken--------------------
 // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
-  map.on('click', function(e) {
+  /*map.on('click', function(e) {
     var coord = e.latlng;
     var lat = coord.lat;
     var lng = coord.lng;
     alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
-  });
+  });*/
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
@@ -515,3 +513,5 @@ showPin('filterToiletten', 'toilet');
 showPin('filterDouche', 'douche');
 showPin('filterKleedkamers', 'kleedkamers');
 showPin('filterEHBO', 'EHBO');
+
+//-----klik------
