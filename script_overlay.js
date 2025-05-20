@@ -1,4 +1,3 @@
-
 function openInfoOverlay(content) {
   document.getElementById('info-overlay-content').innerHTML = content;
   document.getElementById('info-overlay').style.display = 'block';
