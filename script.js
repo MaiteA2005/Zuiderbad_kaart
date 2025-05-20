@@ -89,12 +89,12 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
 //---------------Coordinaten zoeken--------------------
 // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
-  /*map.on('click', function(e) {
+  map.on('click', function(e) {
     var coord = e.latlng;
     var lat = coord.lat;
     var lng = coord.lng;
     alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
-  });*/
+  });
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
@@ -412,6 +412,10 @@ var toilet1Marker = L.marker([50.985454343982965, 4.5159788914792385], { icon: t
 toilet1Marker.type = 'toilet';
 var toilet2Marker = L.marker([50.982655090237145, 4.510526353483929], { icon: toiletIcon }).addTo(map);
 toilet2Marker.type = 'toilet';
+var toilet3Marker = L.marker([50.98696720922918, 4.49742078781128], { icon: toiletIcon }).addTo(map);
+toilet3Marker.type = 'toilet';
+var toilet4Marker = L.marker([50.98455756661985, 4.5061030983924875], { icon: toiletIcon }).addTo(map);
+toilet4Marker.type = 'toilet';
 var doucheMarker = L.marker([50.985099592014066, 4.515268206596375], { icon: doucheIcon }).addTo(map);
 doucheMarker.type = 'douche';
 var kleedkamers1Marker = L.marker([50.98632156606132, 4.5161622835904955], { icon: kleedkamersIcon }).addTo(map);
@@ -437,7 +441,7 @@ var allMarkers = [
   //Cultuur & sportlocaties
   documentatiecentrumMarker, hondenweideMarker, sportcomplexMarker, sportverblijfMarker, sportweideMarker, survivalkampMarker, uitleendienstMarker, zeilclubMarker,
   //Sanitair
-  doucheMarker, toilet1Marker,toilet2Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
+  doucheMarker, toilet1Marker,toilet2Marker,toilet3Marker, toilet4Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
 ];
 
 // ------------------- Filterfunctie -------------------
