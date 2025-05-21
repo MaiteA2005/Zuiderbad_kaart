@@ -326,6 +326,8 @@ var eventMarkerStrandzone = L.marker([50.98608, 4.51551], { icon: eventIcon }).a
 eventMarkerStrandzone.types = ['event', 'strandzone'];
 var eventMarkerOudVoetbalveld = L.marker([50.98075, 4.50637], { icon: eventIcon }).addTo(map);
 eventMarkerOudVoetbalveld.types = ['event', 'oudvoetbalveld'];
+var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
+hoogtouwenparcoursMarker.types = ['event', 'hoogtouwenparcours'];
 
 //Parkeermarkers
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
@@ -368,8 +370,6 @@ var boogschietenMarker = L.marker([50.98328097641515, 4.506073594093324], { icon
 boogschietenMarker.types = ['activiteit', 'boogschieten'];
 var finsePistMarker = L.marker([50.98651911759529, 4.518476261767087], { icon: wandelIcon }).addTo(map);
 finsePistMarker.types = ['activiteit', 'finsePiste'];
-var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
-hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenparcours'];
 var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
 megaSpeeltuinMarker.types = ['activiteit', 'megaspeeltuin'];
 var muurklimmenMarker = L.marker([50.98340925174416, 4.505848288536073], { icon: muurklimmenIcon }).addTo(map);
