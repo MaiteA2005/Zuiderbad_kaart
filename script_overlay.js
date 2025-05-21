@@ -29,7 +29,7 @@ function openInfoOverlay(title, content) {
 //-------horeca markers------------------//
 // Horeca marker 1
 horecaMarkerStrandbar.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Zuiderbad Strandbar',
 `<div class="info-overlay-advice">
@@ -50,7 +50,7 @@ horecaMarkerStrandbar.on('click', function(e) {
 
 // Horeca marker 2
 horecaMarkerZomerlust.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Zuiderbad Zomerlust',
 `<div class="info-overlay-advice">
@@ -71,7 +71,7 @@ horecaMarkerZomerlust.on('click', function(e) {
 
 // Horeca marker 3
 horecaMarkerStrandkiosk.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Zuiderbad Strandkiosk',
 `<div class="info-overlay-advice">
@@ -93,7 +93,7 @@ horecaMarkerStrandkiosk.on('click', function(e) {
 //-------event markers------------------//
 // Event marker 1
 eventMarkerEvenementenweide.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'De Evenementenweide',
 `<div class="info-overlay-advice">
@@ -114,7 +114,7 @@ eventMarkerEvenementenweide.on('click', function(e) {
 
 // Event marker 2
 eventMarkerSportimonium.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Het Sportimonium',
 `<div class="info-overlay-advice">
@@ -135,7 +135,7 @@ eventMarkerSportimonium.on('click', function(e) {
 
 // Event marker 3
 eventMarkerVergaderzaal.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'De Vergaderzaal',
 `<div class="info-overlay-advice">
@@ -156,7 +156,7 @@ eventMarkerVergaderzaal.on('click', function(e) {
 
 // Event marker 4
 eventMarkerSerre.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'De Serre',
 `<div class="info-overlay-advice">
@@ -177,7 +177,7 @@ eventMarkerSerre.on('click', function(e) {
 
 // Event marker 5
 eventMarkerStrandhuis.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Het Strandhuis',
 `<div class="info-overlay-advice">
@@ -198,7 +198,7 @@ eventMarkerStrandhuis.on('click', function(e) {
 
 // Event marker 6
 eventMarkerStrandzone.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'De Strandzone',
 `<div class="info-overlay-advice">
@@ -219,7 +219,7 @@ eventMarkerStrandzone.on('click', function(e) {
 
 // Event marker 7
 eventHoogtouwenparcoursMarker.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Het Hoogtouwenparcours',
 `<div class="info-overlay-advice">
@@ -241,7 +241,7 @@ eventHoogtouwenparcoursMarker.on('click', function(e) {
 //-------Parking------------------//
 // parking marker 1
 parkingMarkerA.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking A',
 `<div class="info-overlay-advice">
@@ -262,7 +262,7 @@ parkingMarkerA.on('click', function(e) {
 
 // ingang marker 1
 ingangMarkerA.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Ingang A',
 `<div class="info-overlay-advice">
@@ -283,7 +283,7 @@ ingangMarkerA.on('click', function(e) {
 
 // parking marker 2
 parkingMarkerB.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking A',
 `<div class="info-overlay-advice">
@@ -304,7 +304,7 @@ parkingMarkerB.on('click', function(e) {
 
 // ingang marker 2
 ingangMarkerB.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Ingang B',
 `<div class="info-overlay-advice">
@@ -325,7 +325,7 @@ ingangMarkerB.on('click', function(e) {
 
 // parking marker 3
 parkingMarkerC.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking C',
 `<div class="info-overlay-advice">
@@ -346,7 +346,7 @@ parkingMarkerC.on('click', function(e) {
 
 // ingang marker 3
 ingangMarkerC.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Ingang D',
 `<div class="info-overlay-advice">
@@ -367,7 +367,7 @@ ingangMarkerC.on('click', function(e) {
 
 // parking marker 4
 parkingMarkerD.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking D',
 `<div class="info-overlay-advice">
@@ -388,7 +388,7 @@ parkingMarkerD.on('click', function(e) {
 
 // ingang marker 4
 ingangMarkerD.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Ingang D',
 `<div class="info-overlay-advice">
@@ -409,7 +409,7 @@ ingangMarkerD.on('click', function(e) {
 
 // parking marker 5
 parkingMarkerE.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking E',
 `<div class="info-overlay-advice">
@@ -430,7 +430,7 @@ parkingMarkerE.on('click', function(e) {
 
 // ingang marker 5
 ingangMarkerE.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Ingang E',
 `<div class="info-overlay-advice">
@@ -451,7 +451,7 @@ ingangMarkerE.on('click', function(e) {
 
 // parking marker 6
 parkingMarkerSportcomplex.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking Sportcomplex',
 `<div class="info-overlay-advice">
@@ -472,7 +472,7 @@ parkingMarkerSportcomplex.on('click', function(e) {
 
 // betaalterminal 1
 betaalterminalMarker1.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Betaalterminal',
 `<div class="info-overlay-advice">
@@ -493,7 +493,7 @@ betaalterminalMarker1.on('click', function(e) {
 
 // betaalterminal 2
 betaalterminalMarker2.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Betaalterminal',
 `<div class="info-overlay-advice">
@@ -514,7 +514,7 @@ betaalterminalMarker2.on('click', function(e) {
 
 // betaalterminal 3
 betaalterminalMarker3.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Betaalterminal',
 `<div class="info-overlay-advice">
@@ -535,7 +535,7 @@ betaalterminalMarker3.on('click', function(e) {
 
 // betaalterminal 4
 betaalterminalMarker4.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Betaalterminal',
 `<div class="info-overlay-advice">
@@ -556,7 +556,7 @@ betaalterminalMarker4.on('click', function(e) {
 
 // betaalterminal 5
 betaalterminalMarker5.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Betaalterminal',
 `<div class="info-overlay-advice">
@@ -578,7 +578,7 @@ betaalterminalMarker5.on('click', function(e) {
 //-------Activiteiten------------------//
 // Activiteiten marker 1
 parkingMarkerA.on('click', function(e) {
-  map.setView(e.latlng, 18);
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
 'Parking A',
 `<div class="info-overlay-advice">
