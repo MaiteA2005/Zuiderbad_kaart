@@ -63,7 +63,7 @@
 }
 
 #info-overlay-header h2 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2rem);
   flex: 1;
 }
 
@@ -134,7 +134,7 @@
   left: 30px;
   right: 45px;
   bottom: 20px;
-  font-size: clamp(0.6rem, 2.7vw, 2rem);
+  font-size: clamp(0.5rem, 2.7vw, 0.85rem);
   line-height: 1.4;
   color: var(--rood);
   text-align: center;

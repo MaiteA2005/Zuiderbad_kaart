@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: 'GG Sans 2';
-  src: url('fonts/GGSans2.ttf') format('truetype'); /* pas bestandsnaam aan als nodig */
-}
-
-@font-face {
   font-family: 'Mono and Friends DO';
   src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
 }
@@ -33,19 +28,23 @@
 .back-button {
   display: flex;
   align-items: center;
-  color: #6c1222;
+  color: var(--rood);
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 16px;
   text-decoration: none;
   gap: 8px;
-  font-family: 'GG Sans 2';
+  font-family: 'GG Sans';
 }
 
 .back-button img {
   height: 40px;
   width: auto;
   display: block;
+}
+
+.back-button p {
+  font-family: 'GG Sans';
 }
 
 .arrow {
@@ -60,7 +59,7 @@
 }
 
 .info-box {
-  background-color: #6c1222;
+  background-color: var(--rood);
   color: white;
   padding: 16px;
   border-radius: 16px;
@@ -95,4 +94,64 @@
   height: auto;
   border-radius: 12px; /* Geeft zelf ook afgeronde hoeken */
   display: block;
+}
+
+.openingsuren{
+  margin-top: 20px;
+}
+
+.openingsuren table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+
+.openingsuren th,
+.openingsuren td {
+  padding: 15px 5px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+/* Specifiek gelijke breedte voor 3 kolommen */
+.openingsuren td:nth-child(1),
+.openingsuren th:nth-child(1),
+.openingsuren td:nth-child(2),
+.openingsuren th:nth-child(2),
+.openingsuren td:nth-child(3),
+.openingsuren th:nth-child(3) {
+  width: 33.33%;
+}
+
+.openingsuren thead {
+  background-color: var(--rood); /* Donkerrood */
+  color: #fff;
+  border: #fff solid 1px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.openingsuren tbody tr:hover {
+  background-color: #9f4f4f;
+}
+
+.openingsuren small {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.pTabel {
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.lijn {
+  border-top: 1px solid #ffffff;
+  margin: 8px auto;
+  width: 90%;
+  opacity: 0.5;
 }
