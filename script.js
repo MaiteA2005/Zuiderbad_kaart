@@ -336,14 +336,16 @@ var parkingMarkerB = L.marker([50.98412, 4.50338], { icon: parkingIcon }).addTo(
 parkingMarkerB.types = ['parking', 'parkingB'];
 var ingangMarkerB = L.marker([50.98388038152604, 4.503541588783265], { icon: ingangIcon }).addTo(map);
 ingangMarkerB.types = ['parkingB'];
-var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
-parkingMarkerE.types = ['parking', 'parkingE'];
-var ingangMarkerE = L.marker([50.985943748848975, 4.519549012184144], { icon: ingangIcon }).addTo(map);
-ingangMarkerE.types = ['parkingE'];
+var parkingMarkerC = L.marker([50.98231512977452, 4.5045371269666346], { icon: parkingIcon }).addTo(map);
+parkingMarkerC.types = ['parking', 'parkingC'];
 var parkingMarkerD = L.marker([50.97957, 4.50878], { icon: parkingIcon }).addTo(map);
 parkingMarkerD.types = ['parking', 'parkingD'];
 var ingangMarkerD = L.marker([50.979753653065636, 4.506293535232545], { icon: ingangIcon }).addTo(map);
 ingangMarkerD.types = ['parkingD'];
+var parkingMarkerE = L.marker([50.98527, 4.51835], { icon: parkingIcon }).addTo(map);
+parkingMarkerE.types = ['parking', 'parkingE'];
+var ingangMarkerE = L.marker([50.985943748848975, 4.519549012184144], { icon: ingangIcon }).addTo(map);
+ingangMarkerE.types = ['parkingE'];
 var parkingMarkerSportcomplex = L.marker([50.98384, 4.50519], { icon: parkingIcon }).addTo(map);
 parkingMarkerSportcomplex.types = ['parking', 'parkingSportcomplex'];
 var ingangMarkerC = L.marker([50.982340417116006, 4.504458904266358], { icon: ingangIcon }).addTo(map);
@@ -433,7 +435,7 @@ var allMarkers = [
   //Eventlocaties
   eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventHoogtouwenparcoursMarker, 
   //Parking
-  parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
+  parkingMarkerA, parkingMarkerB, parkingMarkerC, parkingMarkerD, parkingMarkerE, parkingMarkerSportcomplex,
   ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
   betaalterminalMarker1, betaalterminalMarker2, betaalterminalMarker3, betaalterminalMarker4, betaalterminalMarker5,
   //Activiteiten & sport

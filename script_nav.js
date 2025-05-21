@@ -95,6 +95,7 @@ showPin('parkingA', 'parkingA');
 showPin('ingangA', 'parkingA');
 showPin('parkingB', 'parkingB');
 showPin('ingangB', 'parkingB');
+showPin('parkingC', 'parkingC');
 showPin('parkingD', 'parkingD');
 showPin('ingangD', 'parkingD');
 showPin('parkingE', 'parkingE');
