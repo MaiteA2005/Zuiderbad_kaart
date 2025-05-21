@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: 'GG Sans 2';
-  src: url('fonts/GGSans2.ttf') format('truetype'); /* pas bestandsnaam aan als nodig */
-}
-
-@font-face {
   font-family: 'Mono and Friends DO';
   src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
 }
@@ -39,13 +34,17 @@
   margin-bottom: 16px;
   text-decoration: none;
   gap: 8px;
-  font-family: 'GG Sans 2';
+  font-family: 'GG Sans';
 }
 
 .back-button img {
   height: 40px;
   width: auto;
   display: block;
+}
+
+.back-button p {
+  font-family: 'GG Sans';
 }
 
 .arrow {
@@ -95,4 +94,42 @@
   height: auto;
   border-radius: 12px; /* Geeft zelf ook afgeronde hoeken */
   display: block;
+}
+
+.openingsuren{
+  margin-top: 20px;
+}
+
+.openingsuren table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.openingsuren th,
+.openingsuren td {
+  padding: 15px 5px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.openingsuren thead {
+  background-color: #640e1f; /* Donkerrood */
+  color: #fff;
+  border: #fff solid 1px;
+}
+
+.openingsuren tbody tr:hover {
+  background-color: #9f4f4f;
+}
+
+.openingsuren small {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.pTabel {
+  margin-top: 10px;
+  font-size: 12px;
 }

@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: 'GG Sans 2';
-  src: url('fonts/GGSans2.ttf') format('truetype'); /* pas bestandsnaam aan als nodig */
-}
-
-@font-face {
   font-family: 'Mono and Friends DO';
   src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
 }
