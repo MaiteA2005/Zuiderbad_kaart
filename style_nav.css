@@ -220,7 +220,7 @@ nav button p {
   background-color: #fef1e7;
   border-radius: 15px;
   padding: 1em;
-  width: 400px;
+  width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
@@ -290,13 +290,9 @@ nav button p {
     border-bottom-left-radius: 20px;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
   } 
-
-
-
-  /* Indien je kaart of andere inhoud moet worden aangepast vanwege de nieuwe zijbalk: */
   #map {
-    margin-right: 300px; 
-    width: calc(100% - 300px);
+    margin-right: 30%; 
+    width: calc(100% - 30%);
   }
   .nav_down {
     width: 70%;
@@ -305,4 +301,36 @@ nav button p {
     width: 70%;
     display: flex;
   }
+  #close-overlay{
+    display: none;
+  }
+  .overlay-menu {
+  position: fixed;
+  left: 25vh;
+  transform: translateX(-50%);
+  background-color: #fef1e7;
+  width: 300px;
+}
+  .submenu {
+    width: 30%;
+    left: 70%;
+  }
+  .submenu-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .back-btn img {
+    width: auto;
+    height: 40px;
+  }
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+  
 }
