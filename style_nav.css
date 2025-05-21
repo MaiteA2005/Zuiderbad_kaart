@@ -264,3 +264,45 @@ nav button p {
   cursor: pointer;
   color: #631f1f;
 }
+
+@media screen and (min-width: 768px) {  
+#open-custom-overlay{
+    display: none
+}
+
+#custom-overlay {
+    display: flex !important; 
+    justify-self: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: var(--beige);
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
+    padding: 2rem;
+    z-index: 2000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  } 
+
+
+
+  /* Indien je kaart of andere inhoud moet worden aangepast vanwege de nieuwe zijbalk: */
+  #map {
+    margin-right: 300px; 
+    width: calc(100% - 300px);
+  }
+  .nav_down {
+    width: 70%;
+  }
+  .nav_up {
+    width: 70%;
+    display: flex;
+  }
+}
