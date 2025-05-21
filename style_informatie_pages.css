@@ -14,9 +14,16 @@
 }
 
 @font-face {
-  font-family: 'gg sans';
-  src: url('fonts/gg_sans/gg sand Regular') format('woff');
+  font-family: 'GGSans';
+  src: url('/fonts/GGSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
+body {
+  font-family: 'GGSans', sans-serif;
+}
+
 
 @font-face {
   font-family: 'Chunky Monkey';
