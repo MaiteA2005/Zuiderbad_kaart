@@ -128,15 +128,11 @@ showPin('hoogtouwenparcoursEvent', 'hoogtouwenEvent');
 // Parking pins
 showPin('alleParking', 'parking');
 showPin('parkingA', 'parkingA');
-showPin('ingangA', 'parkingA');
 showPin('parkingB', 'parkingB');
-showPin('ingangB', 'parkingB');
 showPin('parkingC', 'parkingC');
 showPin('ingangC', 'ingangC');
 showPin('parkingD', 'parkingD');
-showPin('ingangD', 'parkingD');
 showPin('parkingE', 'parkingE');
-showPin('ingangE', 'ingangE');
 showPin('parkingSportcomplex', 'parkingSportcomplex');
 showPin('betaalterminalsParking', 'betaalterminal');
 
