@@ -41,28 +41,30 @@
 }
 
 #custom-overlay {
-    position: fixed;
-    top: 0;
-    left: 20%; 
-    width: 80%; 
-    height: 100%;
-    background-color: var(--beige);
-    display: none; 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: left;
-
-    padding: 2rem;
-    z-index: 2000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%;
+  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 2rem;
+  z-index: 2000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
 }
 
+/* Actieve state */
 #custom-overlay.active {
-  display: flex;
+  transform: translateX(0);
   pointer-events: auto;
-  opacity: 1;
 }
 
 nav button {
@@ -158,18 +160,22 @@ nav button p {
 .submenu {
   position: fixed;
   top: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-color: var(--beige);
   z-index: 9999;
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 20px;
   overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
 }
 
 .submenu.active {
-  display: flex;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .submenu-header {
