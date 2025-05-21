@@ -14,6 +14,18 @@
 }
 
 @font-face {
+  font-family: 'GGSans';
+  src: url('/fonts/GGSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'GGSans', sans-serif;
+}
+
+
+@font-face {
   font-family: 'Chunky Monkey';
   src: url('fonts/ChunkyMonkey.otf') format('opentype');
 }
@@ -34,7 +46,7 @@
   margin-bottom: 16px;
   text-decoration: none;
   gap: 8px;
-  font-family: 'GG Sans';
+  font-family: 'gg sans';
 }
 
 .back-button img {
@@ -44,7 +56,7 @@
 }
 
 .back-button p {
-  font-family: 'GG Sans';
+  font-family: 'gg sans';
 }
 
 .arrow {
@@ -71,14 +83,14 @@
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 30px;
-  font-family: 'GG Sans';
+  font-family: 'gg sans';
 }
 
 .info-box p {
   margin: 0;
   font-size: 18px;
   line-height: 1.5;
-  font-family: 'GG Sans';
+  font-family: 'gg sans';
   font-weight: 200;
 }
 
@@ -164,7 +176,7 @@
   margin: 20px 0px;
   color: #333;
   align-items: center;
-  font-family: 'GG Sans';
+  font-family: 'gg sans';
   font-size: 0.9em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -183,7 +195,7 @@
   margin-bottom: 10px;
 }
 
-.openingstijden a {
+.openingstijden a, .hoogtLink {
   color: var(--orange);
   text-decoration: none;
 }
@@ -206,7 +218,7 @@
 .opmerking {
   background-color: var(--orange);
   color: white;
-  padding: 10px;
+  padding: 10px 15px; 
   font-size: 0.85em;
   margin-top: 15px;
   border-radius: 5px;
@@ -217,8 +229,8 @@
   border-radius: 12px;
   padding: 30px;
   max-width: 700px;
-  margin: 30px auto;
-  font-family: 'GG Sans', sans-serif;
+  margin: 20px auto;
+  font-family: 'gg sans', sans-serif;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
@@ -260,4 +272,17 @@
 .locatiekaart p {
   margin: 0;
   color: #000;
+}
+
+.lijnSpeeltuin {
+  border-top: 1px solid var(--rood);
+  width: 100%;
+  opacity: 0.5;
+}
+
+.locatiekaart h5 {
+  color: var(--rood);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
 }
