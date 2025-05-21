@@ -324,8 +324,8 @@ var eventMarkerStrandhuis = L.marker([50.98527, 4.51578], { icon: eventIcon }).a
 eventMarkerStrandhuis.types = ['event', 'strandhuis'];
 var eventMarkerStrandzone = L.marker([50.98608, 4.51551], { icon: eventIcon }).addTo(map);
 eventMarkerStrandzone.types = ['event', 'strandzone'];
-var eventMarkerOudVoetbalveld = L.marker([50.98075, 4.50637], { icon: eventIcon }).addTo(map);
-eventMarkerOudVoetbalveld.types = ['event', 'oudvoetbalveld'];
+var eventHoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: eventIcon }).addTo(map);
+eventHoogtouwenparcoursMarker.types = ['event', 'hoogtouwenEvent'];
 
 //Parkeermarkers
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
@@ -369,7 +369,7 @@ boogschietenMarker.types = ['activiteit', 'boogschieten'];
 var finsePistMarker = L.marker([50.98651911759529, 4.518476261767087], { icon: wandelIcon }).addTo(map);
 finsePistMarker.types = ['activiteit', 'finsePiste'];
 var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
-hoogtouwenparcoursMarker.types = ['activiteit', 'event', 'hoogtouwenparcours'];
+hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenactiviteit'];
 var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
 megaSpeeltuinMarker.types = ['activiteit', 'megaspeeltuin'];
 var muurklimmenMarker = L.marker([50.98340925174416, 4.505848288536073], { icon: muurklimmenIcon }).addTo(map);
@@ -431,7 +431,7 @@ var allMarkers = [
   //Horeca
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
   //Eventlocaties
-  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventMarkerOudVoetbalveld, 
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventHoogtouwenparcoursMarker, 
   //Parking
   parkingMarkerA, parkingMarkerB, parkingMarkerE, parkingMarkerD, parkingMarkerSportcomplex,
   ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
@@ -480,7 +480,7 @@ showPin('alleActiviteiten', 'activiteit'); //alle activiteiten
 showPin('basketActiviteit', 'basketVoetbal');
 showPin('boogschietActiviteit', 'boogschieten');
 showPin('finsePisteActiviteit', 'finsePiste');
-showPin('hoogtouwparcoursActiviteit', 'hoogtouwenparcours');
+showPin('hoogtouwparcoursActiviteit', 'hoogtouwenactiviteit');
 showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
 showWandelroute('MTBActiviteit', MBTroute_kaart);
 showPin('muurklimActiviteit', 'muurklimmen');
