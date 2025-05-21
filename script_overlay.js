@@ -42,7 +42,7 @@ horecaMarkerStrandbar.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
+  <a href="informatie_pages/horeca/zuiderbad_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -63,7 +63,7 @@ horecaMarkerZomerlust.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_zomerlust.html" class="info-overlay-button">Meer informatie over Zuiderbad Zomerlust</a>
+  <a href="informatie_pages/horeca/zuiderbad_zomerlust.html" class="info-overlay-button">Meer informatie over Zuiderbad Zomerlust</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -84,7 +84,7 @@ horecaMarkerStrandkiosk.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_strandkiosk.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandkiosk</a>
+  <a href="informatie_pages/horeca/zuiderbad_strandkiosk.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandkiosk</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
