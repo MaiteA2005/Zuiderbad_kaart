@@ -225,17 +225,20 @@ nav button p {
   transform: translateX(-50%);
   background-color: #fef1e7;
   border-radius: 15px;
-  padding: 1em;
+  padding: 0 1em;
   width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.overlay-menu.hidden {
-  display: none;
+.overlay-menu:not(.hidden) {
+  padding: 1em;
+  max-height: 500px; /* genoeg ruimte voor je content */
 }
-
 .menu-header {
   display: flex;
   justify-content: space-between;
