@@ -28,7 +28,7 @@
 .back-button {
   display: flex;
   align-items: center;
-  color: #6c1222;
+  color: var(--rood);
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 16px;
@@ -59,7 +59,7 @@
 }
 
 .info-box {
-  background-color: #6c1222;
+  background-color: var(--rood);
   color: white;
   padding: 16px;
   border-radius: 16px;
@@ -105,6 +105,7 @@
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
 }
 
 .openingsuren th,
@@ -112,12 +113,25 @@
   padding: 15px 5px;
   text-align: center;
   border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+/* Specifiek gelijke breedte voor 3 kolommen */
+.openingsuren td:nth-child(1),
+.openingsuren th:nth-child(1),
+.openingsuren td:nth-child(2),
+.openingsuren th:nth-child(2),
+.openingsuren td:nth-child(3),
+.openingsuren th:nth-child(3) {
+  width: 33.33%;
 }
 
 .openingsuren thead {
-  background-color: #640e1f; /* Donkerrood */
+  background-color: var(--rood); /* Donkerrood */
   color: #fff;
   border: #fff solid 1px;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .openingsuren tbody tr:hover {
@@ -130,6 +144,14 @@
 }
 
 .pTabel {
-  margin-top: 10px;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.lijn {
+  border-top: 1px solid #ffffff;
+  margin: 8px auto;
+  width: 90%;
+  opacity: 0.5;
 }
