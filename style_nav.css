@@ -266,6 +266,10 @@ nav button p {
   margin-bottom: 0.1em;
 }
 
+.menu-header h2 {
+  font-size: 1em;
+}
+
 .overlay-menu ul {
   list-style: none;
   padding: 0;
