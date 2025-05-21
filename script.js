@@ -89,12 +89,12 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
 //---------------Coordinaten zoeken--------------------
 // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
-  map.on('click', function(e) {
-    var coord = e.latlng;
-    var lat = coord.lat;
-    var lng = coord.lng;
-    alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
-  });
+  // map.on('click', function(e) {
+  //   var coord = e.latlng;
+  //   var lat = coord.lat;
+  //   var lng = coord.lng;
+  //   alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
+  // });
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
