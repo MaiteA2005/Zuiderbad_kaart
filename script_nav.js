@@ -138,6 +138,7 @@ showPin('ingangD', 'parkingD');
 showPin('parkingE', 'parkingE');
 showPin('ingangE', 'ingangE');
 showPin('parkingSportcomplex', 'parkingSportcomplex');
+showPin('betaalterminalsParking', 'betaalterminal');
 
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
 openActiviteitenBtn.addEventListener('click', function(e) {
