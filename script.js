@@ -521,3 +521,12 @@ showPin('filterKleedkamers', 'kleedkamers');
 showPin('filterEHBO', 'EHBO');
 
 //-----klik------
+
+
+window.onload = function() {
+  const filter = sessionStorage.getItem('filter');
+  if (filter) {
+    toggleMarkersByType(filter);
+    sessionStorage.removeItem('filter'); // zodat het niet blijft hangen bij herladen
+  }
+};
