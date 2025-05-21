@@ -1,7 +1,7 @@
 //---------------Overlay--------------------
-const openBtn = document.getElementById('open-custom-overlay'); // Dit is de knop die de 'Meer' opent
-const overlay = document.getElementById('custom-overlay'); // Dit is de overlay die je wilt openen/sluiten
-const closeBtn = document.getElementById('close-overlay'); // Dit is de knop die de overlay sluit
+const openBtn = document.getElementById('open-custom-overlay'); // Knop die de 'Meer' opent
+const overlay = document.getElementById('custom-overlay'); // De overlay zelf
+const closeBtn = document.getElementById('close-overlay'); // Knop om overlay te sluiten
 
 // Open overlay
 openBtn.addEventListener('click', (e) => {
@@ -9,19 +9,21 @@ openBtn.addEventListener('click', (e) => {
   overlay.classList.add('active');
 });
 
-// Sluit overlay als je erop klikt
+// Sluit overlay als je erop klikt (buiten de menu)
 overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
+  sluitAlleMenus();
+  sluitSubmenus();
 });
 
-// Stop klikbubbels binnen de overlay (knoppen en andere elementen)
+// Stop klikbubbels binnen de overlay (zodat klikken in submenu niet sluit)
 Array.from(overlay.children).forEach((child) => {
   child.addEventListener('click', (e) => {
     e.stopPropagation();
   });
 });
 
-// Selecteer knoppen
+// Selecteer knoppen van hoofdmappen
 const horecaBtn = document.getElementById('filterHoreca');
 const eventlocatiesBtn = document.getElementById('filterEventlocaties');
 const parkingBtn = document.getElementById('filterParking');
@@ -32,14 +34,41 @@ const horecaMenu = document.getElementById('horeca-menu');
 const eventlocatiesMenu = document.getElementById('eventlocaties-menu');
 const parkingsMenu = document.getElementById('parkings-menu');
 
-// Helperfunctie om alle overlays te sluiten
+// Submenus
+const openActiviteitenBtn = document.getElementById('filterActiviteitenSport');
+const submenuActiviteiten = document.getElementById('activiteiten-submenu');
+const backtomainActiviteiten = document.getElementById('back-to-main-menu');
+
+const openWandelroutesBtn = document.getElementById('filterWandelroutes');
+const submenuWandelroutes = document.getElementById('wandelroutes-submenu');
+const backtomainWandelroutes = document.getElementById('back-to-main-menu-wandelroutes');
+
+const openCultuurBtn = document.getElementById('filterCultuurSportlocaties');
+const submenuCultuur = document.getElementById('cultuur-submenu');
+const backtomainCultuur = document.getElementById('back-to-main-menu-cultuur');
+
+// Helperfunctie om alle hoofdmenu's te sluiten
 function sluitAlleMenus() {
   horecaMenu.classList.add('hidden');
   eventlocatiesMenu.classList.add('hidden');
   parkingsMenu.classList.add('hidden');
 }
 
-// Event listeners
+// Helperfunctie om alle submenus te sluiten
+function sluitSubmenus() {
+  submenuActiviteiten.classList.remove('active');
+  submenuWandelroutes.classList.remove('active');
+  submenuCultuur.classList.remove('active');
+}
+
+// Helperfunctie om overlay én alle menus te sluiten
+function sluitOverlayEnMenus() {
+  overlay.classList.remove('active');
+  sluitAlleMenus();
+  sluitSubmenus();
+}
+
+// Eventlisteners voor hoofdmappen
 horecaBtn.addEventListener('click', () => {
   sluitAlleMenus();
   horecaMenu.classList.remove('hidden');
@@ -56,9 +85,11 @@ parkingBtn.addEventListener('click', () => {
 });
 
 meerBtn.addEventListener('click', () => {
-  sluitAlleMenus(); // sluit alle als je op 'Meer' klikt
+  sluitAlleMenus();
+  sluitSubmenus();
 });
 
+// Sluitknoppen in overlay-menus
 document.querySelectorAll('.close-btn').forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -68,20 +99,24 @@ document.querySelectorAll('.close-btn').forEach((btn) => {
 });
 
 //-------------------- Toggle pins -------------------
-// ------------------- Toggle functie voor de knoppen -------------------
+// Toggle functie voor de knoppen en sluiten overlay
 function showPin(id, type) {
-  document.getElementById(id).addEventListener('click', () => {
+  const element = document.getElementById(id);
+  if (!element) return;
+  element.addEventListener('click', () => {
     toggleMarkersByType(type);
-    sluitAlleMenus();
+    sluitOverlayEnMenus();
   });
 }
-//Horeca
-showPin('alleHoreca', 'horeca'); //alle horeca
+
+// Horeca pins
+showPin('alleHoreca', 'horeca');
 showPin('strandbarHoreca', 'strandbar');
 showPin('strandkioskHoreca', 'strandkiosk');
 showPin('zomerlustHoreca', 'zomerlust');
-//Eventlocaties
-showPin('alleEventlocaties', 'event'); //alle eventlocaties
+
+// Eventlocaties pins
+showPin('alleEventlocaties', 'event');
 showPin('serreEvent', 'serre');
 showPin('strandhuisEvent', 'strandhuis');
 showPin('sportimoniumEvent', 'sportimonium');
@@ -89,33 +124,25 @@ showPin('vergaderzaalEvent', 'vergaderzaal');
 showPin('eventweideEvent', 'evenementenweide');
 showPin('strandzoneEvent', 'strandzone');
 showPin('hoogtouwenparcoursEvent', 'hoogtouwenEvent');
-//Parking
-showPin('alleParking', 'parking'); //alle parking
+
+// Parking pins
+showPin('alleParking', 'parking');
 showPin('parkingA', 'parkingA');
 showPin('ingangA', 'parkingA');
 showPin('parkingB', 'parkingB');
 showPin('ingangB', 'parkingB');
 showPin('parkingC', 'parkingC');
+showPin('ingangC', 'ingangC');
 showPin('parkingD', 'parkingD');
 showPin('ingangD', 'parkingD');
 showPin('parkingE', 'parkingE');
-showPin('ingangE', 'parkingE');
+showPin('ingangE', 'ingangE');
 showPin('parkingSportcomplex', 'parkingSportcomplex');
-showPin('ingangC', 'ingangC');
-
 
 //-------------------- Submenu 'Activiteiten & Sport' -------------------
-const openActiviteitenBtn = document.getElementById('filterActiviteitenSport'); // Dit is de knop die het submenu ('activiteiten & sport') opent/sluit
-const submenuActiviteiten = document.getElementById('activiteiten-submenu'); // Dit is het submenu ('activiteiten & sport') dat je wilt openen/sluiten
-const backtomainActiviteiten = document.getElementById('back-to-main-menu'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
-
 openActiviteitenBtn.addEventListener('click', function(e) {
-  e.stopPropagation(); // voorkomt sluiten van overlay
+  e.stopPropagation();
   submenuActiviteiten.classList.toggle('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  overlay.classList.remove('active');
 });
 
 backtomainActiviteiten.addEventListener('click', () => {
@@ -123,37 +150,33 @@ backtomainActiviteiten.addEventListener('click', () => {
 });
 
 //-------------------- Submenu 'Wandelroutes' -------------------
-const openWandelroutesBtn = document.getElementById('filterWandelroutes'); // Dit is de knop die het submenu ('wandelroutes') opent/sluit
-const submenuWandelroutes = document.getElementById('wandelroutes-submenu'); // Dit is het submenu ('wandelroutes') dat je wilt openen/sluiten
-const backtomainWandelroutes = document.getElementById('back-to-main-menu-wandelroutes'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
-
 openWandelroutesBtn.addEventListener('click', function(e) {
-  e.stopPropagation(); // voorkomt sluiten van overlay
+  e.stopPropagation();
   submenuWandelroutes.classList.toggle('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  overlay.classList.remove('active');
 });
 
 backtomainWandelroutes.addEventListener('click', () => {
   submenuWandelroutes.classList.remove('active');
 });
 
-//-------------------- Submenu 'Cultuur & Sportlocaties ' -------------------
-const openCultuurBtn = document.getElementById('filterCultuurSportlocaties'); // Dit is de knop die het submenu ('cultuur & sportlocaties') opent/sluit
-const submenuCultuur = document.getElementById('cultuur-submenu'); // Dit is het submenu ('cultuur & sportlocaties') dat je wilt openen/sluiten
-const backtomainCultuur = document.getElementById('back-to-main-menu-cultuur'); // Dit is het pijltje om terug te gaan naar het hoofdmenu
-
+//-------------------- Submenu 'Cultuur & Sportlocaties' -------------------
 openCultuurBtn.addEventListener('click', function(e) {
-  e.stopPropagation(); // voorkomt sluiten van overlay
+  e.stopPropagation();
   submenuCultuur.classList.toggle('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  overlay.classList.remove('active');
 });
 
 backtomainCultuur.addEventListener('click', () => {
   submenuCultuur.classList.remove('active');
+});
+
+// Sluit overlay als je op sluitknop klikt
+closeBtn.addEventListener('click', () => {
+  sluitOverlayEnMenus();
+});
+
+// Sluit overlay en menu als je op een item in overlay-menu klikt
+document.querySelectorAll('.overlay-menu ul li').forEach(li => {
+  li.addEventListener('click', () => {
+    sluitOverlayEnMenus();
+  });
 });
