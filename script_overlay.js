@@ -626,7 +626,7 @@ finsePistMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>zachte, dempende looproute</b> doorheen een natuurlijke omgeving. De piste is ideaal voor <b>joggers en wandelaars.</b>
+      Een <b>zachte looproute</b> doorheen een groene omgeving. Ideaal voor <b>joggers en wandelaars.</b>
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -836,7 +836,7 @@ zensportplatformMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>rustige zone</b> voor <b>yoga, tai chi of andere kalme, mindful activiteiten</b>. Meestal in een <b>groene omgeving</b>.
+      Een <b>rustige zone</b> voor <b>yoga, tai chi of andere mindful activiteiten</b>. Meestal in een <b>groene omgeving</b>.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -858,7 +858,7 @@ documentatiecentrumMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een plek vol informatie over sport, sportgeschiedenis, gezondheid en beweging. Educatief en interessant voor sportliefhebbers.
+      Een plek vol informatie over sport, sportgeschiedenis en beweging. Educatief en interessant.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -963,7 +963,7 @@ survivalkampMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Uitdagend <b>parcours met hindernissen, klimnetten, modder en avontuur</b>. Hier test je kracht, moed en samenwerking.
+      Uitdagend <b>parcours met hindernissen, modder en avontuur</b>. Hier test je kracht, moed en samenwerking.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
