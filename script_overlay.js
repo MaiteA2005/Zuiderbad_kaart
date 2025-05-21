@@ -42,7 +42,7 @@ horecaMarkerStrandbar.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
+  <a href="informatie_pages/horeca/zuiderbad_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -63,7 +63,7 @@ horecaMarkerZomerlust.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_zomerlust.html" class="info-overlay-button">Meer informatie over Zuiderbad Zomerlust</a>
+  <a href="informatie_pages/horeca/zuiderbad_zomerlust.html" class="info-overlay-button">Meer informatie over Zuiderbad Zomerlust</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -84,7 +84,7 @@ horecaMarkerStrandkiosk.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbar_strandkiosk.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandkiosk</a>
+  <a href="informatie_pages/horeca/zuiderbad_strandkiosk.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandkiosk</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -612,7 +612,7 @@ boogschietenMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Boogschieten</a>
+  <a href="informatie_pages/activiteiten&sport/boogschieten.html" class="info-overlay-button">Meer informatie over Boogschieten</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -626,14 +626,14 @@ finsePistMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>zachte, dempende looproute</b> doorheen een natuurlijke omgeving. De piste is ideaal voor <b>joggers en wandelaars.</b>
+      Een <b>zachte looproute</b> doorheen een groene omgeving. Ideaal voor <b>joggers en wandelaars.</b>
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Finse Piste</a>
+  <a href="informatie_pages/activiteiten&sport/finse_piste.html" class="info-overlay-button">Meer informatie over Finse Piste</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -653,7 +653,7 @@ Een <b>uitdagend hoogtouwenparcours</b> voor de avontuurlijke bezoekers. Perfect
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Hoogtouwenparcours</a>
+  <a href="informatie_pages/activiteiten&sport/hoogtouwenparcours.html" class="info-overlay-button">Meer informatie over Hoogtouwenparcours</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -674,7 +674,7 @@ megaSpeeltuinMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Mega speeltuin</a>
+  <a href="informatie_pages/activiteiten&sport/mega_speeltuin.html" class="info-overlay-button">Meer informatie over Mega speeltuin</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -695,7 +695,7 @@ muurklimmenMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Muurklimmen</a>
+  <a href="informatie_pages/activiteiten&sport/muurklimmen.html" class="info-overlay-button">Meer informatie over Muurklimmen</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -716,7 +716,7 @@ openwaterzwemmenMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Openwaterzwemmen</a>
+  <a href="informatie_pages/activiteiten&sport/openwaterzwemmen.html" class="info-overlay-button">Meer informatie over Openwaterzwemmen</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -737,7 +737,7 @@ pingpongMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Pingpongtafel</a>
+  <a href="informatie_pages/activiteiten&sport/pingpongtafel.html" class="info-overlay-button">Meer informatie over Pingpongtafel</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -759,7 +759,7 @@ piratenSpeeltuinMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Piraten speeltuin</a>
+  <a href="informatie_pages/activiteiten&sport/piratenspeeltuin.html" class="info-overlay-button">Meer informatie over Piraten speeltuin</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -780,7 +780,7 @@ skaterampMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Skateramp</a>
+  <a href="informatie_pages/activiteiten&sport/skateramp.html" class="info-overlay-button">Meer informatie over Skateramp</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -801,7 +801,7 @@ voetbalveldMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Voetbalveld</a>
+  <a href="informatie_pages/activiteiten&sport/voetbalveld.html" class="info-overlay-button">Meer informatie over Voetbalveld</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -822,7 +822,7 @@ waterpretparkMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Waterpretpark</a>
+  <a href="informatie_pages/activiteiten&sport/waterpark.html" class="info-overlay-button">Meer informatie over Waterpretpark</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -836,14 +836,14 @@ zensportplatformMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>rustige zone</b> voor <b>yoga, tai chi of andere kalme, mindful activiteiten</b>. Meestal in een <b>groene omgeving</b>.
+      Een <b>rustige zone</b> voor <b>yoga, tai chi of andere mindful activiteiten</b>. Meestal in een <b>groene omgeving</b>.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Zensportplatform</a>
+  <a href="informatie_pages/activiteiten&sport/zensportplatform.html" class="info-overlay-button">Meer informatie over Zensportplatform</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -858,14 +858,14 @@ documentatiecentrumMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een plek vol informatie over sport, sportgeschiedenis, gezondheid en beweging. Educatief en interessant voor sportliefhebbers.
+      Een plek vol informatie over sport, sportgeschiedenis en beweging. Educatief en interessant.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Documentatiecentrum</a>
+  <a href="informatie_pages/cultuur&sportlocaties/documentatiecentrum.html" class="info-overlay-button">Meer informatie over Documentatiecentrum</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -886,7 +886,7 @@ hondenweideMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Hondenweide</a>
+  <a href="informatie_pages/cultuur&sportlocaties/hondenweide.html" class="info-overlay-button">Meer informatie over Hondenweide</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -907,7 +907,7 @@ sportcomplexMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Sportcomplex</a>
+  <a href="informatie_pages/cultuur&sportlocaties/sportcomplex.html" class="info-overlay-button">Meer informatie over Sportcomplex</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -928,7 +928,7 @@ sportverblijfMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Sportverblijf</a>
+  <a href="informatie_pages/cultuur&sportlocaties/sportverblijf.html" class="info-overlay-button">Meer informatie over Sportverblijf</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -949,7 +949,7 @@ sportweideMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Sportweide</a>
+  <a href="informatie_pages/cultuur&sportlocaties/sportweide.html" class="info-overlay-button">Meer informatie over Sportweide</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -963,14 +963,14 @@ survivalkampMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Uitdagend <b>parcours met hindernissen, klimnetten, modder en avontuur</b>. Hier test je kracht, moed en samenwerking.
+      Uitdagend <b>parcours met hindernissen, modder en avontuur</b>. Hier test je kracht, moed en samenwerking.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Survivalkamp</a>
+  <a href="informatie_pages/cultuur&sportlocaties/survivalkamp.html" class="info-overlay-button">Meer informatie over Survivalkamp</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -991,7 +991,7 @@ uitleendienstMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Uitleendienst</a>
+  <a href="informatie_pages/cultuur&sportlocaties/uitleendienst.html" class="info-overlay-button">Meer informatie over Uitleendienst</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
@@ -1012,7 +1012,7 @@ zeilclubMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" target="_blank" class="info-overlay-button">Meer informatie over Zeilclub</a>
+  <a href="informatie_pages/cultuur&sportlocaties/zeilclub.html" class="info-overlay-button">Meer informatie over Zeilclub</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
