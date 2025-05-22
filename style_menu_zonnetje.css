@@ -61,6 +61,9 @@
   padding: 1em;
 }
 
+.link{
+  color: var(--orange);
+}
 
 /*-----------hulp-----------*/
 .container_hulp{
@@ -125,4 +128,17 @@
     height: 35px;
     width: auto;
     margin: 0;
+}
+
+/*desktop*/
+@media (min-width: 768px) {
+  .qa-item {
+    margin-bottom: 1.5em;
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .qa-item p {
+    font-size: 1.2rem;
+  }
 }
