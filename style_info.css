@@ -116,7 +116,6 @@
   flex-shrink: 0;
 }
 
-/* ✅ Nieuwe versie zonder aparte img */
 .speech-bubble {
   width: 230px;
   height: 180px;
@@ -149,30 +148,25 @@
   text-overflow: ellipsis;
 }
 
-
+/*responsive*/
 @media (min-width: 768px) {
   #info-overlay {
-  position: fixed;
-  display: none;
-  bottom: 60px; /* in plaats van 0 */
-  width: 70vw;
-}
-
-.info-overlay-advice {
-  justify-content: center;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 1em;
-}
-
-#info-overlay-header {
-  margin: 0em 2em;
-}
-
-#info-overlay-header h2 {
-  font-size: 2em;
-}
-
-
+    position: fixed;
+    display: none;
+    bottom: 60px; /* in plaats van 0 */
+    width: 70vw;
+  }
+  .info-overlay-advice {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1em;
+  }
+  #info-overlay-header {
+    margin: 0em 2em;
+  }
+  #info-overlay-header h2 {
+    font-size: 2em;
+  }
 }

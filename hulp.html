@@ -12,20 +12,16 @@
 </head>
 <body>
     <a href="kaart.html" class="back">
-            <img src="images/close.png" alt="">
-        </a>
+      <img src="images/close.png" alt="">
+    </a>
     <div class="container_hulp">
-        
-
-        <h2>In geval van nood</h2>
-        <p>Ongeval gehad? gewond? Of nood aan eerste hulp?</p>
-
-        <img src="images/zon_hulp.png" alt="" id="sun_hulp_img">
-        
-        <div class="ehbo_kaart">
-        <a href="kaart.html" onclick="sessionStorage.setItem('filter', 'EHBO')">EHBO op de kaart bekijken</a>
-        <img src="images/pijl_oranje.png" alt="">
-        </div>
+      <h2>In geval van nood</h2>
+      <p>Ongeval gehad? gewond? Of nood aan eerste hulp?</p>
+      <img src="images/zon_hulp.png" alt="" id="sun_hulp_img">
+      <div class="ehbo_kaart">
+      <a href="kaart.html" onclick="sessionStorage.setItem('filter', 'EHBO')">EHBO op de kaart bekijken</a>
+      <img src="images/pijl_oranje.png" alt="">
+    </div>
         
     <div class="bellen">
       <div class="call_descr">
@@ -37,11 +33,11 @@
     </div>
 </body>
 <script>
-document.querySelectorAll(".question").forEach(function(question) {
-  question.addEventListener("click", function() {
-    this.nextElementSibling.classList.toggle("open");
-    this.classList.toggle("open");
+  document.querySelectorAll(".question").forEach(function(question) {
+    question.addEventListener("click", function() {
+      this.nextElementSibling.classList.toggle("open");
+      this.classList.toggle("open");
+    });
   });
-});
 </script>
 </html>

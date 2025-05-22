@@ -11,9 +11,9 @@
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
-        <a href="kaart.html" class="back">
-            <img src="images/close.png" alt="">
-        </a>
+    <a href="kaart.html" class="back">
+        <img src="images/close.png" alt="">
+    </a>
 
     <div class="qa-item">
       <div class="question"><p>Moet ik toegang tot het strand betalen als ik iets wil komen drinken of eten in de strandbar?</p>
@@ -86,11 +86,11 @@
     </div>
 </body>
 <script>
-document.querySelectorAll(".question").forEach(function(question) {
-  question.addEventListener("click", function() {
-    this.nextElementSibling.classList.toggle("open");
-    this.classList.toggle("open");
+  document.querySelectorAll(".question").forEach(function(question) {
+    question.addEventListener("click", function() {
+      this.nextElementSibling.classList.toggle("open");
+      this.classList.toggle("open");
+    });
   });
-});
 </script>
 </html>

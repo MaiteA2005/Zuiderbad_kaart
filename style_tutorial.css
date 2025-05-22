@@ -5,35 +5,32 @@ body {
 
 #custom-overlay_tutorial{
   display: none;
-
 }
 
 .tutorial_kaart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 170px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 170px;
 }
 
 .tutorial_kaart img {
-    height: 400px;
-    width: auto;
+  height: 400px;
+  width: auto;
 }
 
 .nav_up_tutorial{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    background: none; 
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: none;  
 }
 
 .nav_up_tutorial_2{

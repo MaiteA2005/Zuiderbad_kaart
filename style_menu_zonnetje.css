@@ -130,7 +130,7 @@
     margin: 0;
 }
 
-/*desktop*/
+/*responsive*/
 @media (min-width: 768px) {
   .qa-item {
     margin-bottom: 1.5em;

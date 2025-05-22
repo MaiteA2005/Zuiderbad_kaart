@@ -1147,7 +1147,7 @@ toilet4Marker.on('click', function(e) {
 doucheMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
-'Openbare douche',
+'Openbare douches',
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>

@@ -29,18 +29,6 @@ var map = L.map('map', {
   // Voeg een CSS-klasse toe om de afbeelding te draaien
   imageOverlay.getElement().classList.add('leaflet-rotated');
 
-//---------------Echte streetview--------------------
-  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  // }).addTo(map);
-
-//---------------Markers--------------------
-  //Voeg markers toe voor de hoeken
-  // L.marker([50.98717954450199, 4.495553970336915]).addTo(map).bindPopup('Linkerbovenhoek');
-  // L.marker([50.9886383295914, 4.529027938842774]).addTo(map).bindPopup('Rechteronderhoek');
-  // L.marker([50.995580437743314, 4.517011642456056]).addTo(map).bindPopup('Rechterbovenhoek');
-  // L.marker([50.978074609081055, 4.508256912231446]).addTo(map).bindPopup('Linkeronderhoek');
-
 //---------------Knoppen reset en zoemen--------------------
 document.getElementById('reset-map').addEventListener('click', function() {
   map.setView([50.9875, 4.5147], 14);
@@ -48,7 +36,6 @@ document.getElementById('reset-map').addEventListener('click', function() {
     if (!map.hasLayer(marker)) { //alle markers die momenteel niet zichtbaar zijn
       map.addLayer(marker); //toon deze markers^
     }
-    //allMarkers.forEach(marker => map.removeLayer(marker));
   });
   if (map.hasLayer(imageOverlay)) {
     map.removeLayer(imageOverlay);
@@ -87,15 +74,6 @@ map.on('zoomend', function() {
   updateZoomButtons();
 });
 updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
-
-//---------------Coordinaten zoeken--------------------
-// Voeg een klikgebeurtenis toe om de coördinaten weer te geven
-  // map.on('click', function(e) {
-  //   var coord = e.latlng;
-  //   var lat = coord.lat;
-  //   var lng = coord.lng;
-  //   alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
-  // });
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
@@ -531,12 +509,10 @@ function showPin(id, type) {
 }
 
 function showPinZoomOut(id, type) {
-
   document.getElementById(id).addEventListener('click', () => {
     toggleMarkersByType(type);
     overlay.classList.remove('active'); // sluit menu
-  map.setView([50.9875, 4.5147], 14);
-
+    map.setView([50.9875, 4.5147], 14);
   });
 }
 
