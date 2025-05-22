@@ -560,45 +560,53 @@ body {
     left: 10px;
 }
 
-#sun_tutorial7{
+.tutorial-ballon-container_7 {
   position: fixed;
-  top: 35%;
-  left: 32%;
+  top: 30vh;
+  left: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial7 img{
-  height: 200px;
-  width: auto;
-}
-
-#text_ballon7 {
-  position: fixed;
-  top: 130px;
-  left: 60px;
-  z-index: 2000;
-}
-
-#text_ballon7 img {
-  height: 220px;
-  width: auto;
-}
-
-#text_tutorial7 {
-  position: absolute;
-  text-align: center;
-  top: 40px; 
-  left: 8px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 18px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial7 p {
+.tutorial-ballon_7 {
+  width: 270px;
+  height: 170px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 20vw;
+  background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_7 p {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_7 {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 /*---------stap 8---------*/
