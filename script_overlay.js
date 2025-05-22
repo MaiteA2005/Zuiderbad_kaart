@@ -56,7 +56,7 @@ horecaMarkerZomerlust.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>sfeerval</b> eet- en drinkplekje, iets <b>rustiger</b> dan de strandbar. Met een <b>relaxte</b> zomerse sfeer.
+      Een <b>sfeerval</b> eet- en drinkplekje, iets <b>rustiger</b> dan de strandbar. Met een <b>relaxe</b> zomerse sfeer.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -268,7 +268,7 @@ ingangMarkerA.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtsbij</b> als je op <b>Parking A</b> parkeert.
+      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking A</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -306,7 +306,7 @@ ingangMarkerB.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtsbij</b> als je op <b>Parking B</b> parkeert.
+      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking B</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -340,7 +340,7 @@ parkingMarkerC.on('click', function(e) {
 ingangMarkerC.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
-'Ingang D',
+'Ingang C',
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
@@ -382,7 +382,7 @@ ingangMarkerD.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtsbij</b> als je op <b>Parking D</b> parkeert.
+      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking D</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -458,7 +458,7 @@ betaalterminalMarker1.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>handige betaalterminal</b> om de betalende parking te betalen.
+      Een <b>handige terminal</b> om voor je parking te betalen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -479,7 +479,7 @@ betaalterminalMarker2.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>handige betaalterminal</b> om de betalende parking te betalen.
+      Een <b>handige terminal</b> om voor je parking te betalen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -500,7 +500,7 @@ betaalterminalMarker3.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>handige betaalterminal</b> om de betalende parking te betalen.
+      Een <b>handige terminal</b> om voor je parking te betalen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -521,7 +521,7 @@ betaalterminalMarker4.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>handige betaalterminal</b> om de betalende parking te betalen.
+      Een <b>handige terminal</b> om voor je parking te betalen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -542,7 +542,7 @@ betaalterminalMarker5.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>handige betaalterminal</b> om de betalende parking te betalen.
+      Een <b>handige terminal</b> om voor je parking te betalen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -710,7 +710,7 @@ pingpongMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een klassieke <b>outdoor pingpongtafel,</b> ideaal voor snelle spelletjes of intensieve duels
+      Een klassieke <b>outdoor pingpongtafel,</b> ideaal voor snelle spelletjes of intensieve duels.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -859,7 +859,7 @@ hondenweideMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Laat je hand <b>vriendjes</b> maken. De ideale plek voor <b>socialisatie.</b> Breng een speeltje mee en laat ze samen spelen.
+      Laat je hond <b>vriendjes</b> maken. De ideale plek voor <b>socialisatie.</b> Breng een speeltje mee en laat ze samen spelen.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -1116,7 +1116,7 @@ kleedkamers1Marker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      kleedkamers voor <b>sporters</b> en <b>zwemmers.</b> Ideaal om je om te kleden voor een <b>dagje strand of sport.</b>
+      Kleedkamers voor <b>sporters</b> en <b>zwemmers.</b> Ideaal om je om te kleden voor een <b>dagje strand of sport.</b>
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -1133,7 +1133,7 @@ kleedkamers2Marker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      kleedkamers voor <b>sporters</b> en <b>zwemmers.</b> Ideaal om je om te kleden voor een <b>dagje strand of sport.</b>
+      Kleedkamers voor <b>sporters</b> en <b>zwemmers.</b> Ideaal om je om te kleden voor een <b>dagje strand of sport.</b>
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
