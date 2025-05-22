@@ -17,28 +17,28 @@
 
 @font-face {
   font-family: 'gg sans Bold';
-  src: url('fonts/gg-sans/gg-sans-bold.woff') format('woff');
+  src: url('fonts/gg-sans/gg\ sans\ Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'gg sans Normal Regular';
-  src: url('fonts/gg-sans/gg-sans-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'gg sans Medium Regular';
-  src: url('fonts/gg-sans/gg-sans-medium.woff') format('woff');
+  font-family: 'gg sans Medium';
+  src: url('fonts/gg-sans/gg\ sans\ Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
+  font-family: 'gg sans Regular';
+  src: url('fonts/gg-sans/gg\ sans\ Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'gg sans SemiBold Regular';
-  src: url('fonts/gg-sans/gg-sans-semibold.woff') format('woff');
+  src: url('fonts/gg-sans/gg\ sans\ Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
@@ -53,7 +53,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Chunky Monkey', sans-serif;
+    font-family: 'gg sans SemiBold Regular', sans-serif;
 }
 
 body{
