@@ -287,4 +287,33 @@ margin-left: 1em;
     justify-content: center;
     align-items: center;
   }
+
+  .intro_tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 340px;
+  }
+
+  .intro_zon {
+    height: 220px;
+    margin-bottom: 20px;
+  }
+
+  .knoppen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .knoppen a {
+    width: fit-content;
+    margin: 10px 0;
+  }
 }
