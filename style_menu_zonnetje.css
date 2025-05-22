@@ -73,38 +73,37 @@
 }
 
 #sun_hulp_img{
-    height: 200px;
-    width: auto;
-    margin: 1em 1em;
+  height: 200px;
+  width: auto;
+  margin: 1em 1em;
 }
 
 .ehbo_kaart {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    justify-content: center;
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  justify-content: center;
 }
 
 .ehbo_kaart a {
-    font-size: 1.5rem; 
-    text-decoration: underline ; 
-    color: var(--rood);
-
+  font-size: 1.5rem; 
+  text-decoration: underline ; 
+  color: var(--rood);
 }
 
 .ehbo_kaart img {
-    width: 40px; 
-    height: auto;
+  width: 40px; 
+  height: auto;
 }
 
 #nood_note{
-    margin-top: 5vh;
-    font-size: 1.2em;
+  margin-top: 5vh;
+  font-size: 1.2em;
 }
 
 .call_nood{
-    margin-top: 2%;
-    text-align: center;
+  margin-top: 2%;
+  text-align: center;
 }
 
 .call_nood a{
