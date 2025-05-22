@@ -95,14 +95,14 @@ body {
 }
 
 .button_tutorial_next{
-  z-index: 2000;
+  z-index: 2001;
   position: fixed;
   bottom: 50%;
   right: 10px;
 }
 
 .button_tutorial_back{
-  z-index: 2000;
+  z-index: 2001;
   position: fixed;
   bottom: 50%;
   left: 10px;
@@ -310,7 +310,7 @@ body {
   bottom: 15vh;
   margin: 0;
   padding: 0;
-  left: 15vw;
+  left: 17vw;
   background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -355,45 +355,55 @@ body {
 }
 
 /*---------stap 5---------*/
-#sun_tutorial5{
+
+
+.tutorial-ballon-container_5 {
   position: fixed;
-  bottom: 40vh;
-  right: 12vh;
+  bottom: 30vh;
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial5 img{
-  height: 200px;
-  width: auto;
-}
-#text_ballon5 {
-  position: fixed;
-  top: 16vh;
-  left: 80px;
-  z-index: 2000;
-}
-
-#text_ballon5 img {
-  height: 150px;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial5 {
-  position: absolute;
-  text-align: center;
-  top: 30px; 
-  left: 8px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 14px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial5 p {
+.tutorial-ballon_5 {
+  width: 250px;
+  height: 160px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 17vw;
+  background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_5 p {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_5 {
+  width: 140px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 #arrow_tutorial5{
