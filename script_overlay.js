@@ -1018,11 +1018,11 @@ zeilclubMarker.on('click', function(e) {
   );
 });
 
-// Activiteiten marker 7
+// Activiteiten marker 8
 MTBMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
-'Mountenbiken'
+'Mountenbiken',
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
