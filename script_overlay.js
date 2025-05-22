@@ -1,46 +1,43 @@
+// Klik op de toggle button (kruisje bovenaan in de overlay)
 document.getElementById('info-overlay-toggle-btn').addEventListener('click', function(e) {
-  e.stopPropagation(); // voorkom dat de header click mee gaat
-  document.getElementById('info-overlay').classList.toggle('open');
-});
-
-document.getElementById('info-overlay-close-btn').addEventListener('click', function(e) {
   e.stopPropagation();
-  document.getElementById('info-overlay').style.display = 'none';
-  document.getElementById('info-overlay').classList.remove('open');
-  document.getElementById('info-overlay-close-btn').style.display = 'none';
+  const overlay = document.getElementById('info-overlay');
+
+  // Overlay sluiten
+  overlay.style.display = 'none';
+  overlay.classList.remove('open');
   document.getElementsByClassName('nav_up')[0].style.display = 'flex';
 });
 
+// Functie om overlay te openen met specifieke inhoud
 function openInfoOverlay(title, content) {
+  const overlay = document.getElementById('info-overlay');
+
   document.getElementById('info-overlay-title').innerText = title;
   document.getElementById('info-overlay-content').innerHTML = content;
-  document.getElementById('info-overlay').style.display = 'block';
-  document.getElementById('info-overlay').classList.add('open');
-  document.getElementById('info-overlay-close-btn').style.display = 'flex';
 
+  overlay.style.display = 'block';
+  overlay.classList.add('open');
   document.getElementsByClassName('nav_up')[0].style.display = 'none';
 }
 
-
-//-------horeca markers------------------//
-// Horeca marker 1
+// Voorbeeld horeca marker click event
 horecaMarkerStrandbar.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
-'Zuiderbad Strandbar',
-`<div class="info-overlay-advice">
-  <div class="speech-bubble">
-    <p>
-      Een <b>gezellige plek</b> aan het water, met een <b>zomerse vibe.</b> Ideaal voor een <b>drankje of aperitiefje</b> met zicht op het water.
-    </p>
-  </div>
-  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/horeca/zuiderbad_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
-</div>`
+    'Zuiderbad Strandbar',
+    `<div class="info-overlay-advice">
+      <div class="speech-bubble">
+        <p>
+          Een <b>gezellige plek</b> aan het water, met een <b>zomerse vibe.</b> Ideaal voor een <b>drankje of aperitiefje</b> met zicht op het water.
+        </p>
+      </div>
+      <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+    </div>
+    <div class="info-overlay-information">
+      <a href="informatie_pages/horeca/zuiderbad_strandbar.html" class="info-overlay-button">Meer informatie over Zuiderbad Strandbar</a>
+      <img src="images/go_advies.svg" alt="Sluiten" />
+    </div>`
   );
 });
 
