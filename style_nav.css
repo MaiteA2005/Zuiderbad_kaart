@@ -353,8 +353,8 @@ nav button p {
   }
   .overlay-menu {
     position: fixed;
-    left: 25vh;
-    transform: translateX(-50%);
+     right: 0;
+  transform: translateX(0);
     background-color: #fef1e7;
     width: 400px;
   }
