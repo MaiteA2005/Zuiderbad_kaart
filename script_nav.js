@@ -108,7 +108,6 @@ document.querySelectorAll('.close-btn').forEach((btn) => {
 });
 
 //-------------------- Toggle pins -------------------
-// Toggle functie voor de knoppen en sluiten overlay
 const markersByType ={
   // Horeca
   strandbar: horecaMarkerStrandbar,
