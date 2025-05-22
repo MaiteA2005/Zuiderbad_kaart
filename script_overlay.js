@@ -777,8 +777,28 @@ skaterampMarker.on('click', function(e) {
 </div>`
   );
 });
-
 // Activiteiten marker 12
+skatehalMarker.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  openInfoOverlay(
+'Skateramp',
+`<div class="info-overlay-advice">
+  <div class="speech-bubble">
+    <p>
+      Speciaal aangelegd <b>skategedeelte voor skaters, steppers of BMX’ers.</b> Geschikt voor beginners én meer ervaren riders.
+    </p>
+  </div>
+  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+</div>
+
+<div class="info-overlay-information">
+  <a href="informatie_pages/activiteiten&sport/skateramp.html" class="info-overlay-button">Meer informatie over Skateramp</a>
+  <img src="images/go_advies.svg" alt="Sluiten" />
+</div>`
+  );
+});
+
+// Activiteiten marker 13
 voetbalveldMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
@@ -799,7 +819,7 @@ voetbalveldMarker.on('click', function(e) {
   );
 });
 
-// Activiteiten marker 13
+// Activiteiten marker 14
 waterpretparkMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
@@ -820,7 +840,7 @@ waterpretparkMarker.on('click', function(e) {
   );
 });
 
-// Activiteiten marker 14
+// Activiteiten marker 15
 zensportplatformMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
