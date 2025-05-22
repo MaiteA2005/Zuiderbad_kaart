@@ -1018,6 +1018,27 @@ zeilclubMarker.on('click', function(e) {
   );
 });
 
+// Activiteiten marker 8
+MTBMarker.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  openInfoOverlay(
+'Mountenbiken',
+`<div class="info-overlay-advice">
+  <div class="speech-bubble">
+    <p>
+      Een <b>uitdagend mountainbikeparcours</b> doorheen de bossen van Hofstade. Ideaal voor <b>avontuurlijke fietsers.</b>
+    </p>
+  </div>
+  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+</div>
+
+<div class="info-overlay-information">
+  <a href="informatie_pages/cultuur&sportlocaties/mountainbike.html" class="info-overlay-button">Meer informatie over mountenbike</a>
+  <img src="images/go_advies.svg" alt="Sluiten" />
+</div>`
+  );
+});
+
 //-------toiletten-----------------//
 // toilet marker 1
 toilet1Marker.on('click', function(e) {

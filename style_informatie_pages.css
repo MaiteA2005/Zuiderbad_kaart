@@ -127,6 +127,7 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   table-layout: fixed;
+  font-family: 'gg sans Normal Regular', sans-serif;
 }
 
 .openingsuren th,
@@ -135,16 +136,21 @@
   text-align: center;
   border-bottom: 1px solid #ddd;
   word-wrap: break-word;
+  font-size: 16px;
+  font-family: 'gg sans Normal Regular', sans-serif;
+}
+
+.openingsuren td:nth-child(1),
+.openingsuren th:nth-child(1){
+  width: 30%;
 }
 
 /* Specifiek gelijke breedte voor 3 kolommen */
-.openingsuren td:nth-child(1),
-.openingsuren th:nth-child(1),
 .openingsuren td:nth-child(2),
 .openingsuren th:nth-child(2),
 .openingsuren td:nth-child(3),
 .openingsuren th:nth-child(3) {
-  width: 33.33%;
+  width: 34%;
 }
 
 .openingsuren thead {
@@ -159,7 +165,7 @@
   background-color: #9f4f4f;
 }
 
-.openingsuren small {
+.openingsuren .klein {
   font-size: 0.9rem;
   color: #ffffff;
 }
@@ -204,7 +210,7 @@
   margin-bottom: 10px;
 }
 
-.openingstijden a, .hoogtLink {
+.openingstijden a, .hoogtLink, .info-box a {
   color: var(--orange);
   text-decoration: none;
 }

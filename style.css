@@ -10,50 +10,50 @@
 
 @font-face {
   font-family: 'Mono and Friends DO';
-  src: url('fonts/MonoAndFriendsDO.ttf') format('truetype');
+  src: url('fonts/mono-and-friends/MonoAndFriendsDoRegular-WyAxE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'gg sans Bold';
+  src: url('fonts/gg-sans/gg\ sans\ Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
-  font-weight: normal;
-  src: local('gg sans Bold'), url('gg sans Bold.woff') format('woff');
 }
-
 
 @font-face {
-  font-family: 'gg sans Normal Regular';
+  font-family: 'gg sans Medium';
+  src: url('fonts/gg-sans/gg\ sans\ Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
-  font-weight: normal;
-  src: local('gg sans Normal Regular'), url('gg sans Regular.woff') format('woff');
 }
-
 
 @font-face {
-  font-family: 'gg sans Medium Regular';
+  font-family: 'gg sans Regular';
+  src: url('fonts/gg-sans/gg\ sans\ Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
-  src: local('gg sans Medium Regular'), url('gg sans Medium.woff') format('woff');
 }
-
 
 @font-face {
   font-family: 'gg sans SemiBold Regular';
-  font-style: normal;
+  src: url('fonts/gg-sans/gg\ sans\ Semibold.woff') format('woff');
   font-weight: normal;
-  src: local('gg sans SemiBold Regular'), url('gg sans Semibold.woff') format('woff');
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Chunky Monkey';
   src: url('fonts/ChunkyMonkey.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'gg sans SemiBold Regular', sans-serif;
 }
 
 body{
