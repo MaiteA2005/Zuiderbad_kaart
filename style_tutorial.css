@@ -611,35 +611,54 @@ body {
 
 /*---------stap 8---------*/
 
-#text_ballon8 {
+.tutorial-ballon-container_8 {
   position: fixed;
-  top: 12%;
-  left: 25%;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; /* stapelt verticaal */
+  align-items: center;    /* horizontaal centreren */
+  gap: 10px;              /* ruimte tussen tekst en zon */
   z-index: 2000;
 }
 
-#text_ballon8 img {
-  height: 200px;
-  width: auto;
-}
-
-#text_tutorial8 {
-  position: absolute;
-  text-align: center;
-  top: 22px; 
-  left: 35px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 18px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial8 p {
+.tutorial-ballon_8 {
+  width: 270px;
+  height: 170px;
   margin: 0;
+  padding: 0;
+  left: 20vw;
+  background-image: url('images/text_tutorial8.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
+.tutorial-ballon_8 p {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_8 {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
 .btn_kaart {
   position: fixed;
   bottom: 20vh;
