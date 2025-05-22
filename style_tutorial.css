@@ -295,13 +295,13 @@ body {
 
 .tutorial-ballon-container_4 {
   position: fixed;
-  bottom: 40vh;
-  right: 15vh;
-  z-index: 2000;
-
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
   flex-direction: row-reverse;
+  z-index: 2000;
 }
 
 .tutorial-ballon_4 {
