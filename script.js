@@ -472,27 +472,6 @@ var allMarkers = [
 ];
 
 const markerByType = {
-  //Horeca
-  // strandbar: horecaMarkerStrandbar,
-  // zomerlust: horecaMarkerZomerlust,
-  // strandkiosk: horecaMarkerStrandkiosk,
-  // //Eventlocaties
-  // evenementenweide: eventMarkerEvenementenweide,
-  // sportimonium: eventMarkerSportimonium,
-  // vergaderzaal: eventMarkerVergaderzaal,
-  // serre: eventMarkerSerre,
-  // strandhuis: eventMarkerStrandhuis,
-  // strandzone: eventMarkerStrandzone,
-  // hoogtouwenEvent: eventHoogtouwenparcoursMarker,
-  // oudVoetbalveld: oudVoetbalveldMarker,
-  // //Parking
-  // parkingA: parkingMarkerA,
-  // parkingB: parkingMarkerB,
-  // parkingC: parkingMarkerC,
-  // parkingD: parkingMarkerD,
-  // parkingE: parkingMarkerE,
-  // parkingSportcomplex: parkingMarkerSportcomplex,
-  // ingangC: ingangMarkerC,
   //Activiteiten & sport
   basketVoetbal: basketVoetbalMarker,
   boogschieten: boogschietenMarker,

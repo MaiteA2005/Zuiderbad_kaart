@@ -109,12 +109,41 @@ document.querySelectorAll('.close-btn').forEach((btn) => {
 
 //-------------------- Toggle pins -------------------
 // Toggle functie voor de knoppen en sluiten overlay
+const markersByType ={
+  // Horeca
+  strandbar: horecaMarkerStrandbar,
+  zomerlust: horecaMarkerZomerlust,
+  strandkiosk: horecaMarkerStrandkiosk,
+  //Eventlocaties
+  evenementenweide: eventMarkerEvenementenweide,
+  sportimonium: eventMarkerSportimonium,
+  vergaderzaal: eventMarkerVergaderzaal,
+  serre: eventMarkerSerre,
+  strandhuis: eventMarkerStrandhuis,
+  strandzone: eventMarkerStrandzone,
+  hoogtouwenEvent: eventHoogtouwenparcoursMarker,
+  oudVoetbalveld: oudVoetbalveldMarker,
+  //Parking
+  parkingA: parkingMarkerA,
+  parkingB: parkingMarkerB,
+  parkingC: parkingMarkerC,
+  parkingD: parkingMarkerD,
+  parkingE: parkingMarkerE,
+  parkingSportcomplex: parkingMarkerSportcomplex,
+  ingangC: ingangMarkerC
+}
+ 
 function showPin(id, type) {
-  const element = document.getElementById(id);
-  if (!element) return;
-  element.addEventListener('click', () => {
+  document.getElementById(id).addEventListener('click', () => {
     toggleMarkersByType(type);
-    sluitOverlayEnMenus();
+
+    const marker = markersByType[type];
+    if (marker) {
+      const coords = marker.getLatLng();
+      map.flyTo([coords.lat, coords.lng], 17); // Zoom in op de marker
+    }
+
+    overlay.classList.remove('active'); // sluit menu
   });
 }
 
