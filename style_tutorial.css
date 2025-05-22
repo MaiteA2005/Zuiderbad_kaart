@@ -372,6 +372,10 @@ body {
   z-index: 2000;
 }
 
+#custom-overlay_tutorial_5{
+  display: none;
+}
+
 .tutorial-ballon_5 {
   width: 250px;
   height: 160px;
