@@ -155,5 +155,24 @@
   position: fixed;
   display: none;
   bottom: 60px; /* in plaats van 0 */
+  width: 70vw;
 }
+
+.info-overlay-advice {
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+#info-overlay-header {
+  margin: 0em 2em;
+}
+
+#info-overlay-header h2 {
+  font-size: 2em;
+}
+
+
 }

@@ -1045,7 +1045,7 @@ MTBMarker.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="informatie_pages/cultuur&sportlocaties/mountainbike.html" class="info-overlay-button">Meer informatie over mountenbike</a>
+  <a href="informatie_pages/activiteiten&sport/mountainbike.html" class="info-overlay-button">Meer informatie over mountenbike</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );

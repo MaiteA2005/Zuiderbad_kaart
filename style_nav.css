@@ -232,6 +232,7 @@ nav button p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
+  left: auto;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -308,6 +309,7 @@ nav button p {
     justify-self: flex-end;
     position: fixed;
     top: 0;
+    left: auto;
     right: 0;
     width: 30%;
     height: 100vh;
