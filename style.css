@@ -53,7 +53,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'gg sans SemiBold Regular', sans-serif;
+    font-family: 'gg sans Regular', sans-serif;
 }
 
 body{
@@ -228,9 +228,10 @@ margin-left: 1em;
 
 /*-----------intro-----------*/
 .intro_zon{
-  height: 250px;
+  height: 220px;
 }
 .intro_tekst {
+  margin: 0 auto;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -246,7 +247,7 @@ margin-left: 1em;
 
 .image-container img {
   display: block;
-  width: 400px;
+  width: 340px;
 }
 
 .ballon-tekst {
