@@ -99,7 +99,7 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
-map.locate({ setView: true, maxZoom: 16 });  // Stel de kaart in om de locatie van de gebruiker te tonen met een maximum zoomniveau van 16
+map.locate({ setView: false, maxZoom: 16 });  // Stel de kaart in om de locatie van de gebruiker te tonen met een maximum zoomniveau van 16
 
 // Event listener wanneer de locatie van de gebruiker is gevonden
 map.on('locationfound', function(e) {
