@@ -395,6 +395,8 @@ var piratenSpeeltuinMarker = L.marker([50.983944675917876, 4.513455033302308], {
 piratenSpeeltuinMarker.types = ['activiteit', 'piratenspeeltuin'];
 var skaterampMarker = L.marker([50.98329448033371, 4.506408870220185], { icon: skaterampIcon }).addTo(map);
 skaterampMarker.types = ['activiteit', 'skateramp'];
+var skatehalMarker = L.marker([50.987122290900864, 4.497074569795184], { icon: skaterampIcon }).addTo(map);
+skatehalMarker.types = ['activiteit', 'skateramp'];
 var voetbalveldMarker = L.marker([50.9841065666959, 4.505711495876313], { icon: voetbalveldIcon }).addTo(map);
 voetbalveldMarker.types = ['activiteit', 'voetbalveld'];
 var waterpretparkMarker = L.marker([50.98346581850775, 4.512130022048951], { icon: waterpretparkIcon }).addTo(map);
@@ -460,7 +462,7 @@ var allMarkers = [
   ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
   betaalterminalMarker1, betaalterminalMarker2, betaalterminalMarker3, betaalterminalMarker4, betaalterminalMarker5,
   //Activiteiten & sport
-  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker,MTBMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
+  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker,MTBMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, skatehalMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
   //Historische wandelroute
   historieMarker1, historieMarker2, historieMarker3, historieMarker4,
   //Cultuur & sportlocaties
