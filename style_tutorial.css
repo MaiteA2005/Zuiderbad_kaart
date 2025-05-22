@@ -296,7 +296,7 @@ body {
 .tutorial-ballon-container_4 {
   position: fixed;
   bottom: 40vh;
-  left: 30%;
+  left: 25%;
   transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
