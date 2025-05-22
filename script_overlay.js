@@ -11,10 +11,6 @@ document.getElementById('info-overlay-close-btn').addEventListener('click', func
   document.getElementsByClassName('nav_up')[0].style.display = 'flex';
 });
 
-
-
-
-
 function openInfoOverlay(title, content) {
   document.getElementById('info-overlay-title').innerText = title;
   document.getElementById('info-overlay-content').innerHTML = content;
@@ -1158,4 +1154,50 @@ EHBOMarker.on('click', function(e) {
 </div>
 </div>`
   );
+});
+
+
+//-------Geschiedenis------------------//
+// Geschiedenis 1
+historieMarker1.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  
+  window.location.href = "informatie_pages/geschiedenis/olympischeFakkel.html";
+
+});
+
+// Geschiedenis 2
+historieMarker2.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  openInfoOverlay(
+'Kunstwerk',
+`<div class="info-overlay-advice">
+  <div class="speech-bubble">
+    <p>
+      Een kunstwerk <b>zonder naam</b> en waarvan de maker <b>onbekend</b> is.
+      <br>
+      Zeker de moeite waard om te ontdekken.
+    </p>
+    
+  </div>
+  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+</div>
+</div>`
+  );
+});
+
+// Geschiedenis 3
+historieMarker3.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  
+  window.location.href = "informatie_pages/geschiedenis/bootshuis.html";
+
+});
+
+// Geschiedenis 4
+historieMarker4.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  
+  window.location.href = "informatie_pages/geschiedenis/rafOfRaaf.html";
+
 });
