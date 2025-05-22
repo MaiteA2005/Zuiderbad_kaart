@@ -12,16 +12,16 @@
   position: fixed;
    padding-top: 1em;
   display: none;
-  bottom: 95px; /* in plaats van 0 */
+  bottom: 90px; /* in plaats van 0 */
   left: 0;
   width: 100%;
-  max-height: calc(50% - 60px); /* optioneel aanpassen als nodig */
+  max-height: calc(80% - 60px); /* optioneel aanpassen als nodig */
   background: var(--beige);
   border-top: var(--orange) 2px solid;
   z-index: 1;
   overflow: hidden;
   transition: transform 0.3s ease;
-  transform: translateY(calc(100% - 60px - 80px));/* altijd 60px zichtbaar */
+  transform: translateY(calc(100% - 60px - 20px));/* altijd 60px zichtbaar */
 }
 
 #info-overlay-close-btn {
