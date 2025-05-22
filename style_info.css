@@ -21,7 +21,7 @@
   z-index: 1;
   overflow: hidden;
   transition: transform 0.3s ease;
-  transform: translateY(calc(100% - 60px - 20px)); /* altijd 60px zichtbaar */
+  transform: translateY(calc(100% - 60px - 20px));/* altijd 60px zichtbaar */
 }
 
 #info-overlay-close-btn {
@@ -90,6 +90,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 1em;
+  padding-bottom: 1em;
   gap: 10px;
 }
 

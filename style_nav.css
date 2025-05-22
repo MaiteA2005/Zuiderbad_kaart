@@ -293,7 +293,7 @@ nav button p {
   color: #631f1f;
 }
 
-@media screen and (min-width: 768px) {  
+@media screen and (min-width: 1024px) {  
 #open-custom-overlay{
     display: none
 }
