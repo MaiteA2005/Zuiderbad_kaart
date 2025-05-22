@@ -135,6 +135,7 @@
   text-align: center;
   border-bottom: 1px solid #ddd;
   word-wrap: break-word;
+  font-size: 100%;
 }
 
 /* Specifiek gelijke breedte voor 3 kolommen */
