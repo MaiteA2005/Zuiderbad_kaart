@@ -6,7 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 220px;
+    margin-top: 170px;
     
 }
 
@@ -238,7 +238,7 @@ body {
 
 #arrow_tutorial2{
   position: fixed;
-  top: 13vh;
+  top: 12vh;
   right: 10vh;
   z-index: 2000;
 }
@@ -249,21 +249,46 @@ body {
 
 /*---------stap 3---------*/
 
-#text_tutorial3 {
-  position: absolute;
-  text-align: center;
-  top: 33px; 
-  left: 30px;
-  right: 2px;
-  color: var(--rood);
-  font-size: 1.3em;
-  line-height: 1.5;
-  z-index: 2001;
-  max-width: 200px;
+.tutorial-ballon-container_3 {
+  position: fixed;
+  top: 4vh;
+  left: 4vw;
+  z-index: 2000;
+
+  display: flex;
+  align-items: flex-start;
 }
 
-#text_tutorial3 p {
+.tutorial-ballon_3 {
+  width: 230px;
+  height: 130px;
+  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_3 p {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  right: 10%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_3 {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 /*---------stap 4---------*/
