@@ -1034,7 +1034,7 @@ zeilclubMarker.on('click', function(e) {
 MTBMarker.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
   openInfoOverlay(
-'Mountainbike',
+'Mountenbiken',
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>

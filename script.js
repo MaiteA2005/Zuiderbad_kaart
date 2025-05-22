@@ -530,6 +530,16 @@ function showPin(id, type) {
   });
 }
 
+function showPinZoomOut(id, type) {
+
+  document.getElementById(id).addEventListener('click', () => {
+    toggleMarkersByType(type);
+    overlay.classList.remove('active'); // sluit menu
+  map.setView([50.9875, 4.5147], 14);
+
+  });
+}
+
 // ------------------- Toggle functie voor wandelroutes -------------------
 function showWandelroute(id, kaart) {
   document.getElementById(id).addEventListener('click', () => {
@@ -541,9 +551,19 @@ function showWandelroute(id, kaart) {
   });
 }
 
+function showWandelrouteZoomOut(id, kaart) {
+  document.getElementById(id).addEventListener('click', () => {
+    if (map.hasLayer(imageOverlay)) {
+      map.removeLayer(imageOverlay);
+    }
+    imageOverlay = L.imageOverlay(kaart, imageBounds).addTo(map);
+    overlay.classList.remove('active'); //het hoofmenu wordt gesloten
+    map.setView([50.9875, 4.5147], 14);
+  });
+}
 // ------------------- Meer-menu - show pins -------------------
 //Activiteiten & sport
-showPin('alleActiviteiten', 'activiteit'); //alle activiteiten
+showPinZoomOut('alleActiviteiten', 'activiteit'); //alle activiteiten
 showPin('basketActiviteit', 'basketVoetbal');
 showPin('boogschietActiviteit', 'boogschieten');
 showPin('finsePisteActiviteit', 'finsePiste');
@@ -561,7 +581,7 @@ showPin('waterpretparkActiviteit', 'waterpretpark');
 showPin('zensportplatformActiviteit', 'zensportplatform');
 
 //Wandelroutes
-showWandelroute('alleWandelroutes', alleWandelroutes_kaart); //alle wandelroutes
+showWandelrouteZoomOut('alleWandelroutes', alleWandelroutes_kaart); //alle wandelroutes
 showWandelroute('domeinpadWandelroute', domeinpad_kaart);
 showWandelroute('historischpadWandelroute', historischpad_kaart);
 showPin('historischpadWandelroute', 'historischpad');
@@ -571,7 +591,7 @@ showWandelroute('loop4Wandelroute', looproute4_kaart);
 showWandelroute('loop5Wandelroute', looproute5_kaart);
 
 //Cultuur & sportlocaties
-showPin('alleCultuur','cultuur'); //alle cultuur- & sportlocaties
+showPinZoomOut('alleCultuur','cultuur'); //alle cultuur- & sportlocaties
 showPin('documentatiecentrumCultuur', 'documentatiecentrum');
 showPin('hondenweideCultuur', 'hondenweide');
 showPin('sportcomplexCultuur', 'sportcomplex');
@@ -582,9 +602,9 @@ showPin('uitleendienstCultuur', 'uitleendienst');
 showPin('zeilclubCultuur', 'zeilclub');
 
 //Sanitair
-showPin('filterToiletten', 'toilet');
+showPinZoomOut('filterToiletten', 'toilet');
 showPin('filterDouche', 'douche');
-showPin('filterKleedkamers', 'kleedkamers');
+showPinZoomOut('filterKleedkamers', 'kleedkamers');
 showPin('filterEHBO', 'EHBO');
 
 //-----klik------
