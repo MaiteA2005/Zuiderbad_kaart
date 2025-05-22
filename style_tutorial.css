@@ -130,7 +130,7 @@
 .tutorial-ballon-container_1 {
   position: fixed;
   top: 4vh;
-  left: 10vw;
+  left: 8vw;
   z-index: 2000;
 
   display: flex;
@@ -155,7 +155,7 @@
   left: 25%;
   right: 10%;
   bottom: 10%;
-  font-size: clamp(0.9rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.4;
   color: var(--rood);
   text-align: center;
