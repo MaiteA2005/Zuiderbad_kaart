@@ -161,6 +161,7 @@ nav button p {
 
 .submenu {
   position: fixed;
+  opacity: 0;
   top: 0;
   width: 100%;
   height: 100%;
@@ -178,6 +179,7 @@ nav button p {
 .submenu.active {
   transform: translateX(0);
   pointer-events: auto;
+  opacity: 1;
 }
 
 .submenu-header {
@@ -293,14 +295,9 @@ nav button p {
   color: #631f1f;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  #custom-overlay {
-    left: 250px;
-    width: calc(100% - 250px);
-  }
-}
 
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 768px) {
   #open-custom-overlay {
     display: none;
 }
