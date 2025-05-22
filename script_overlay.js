@@ -21,6 +21,16 @@ function openInfoOverlay(title, content) {
   document.getElementsByClassName('nav_up')[0].style.display = 'none';
 }
 
+// Functie om de info-overlay te sluiten
+function sluitInfoOverlay() {
+  const infoOverlay = document.getElementById('info-overlay');
+  if (infoOverlay.classList.contains('open')) {
+    infoOverlay.style.display = 'none';
+    infoOverlay.classList.remove('open');
+    document.getElementsByClassName('nav_up')[0].style.display = 'flex';
+  }
+}
+
 // Voorbeeld horeca marker click event
 horecaMarkerStrandbar.on('click', function(e) {
   map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
@@ -40,6 +50,15 @@ horecaMarkerStrandbar.on('click', function(e) {
     </div>`
   );
 });
+
+// Navigatieknoppen sluiten de info-overlay
+document.getElementById('filterHoreca').addEventListener('click', sluitInfoOverlay);
+document.getElementById('filterEventlocaties').addEventListener('click', sluitInfoOverlay);
+document.getElementById('filterParking').addEventListener('click', sluitInfoOverlay);
+document.getElementById('open-custom-overlay').addEventListener('click', sluitInfoOverlay);
+
+
+
 
 // Horeca marker 2
 horecaMarkerZomerlust.on('click', function(e) {
