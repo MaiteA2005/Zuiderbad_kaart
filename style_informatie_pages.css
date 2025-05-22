@@ -390,3 +390,43 @@ span.bold{
 .tarievenlijst li:last-child {
   border-bottom: none;
 }
+
+.geschiedenis {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--beige);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #000;
+  line-height: 1.6;
+}
+
+.geschiedenis h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--rood);
+}
+
+.geschiedenis .status {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.geschiedenis p {
+  margin-bottom: 15px;
+}
+
+.geschiedenis strong {
+  color: var(--orange);
+}
+
+.geschiedenis em {
+  font-style: italic;
+  color: #000;
+}
+
+.geschiedenis ul {
+  padding-top: 10px;
+}
