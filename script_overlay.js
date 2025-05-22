@@ -272,12 +272,8 @@ ingangMarkerA.on('click', function(e) {
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/parking/ingang_A.html" class="info-overlay-button">Meer informatie over Ingang A</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
+
   );
 });
 
@@ -314,13 +310,9 @@ ingangMarkerB.on('click', function(e) {
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/parking/ingang_B.html" class="info-overlay-button">Meer informatie over Ingang B</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
-  );
+
+);
 });
 
 // parking marker 3
@@ -356,12 +348,8 @@ ingangMarkerC.on('click', function(e) {
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/parking/ingang_C.html" class="info-overlay-button">Meer informatie over Ingang C</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
+
   );
 });
 
@@ -398,12 +386,8 @@ ingangMarkerD.on('click', function(e) {
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/parking/ingang_D.html" class="info-overlay-button">Meer informatie over Ingang D</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
+
   );
 });
 
@@ -440,12 +424,8 @@ ingangMarkerE.on('click', function(e) {
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
-</div>
-
-<div class="info-overlay-information">
-  <a href="informatie_pages/parking/ingang_E.html" class="info-overlay-button">Meer informatie over Ingang E</a>
-  <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
+
   );
 });
 
@@ -1039,6 +1019,7 @@ MTBMarker.on('click', function(e) {
   );
 });
 
+//-------Sanitair-----------------//
 //-------toiletten-----------------//
 // toilet marker 1
 toilet1Marker.on('click', function(e) {
