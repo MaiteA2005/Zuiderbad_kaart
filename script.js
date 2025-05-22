@@ -333,6 +333,8 @@ var eventMarkerStrandzone = L.marker([50.98608, 4.51551], { icon: eventIcon }).a
 eventMarkerStrandzone.types = ['event', 'strandzone'];
 var eventHoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: eventIcon }).addTo(map);
 eventHoogtouwenparcoursMarker.types = ['event', 'hoogtouwenEvent'];
+var oudVoetbalveldMarker = L.marker([50.980642588287914, 4.506303383646549], { icon: eventIcon }).addTo(map);
+oudVoetbalveldMarker.types = ['event', 'oudVoetbalveld'];
 
 //Parkeermarkers
 var parkingMarkerA = L.marker([50.98672, 4.49802], { icon: parkingIcon }).addTo(map);
@@ -452,7 +454,7 @@ var allMarkers = [
   //Horeca
   horecaMarkerStrandbar, horecaMarkerZomerlust, horecaMarkerStrandkiosk,
   //Eventlocaties
-  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventHoogtouwenparcoursMarker, 
+  eventMarkerEvenementenweide, eventMarkerVergaderzaal, eventMarkerSportimonium, eventMarkerSerre, eventMarkerStrandhuis, eventMarkerStrandzone, eventHoogtouwenparcoursMarker, oudVoetbalveldMarker,
   //Parking
   parkingMarkerA, parkingMarkerB, parkingMarkerC, parkingMarkerD, parkingMarkerE, parkingMarkerSportcomplex,
   ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
