@@ -126,13 +126,18 @@
   box-sizing: border-box;
 
   position: relative;
+  display: flex;
+  align-items: center; /* verticaal centreren */
+  justify-content: center; /* horizontaal centreren */
+  text-align: center;
+  padding: 20px 45px 20px 30px; /* evt. aanpassen i.p.v. absolute p */
 }
 
 .speech-bubble p {
-  position: absolute;
-  top: 40px;
+  position: static;
+  top: 20px;
   left: 30px;
-  right: 45px;
+  right: 40px;
   bottom: 20px;
   font-size: clamp(0.5rem, 2.7vw, 0.85rem);
   line-height: 1.4;
@@ -142,6 +147,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 @media (min-width: 768px) {
   #info-overlay {
