@@ -350,3 +350,45 @@ span.bold{
   font-family: 'gg sans SemiBold Regular', sans-serif;
   padding-bottom: 10px;
 }
+
+.parkeertarieven {
+  background-color: var(--beige);
+  border-left: 6px solid #6b1e23;
+  padding: 20px 25px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.parkeertarieven h2 {
+  font-size: 1.5em;
+  color: #6b1e23;
+  margin-bottom: 10px;
+}
+
+.parkeertarieven p {
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #000;
+}
+
+.tarievenlijst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarievenlijst li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rood);
+  font-size: 1em;
+  color: var(--rood);
+}
+
+.tarievenlijst li:last-child {
+  border-bottom: none;
+}
