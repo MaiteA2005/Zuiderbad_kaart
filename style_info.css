@@ -142,3 +142,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@media (min-width: 768px) {
+  #info-overlay {
+  position: fixed;
+  display: none;
+  bottom: 60px; /* in plaats van 0 */
+}
+}
