@@ -232,6 +232,7 @@ nav button p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
+  left: auto;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -308,6 +309,7 @@ nav button p {
     justify-self: flex-end;
     position: fixed;
     top: 0;
+    left: auto;
     right: 0;
     width: 30%;
     height: 100vh;
@@ -353,8 +355,8 @@ nav button p {
   }
   .overlay-menu {
     position: fixed;
-    left: 25vh;
-    transform: translateX(-50%);
+     right: 0;
+  transform: translateX(0);
     background-color: #fef1e7;
     width: 400px;
   }
@@ -367,6 +369,7 @@ nav button p {
     padding: 20px;
     overflow-y: auto;
     transform: translateX(100%);
+    pointer-events: none;
     transition: transform 0.4s ease;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

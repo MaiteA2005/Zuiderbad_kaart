@@ -70,18 +70,27 @@ function sluitOverlayEnMenus() {
 
 // Eventlisteners voor hoofdmappen
 horecaBtn.addEventListener('click', () => {
-  sluitAlleMenus();
-  horecaMenu.classList.remove('hidden');
+  if (horecaMenu.classList.contains('hidden')) {
+    horecaMenu.classList.remove('hidden');
+  } else {
+    sluitAlleMenus();
+  }
 });
 
 eventlocatiesBtn.addEventListener('click', () => {
-  sluitAlleMenus();
-  eventlocatiesMenu.classList.remove('hidden');
+  if (eventlocatiesMenu.classList.contains('hidden')) {
+    eventlocatiesMenu.classList.remove('hidden');
+  } else {
+    sluitAlleMenus();
+  }
 });
 
 parkingBtn.addEventListener('click', () => {
-  sluitAlleMenus();
-  parkingsMenu.classList.remove('hidden');
+if (parkingsMenu.classList.contains('hidden')) {
+    parkingsMenu.classList.remove('hidden');
+  } else {
+    sluitAlleMenus();
+  }
 });
 
 meerBtn.addEventListener('click', () => {
