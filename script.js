@@ -48,6 +48,7 @@ document.getElementById('reset-map').addEventListener('click', function() {
     if (!map.hasLayer(marker)) { //alle markers die momenteel niet zichtbaar zijn
       map.addLayer(marker); //toon deze markers^
     }
+    //allMarkers.forEach(marker => map.removeLayer(marker));
   });
   if (map.hasLayer(imageOverlay)) {
     map.removeLayer(imageOverlay);
