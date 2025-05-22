@@ -89,12 +89,12 @@ updateZoomButtons();//Initieel de zichtbaarheid van de knoppen bij pagina laden
 
 //---------------Coordinaten zoeken--------------------
 // Voeg een klikgebeurtenis toe om de coördinaten weer te geven
-  // map.on('click', function(e) {
-  //   var coord = e.latlng;
-  //   var lat = coord.lat;
-  //   var lng = coord.lng;
-  //   alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
-  // });
+  map.on('click', function(e) {
+    var coord = e.latlng;
+    var lat = coord.lat;
+    var lng = coord.lng;
+    alert("Je hebt geklikt op de coördinaten: " + lat + ", " + lng);
+  });
 
 //---------------Locatie van de gebruiker--------------------
 // Functie om de locatie van de gebruiker te verkrijgen en weer te geven
@@ -372,6 +372,8 @@ var finsePistMarker = L.marker([50.98651911759529, 4.518476261767087], { icon: w
 finsePistMarker.types = ['activiteit', 'finsePiste'];
 var hoogtouwenparcoursMarker = L.marker([50.98431609117996, 4.504517912864686], { icon: hoogtouwenparcoursIcon }).addTo(map);
 hoogtouwenparcoursMarker.types = ['activiteit', 'hoogtouwenactiviteit'];
+var MTBMarker = L.marker([50.993790697361355, 4.514499539728938], { icon: MTBIcon }).addTo(map);
+MTBMarker.types = ['activiteit', 'MTB'];
 var megaSpeeltuinMarker = L.marker([50.98268883746178, 4.511314630508424], { icon: speeltuinIcon }).addTo(map);
 megaSpeeltuinMarker.types = ['activiteit', 'megaspeeltuin'];
 var muurklimmenMarker = L.marker([50.98340925174416, 4.505848288536073], { icon: muurklimmenIcon }).addTo(map);
@@ -439,7 +441,7 @@ var allMarkers = [
   ingangMarkerA, ingangMarkerB, ingangMarkerC, ingangMarkerD, ingangMarkerE,
   betaalterminalMarker1, betaalterminalMarker2, betaalterminalMarker3, betaalterminalMarker4, betaalterminalMarker5,
   //Activiteiten & sport
-  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
+  basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker,MTBMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
   //Cultuur & sportlocaties
   documentatiecentrumMarker, hondenweideMarker, sportcomplexMarker, sportverblijfMarker, sportweideMarker, survivalkampMarker, uitleendienstMarker, zeilclubMarker,
   //Sanitair
@@ -485,6 +487,7 @@ showPin('finsePisteActiviteit', 'finsePiste');
 showPin('hoogtouwparcoursActiviteit', 'hoogtouwenactiviteit');
 showPin('megaSpeeltuinActiviteit', 'megaspeeltuin');
 showWandelroute('MTBActiviteit', MBTroute_kaart);
+showPin('MTBActiviteit', 'MTB');
 showPin('muurklimActiviteit', 'muurklimmen');
 showPin('openwaterzwemmenActiviteit', 'openwaterzwemmen');
 showPin('pinpongActiviteit', 'pingpong');
