@@ -231,7 +231,7 @@ margin-left: 1em;
   height: 220px;
 }
 .intro_tekst {
-  margin: 1em;
+  margin: 0 auto;
   position: fixed;
   top: 50%;
   left: 50%;
