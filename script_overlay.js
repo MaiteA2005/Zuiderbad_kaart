@@ -264,7 +264,7 @@ ingangMarkerA.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking A</b> parkeert.
+      De ingang naar hofstade is het <b>dichtsbijzijnd</b> als je op <b>Parking A</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -302,7 +302,7 @@ ingangMarkerB.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking B</b> parkeert.
+      De ingang naar hofstade is het <b>dichtsbijzijnd</b> als je op <b>Parking B</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -378,7 +378,7 @@ ingangMarkerD.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtstbij</b> als je op <b>Parking D</b> parkeert.
+      De ingang naar hofstade is het <b>dichtsbijzijnd</b> als je op <b>Parking D</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -416,7 +416,7 @@ ingangMarkerE.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      De ingang naar hofstade is het <b>dichtsbij</b> als je op <b>Parking E</b> parkeert.
+      De ingang naar hofstade is het <b>dichtsbijzijnd</b> als je op <b>Parking E</b> parkeert.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
