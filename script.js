@@ -296,6 +296,12 @@ var wandelIcon = L.icon({
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
 });
+var geschiedenisIcon = L.icon({
+  iconUrl: 'images/icon_geschiedenis.png',
+  iconSize: [38, 50],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
 var EHBOIcon = L.icon({
   iconUrl: 'images/icon_EHBO.png',
   iconSize: [38, 50],
@@ -394,6 +400,16 @@ waterpretparkMarker.types = ['activiteit', 'waterpretpark'];
 var zensportplatformMarker = L.marker([50.98769910880914, 4.513029603571903], { icon: zensportplatformIcon }).addTo(map);
 zensportplatformMarker.types = ['activiteit', 'zensportplatform'];
 
+//Historische wandelroute
+var historieMarker1 = L.marker([50.985744576058146, 4.516453109116997], { icon: geschiedenisIcon }).addTo(map);
+historieMarker1.types = ['historischpad'];
+var historieMarker2 = L.marker([50.98466087463146, 4.516190309531543], { icon: geschiedenisIcon }).addTo(map);
+historieMarker2.types = ['historischpad'];
+var historieMarker3 = L.marker([50.983094823310246, 4.51378106694539], { icon: geschiedenisIcon }).addTo(map);
+historieMarker3.types = ['historischpad'];
+var historieMarker4 = L.marker([50.982757641372615, 4.513867712673104], { icon: geschiedenisIcon }).addTo(map);
+historieMarker4.types = ['historischpad'];
+
 // Cultuur & sportlocaties
 var documentatiecentrumMarker = L.marker([50.98630890987, 4.517129659652711], { icon: documentatiecentrumIcon }).addTo(map);
 documentatiecentrumMarker.types = ['cultuur', 'documentatiecentrum'];
@@ -443,6 +459,8 @@ var allMarkers = [
   betaalterminalMarker1, betaalterminalMarker2, betaalterminalMarker3, betaalterminalMarker4, betaalterminalMarker5,
   //Activiteiten & sport
   basketVoetbalMarker, boogschietenMarker, finsePistMarker, hoogtouwenparcoursMarker, megaSpeeltuinMarker,MTBMarker, muurklimmenMarker, openwaterzwemmenMarker, pingpongMarker, piratenSpeeltuinMarker, skaterampMarker, voetbalveldMarker, waterpretparkMarker, zensportplatformMarker,
+  //Historische wandelroute
+  historieMarker1, historieMarker2, historieMarker3, historieMarker4,
   //Cultuur & sportlocaties
   documentatiecentrumMarker, hondenweideMarker, sportcomplexMarker, sportverblijfMarker, sportweideMarker, survivalkampMarker, uitleendienstMarker, zeilclubMarker,
   //Sanitair
@@ -466,7 +484,7 @@ function showPin(id, type) {
   document.getElementById(id).addEventListener('click', () => {
     toggleMarkersByType(type);
     overlay.classList.remove('active'); //het hoofmenu wordt gesloten
-  });
+});
 }
 // ------------------- Toggle functie voor wandelroutes -------------------
 function showWandelroute(id, kaart) {
@@ -502,6 +520,7 @@ showPin('zensportplatformActiviteit', 'zensportplatform');
 showWandelroute('alleWandelroutes', alleWandelroutes_kaart); //alle wandelroutes
 showWandelroute('domeinpadWandelroute', domeinpad_kaart);
 showWandelroute('historischpadWandelroute', historischpad_kaart);
+showPin('historischpadWandelroute', 'historischpad');
 showWandelroute('ijsvogelpadWandelroute', ijsvogelpad_kaart);
 showWandelroute('loop3Wandelroute', looproute3_kaart);
 showWandelroute('loop4Wandelroute', looproute4_kaart);
