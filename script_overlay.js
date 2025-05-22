@@ -891,7 +891,7 @@ documentatiecentrumMarker.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een plek vol informatie over sport, sportgeschiedenis en beweging. Educatief en interessant.
+      Een plek vol informatie over sport, sportgeschiedenis en beweging. <b>Educatief en interessant</b>.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
