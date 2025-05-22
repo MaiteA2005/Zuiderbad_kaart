@@ -68,7 +68,7 @@ horecaMarkerZomerlust.on('click', function(e) {
 `<div class="info-overlay-advice">
   <div class="speech-bubble">
     <p>
-      Een <b>sfeerval</b> eet- en drinkplekje, iets <b>rustiger</b> dan de strandbar. Met een <b>relaxe</b> zomerse sfeer.
+      Een <b>sfeervol</b> eet- en drinkplekje, iets <b>rustiger</b> dan de strandbar. Met een <b>relaxe</b> zomerse sfeer.
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
@@ -238,6 +238,27 @@ eventHoogtouwenparcoursMarker.on('click', function(e) {
   <div class="speech-bubble">
     <p>
       Een <b>uitdagend hoogtouwenparcours</b> voor de avontuurlijke bezoekers. Perfect voor een <b>dagje uit</b> met vrienden of familie.
+    </p>
+  </div>
+  <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
+</div>
+
+<div class="info-overlay-information">
+  <a href="informatie_pages/evenementlocaties/eventlocaties_hoogtouwenparcours.html" class="info-overlay-button">Meer informatie over het Hoogtouwenparcours</a>
+  <img src="images/go_advies.svg" alt="Sluiten" />
+</div>`
+  );
+});
+
+// Event marker 8
+oudVoetbalveldMarker.on('click', function(e) {
+  map.setView([e.latlng.lat - 0.001, e.latlng.lng], 18);
+  openInfoOverlay(
+'Het Oud Voetbalveld',
+`<div class="info-overlay-advice">
+  <div class="speech-bubble">
+    <p>
+      Het Oude Voetbalveld vormt een <b>veelzijdige eventlocatie</b> midden in het groen. Ideaal voor <b>sportieve activiteiten, festivals, ... </b> in de buitenlucht.    
     </p>
   </div>
   <img src="images/zon_plain.png" alt="Zonnetje" class="sun-icon" />
