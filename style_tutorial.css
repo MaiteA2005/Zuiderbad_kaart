@@ -2,6 +2,12 @@
 body {
   overflow: hidden;
 }
+
+#custom-overlay_tutorial{
+  display: none;
+
+}
+
 .tutorial_kaart {
     display: flex;
     align-items: center;
@@ -296,7 +302,7 @@ body {
 .tutorial-ballon-container_4 {
   position: fixed;
   bottom: 40vh;
-  left: 25%;
+  left: 150px;
   transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
@@ -310,7 +316,7 @@ body {
   bottom: 15vh;
   margin: 0;
   padding: 0;
-  left: 17vw;
+  left: 80px;
   background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -358,7 +364,7 @@ body {
 .tutorial-ballon-container_5 {
   position: fixed;
   bottom: 30vh;
-  left: 35%;
+  left: 150px;
   transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
@@ -372,7 +378,7 @@ body {
   bottom: 15vh;
   margin: 0;
   padding: 0;
-  left: 17vw;
+  left: 80px;
   background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -435,7 +441,7 @@ body {
 .tutorial-ballon-container_6 {
   position: fixed;
   top: 20vh;
-  left: 25%;
+  left: 120px;
   transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
@@ -449,7 +455,7 @@ body {
   bottom: 15vh;
   margin: 0;
   padding: 0;
-  left: 20vw;
+  left: 100px;
   background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -484,7 +490,7 @@ body {
 #arrow_tutorial6{
   position: absolute;
   bottom: 35vh;
-  right: 250px;
+  left: 180px;
   z-index: 2000;
 }
 
@@ -495,8 +501,8 @@ body {
 
 .tutorial_kaart_6 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     
 }
 
@@ -509,7 +515,7 @@ body {
   position: absolute;
   z-index: 2000;
   bottom: 25vh;
-  right: 25vh;
+  left: 250px;
 
 }
 
@@ -563,7 +569,7 @@ body {
 .tutorial-ballon-container_7 {
   position: fixed;
   top: 30vh;
-  left: 25%;
+  left: 120px;
   transform: translateX(-50%);
   display: flex;
   align-items: flex-start;
@@ -577,7 +583,7 @@ body {
   bottom: 15vh;
   margin: 0;
   padding: 0;
-  left: 20vw;
+  left: 100px;
   background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -628,7 +634,7 @@ body {
   height: 170px;
   margin: 0;
   padding: 0;
-  left: 20vw;
+  left: 100px;
   background-image: url('images/text_tutorial8.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
   background-repeat: no-repeat;
@@ -677,4 +683,202 @@ body {
 .btn_kaart a {
   text-decoration: none;
   color: var(--beige);
+}
+
+
+@media (min-width: 768px) {
+.button_tutorial_next{
+  z-index: 2001;
+  position: fixed;
+  bottom: 50%;
+  right: 50px;
+}
+
+ #open-custom-overlay_tutorial {
+     display: none;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    text-align: left;
+    color: #203336;
+    border: none;
+}
+
+#custom-overlay_tutorial {
+   display: block !important;
+    transform: translateX(0) !important;
+    pointer-events: auto;
+    justify-self: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: var(--beige);
+    z-index: 0;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
+    padding: 2rem;
+    z-index: 2000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    background: #9C938C;
+
+} 
+
+#custom-overlay.active_tutorial {
+  transform: translateX(0);
+  pointer-events: auto;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+   
+}
+
+#custom-overlay_tutorial.active {
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#custom-overlay_tutorial h2 {
+  margin-bottom: 2rem;
+  color: var(--rood);
+}
+
+#custom-overlay_tutorial button {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--rood);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#open-custom-overlay_tutorial p{
+  font-family: 'poppins', sans-serif;
+}
+
+.tutorial_kaart {
+  margin-right: 30%;
+  width: calc(100% - 30%);
+}
+
+.nav_down {
+    width: 70%;
+  }
+  .nav_down_btn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .nav_down_btn img{
+    width: 30px;
+    height: 30px;
+  }
+  .nav_down_btn p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+    .nav_up_tutorial{
+    position: fixed;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+   
+    z-index: 3000;
+    background: none; 
+}
+
+  .nav_up_tutorial_2{
+    position: fixed;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+   
+    z-index: 3000;
+    background: none; 
+}
+    #arrow_tutorial5{
+    position: fixed;
+    bottom: 120px;
+    right: 45vw;
+    z-index: 2000;
+    transform: rotate(250deg); 
+}
+
+#custom-overlay_tutorial_5 {
+   display: block !important;
+    transform: translateX(0) !important;
+    pointer-events: auto;
+    justify-self: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: var(--beige);
+    z-index: 0;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+
+    padding: 2rem;
+    z-index: 2000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    background: var(--beige)
+} 
+
+#custom-overlay.active_tutorial_5 {
+  transform: translateX(0);
+  pointer-events: auto;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+   
+}
+
+#custom-overlay_tutorial_5.active {
+  display: flex;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#custom-overlay_tutorial_5 h2 {
+  margin-bottom: 2rem;
+  color: var(--rood);
+}
+
+#custom-overlay_tutorial_5 button {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--rood);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.tutorial-ballon-container_8 {
+  left: 25%;
+
+}
+
+.btn_kaart {
+  left: 25%;
+}
+
+.nav_up_tutorial{
+    z-index: 200;
+
+    
+}
+
 }

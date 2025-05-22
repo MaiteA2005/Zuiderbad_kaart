@@ -122,8 +122,9 @@ showPin('strandhuisEvent', 'strandhuis');
 showPin('sportimoniumEvent', 'sportimonium');
 showPin('vergaderzaalEvent', 'vergaderzaal');
 showPin('eventweideEvent', 'evenementenweide');
-showPin('strandzoneEvent', 'strandzone');
 showPin('hoogtouwenparcoursEvent', 'hoogtouwenEvent');
+showPin('strandzoneEvent', 'strandzone');
+showPin('oudVoetbalveldEvent', 'oudVoetbalveld');
 
 // Parking pins
 showPin('alleParking', 'parking');
