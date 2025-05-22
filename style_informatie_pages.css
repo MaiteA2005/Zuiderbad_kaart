@@ -210,7 +210,7 @@
   margin-bottom: 10px;
 }
 
-.openingstijden a, .hoogtLink {
+.openingstijden a, .hoogtLink, .info-box a {
   color: var(--orange);
   text-decoration: none;
 }
