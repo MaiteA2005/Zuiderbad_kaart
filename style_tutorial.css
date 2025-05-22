@@ -192,7 +192,7 @@
 /*---------stap 2---------*/
 .tutorial-ballon-container_2 {
   position: fixed;
-  top: 10vh;
+  top: 15vh;
   left: 4vw;
   z-index: 2000;
 
@@ -201,6 +201,7 @@
 }
 
 .tutorial-ballon_2 {
+  top: 5vh;
   width: 230px;
   height: 150px;
   background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
@@ -234,23 +235,13 @@
 
 #arrow_tutorial2{
   position: fixed;
-  top: 20vh;
+  top: 14vh;
   right: 5vh;
   z-index: 2000;
 }
 
-.nav_up_tutorial2{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1001;
-    background: none; 
+#arrow_tutorial2 img{
+  height: 70px;
 }
 
 /*---------stap 3---------*/
