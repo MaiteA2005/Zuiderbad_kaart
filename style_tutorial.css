@@ -204,7 +204,6 @@ body {
   top: 15vh;
   left: 4vw;
   z-index: 2000;
-
   display: flex;
   align-items: flex-start;
 }
@@ -223,7 +222,7 @@ body {
 
 .tutorial-ballon_2 p {
   position: absolute;
-  top: 22%;
+  top: 30%;
   left: 25%;
   right: 10%;
   bottom: 10%;
