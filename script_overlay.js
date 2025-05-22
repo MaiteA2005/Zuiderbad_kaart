@@ -211,7 +211,7 @@ eventMarkerStrandzone.on('click', function(e) {
 </div>
 
 <div class="info-overlay-information">
-  <a href="#" class="info-overlay-button">Meer informatie over de Strandzone</a>
+  <a href="informatie_pages/evenementlocaties/eventlocaties_strandzone.html" class="info-overlay-button">Meer informatie over de Strandzone</a>
   <img src="images/go_advies.svg" alt="Sluiten" />
 </div>`
   );
