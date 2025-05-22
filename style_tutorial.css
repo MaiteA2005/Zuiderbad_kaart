@@ -518,6 +518,24 @@ body {
   width: auto;
 }
 
+.skip_tutorial_6 {
+  position: fixed;
+  bottom: 120px;
+  left: 20px;
+  z-index: 2000;
+  background: var(--orange);
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.skip_tutorial_6 a {
+  text-decoration: none;
+  color: var(--beige);
+}
 
 /*---------stap 7---------*/
 #arrow_tutorial7{
