@@ -189,23 +189,22 @@ margin-left: 1em;
 }
 
 .bellen{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
 }
 .call{
-    margin-top: 3%;
-    justify-self: center;
-    width: 50vh;
+  margin-top: 3%;
+  justify-self: center;
+  width: 50vh;
 }
 
 .call_descr{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.2rem;	
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;	
 }
 
 .call a{
@@ -218,8 +217,7 @@ margin-left: 1em;
   border-radius: 30px;
   text-decoration: none;
   font-size: 1.5rem;
-  gap: 10px;
-  margin: 0 auto;/* ruimte tussen img en tekst */
+  gap: 12px;
 }
 
 .call a img{

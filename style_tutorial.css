@@ -1,9 +1,12 @@
 /*-----------tutorial-----------*/
+body {
+  overflow: hidden;
+}
 .tutorial_kaart {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 220px;
+    margin-top: 170px;
     
 }
 
@@ -27,6 +30,21 @@
     
 }
 
+.nav_up_tutorial_2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    background: none; 
+    
+}
+
 #zoom-reset_tutorial {
   display: flex;
   align-items: center;
@@ -40,11 +58,16 @@
   
 }
 
-#zoom-reset_tutorial button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+#reset-map {
+  padding: 0 1em;
+  height: 35px;
+  line-height: 35px;
+  min-width: 80px;
+  text-align: center;
+  font-weight: 800;
+  background-color: var(--orange);
+  color: var(--beige);
+  border-radius: 5px;
 }
 
 .logo {
@@ -72,14 +95,14 @@
 }
 
 .button_tutorial_next{
-  z-index: 2000;
+  z-index: 2001;
   position: fixed;
   bottom: 50%;
   right: 10px;
 }
 
 .button_tutorial_back{
-  z-index: 2000;
+  z-index: 2001;
   position: fixed;
   bottom: 50%;
   left: 10px;
@@ -109,8 +132,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
@@ -130,12 +153,11 @@
 .tutorial-ballon-container_1 {
   position: fixed;
   top: 4vh;
-  left: 10vw;
+  left: 4vw;
   z-index: 2000;
 
   display: flex;
   align-items: flex-start;
-  gap: 10px;
 }
 
 .tutorial-ballon_1 {
@@ -155,7 +177,7 @@
   left: 25%;
   right: 10%;
   bottom: 10%;
-  font-size: clamp(0.9rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.4;
   color: var(--rood);
   text-align: center;
@@ -170,132 +192,154 @@
   flex-shrink: 0;
 }
 
-
 /*---------stap 2---------*/
-#sun_tutorial2{
+.tutorial-ballon-container_2 {
   position: fixed;
-  top: 140px;
-  left: 20px;
+  top: 15vh;
+  left: 4vw;
   z-index: 2000;
+
+  display: flex;
+  align-items: flex-start;
 }
 
-#sun_tutorial2 img{
-  height: 150px;
-  width: auto;
+.tutorial-ballon_2 {
+  top: 5vh;
+  width: 230px;
+  height: 160px;
+  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
-#text_ballon2 {
-  position: fixed;
-  top: 80px;
-  left: 150px;
-  z-index: 2000;
-}
-
-#text_ballon2 img {
-  height: 180px;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial2 {
+.tutorial-ballon_2 p {
   position: absolute;
-  text-align: center;
-  top: 33px; 
-  left: 10px;
-  right: 5px;
-  color: var(--rood);
-  font-size: 14px;
+  top: 22%;
+  left: 25%;
+  right: 10%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 0.9rem);
   line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#text_tutorial2 p {
-  margin: 0;
+.tutorial-zon-icon_2 {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 #arrow_tutorial2{
   position: fixed;
-  top: 20vh;
-  right: 5vh;
+  top: 12vh;
+  right: 10vh;
   z-index: 2000;
 }
 
-.nav_up_tutorial2{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1001;
-    background: none; 
+#arrow_tutorial2 img{
+  height: 70px;
 }
 
 /*---------stap 3---------*/
 
-#text_tutorial3 {
-  position: absolute;
-  text-align: center;
-  top: 33px; 
-  left: 30px;
-  right: 2px;
-  color: var(--rood);
-  font-size: 1.3em;
-  line-height: 1.5;
-  z-index: 2001;
-  max-width: 200px;
+.tutorial-ballon-container_3 {
+  position: fixed;
+  top: 4vh;
+  left: 4vw;
+  z-index: 2000;
+
+  display: flex;
+  align-items: flex-start;
 }
 
-#text_tutorial3 p {
+.tutorial-ballon_3 {
+  width: 230px;
+  height: 130px;
+  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_3 p {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  right: 10%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_3 {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 /*---------stap 4---------*/
 
-#sun_tutorial4{
+.tutorial-ballon-container_4 {
   position: fixed;
-  top: 15vh;
-  right: 8vh;
+  bottom: 40vh;
+  left: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial4 img{
-  height: 170px;
-  width: auto;
-}
-
-#text_ballon4 {
-  position: fixed;
-  top: 2vh;
-  left: 10vh;
-  z-index: 2000;
-}
-
-#text_ballon4 img {
-  height: 190px;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial4 {
-  position: absolute;
-  text-align: center;
-  top: 22px; 
-  left: 10px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 14px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial4 p {
+.tutorial-ballon_4 {
+  width: 300px;
+  height: 200px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 17vw;
+  background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_4 p {
+  position: absolute;
+  top: 14%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_4 {
+  width: 140px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 #arrow_tutorial4{
@@ -311,45 +355,53 @@
 }
 
 /*---------stap 5---------*/
-#sun_tutorial5{
+.tutorial-ballon-container_5 {
   position: fixed;
-  bottom: 40vh;
-  right: 12vh;
+  bottom: 30vh;
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial5 img{
-  height: 200px;
-  width: auto;
-}
-#text_ballon5 {
-  position: fixed;
-  top: 16vh;
-  left: 80px;
-  z-index: 2000;
-}
-
-#text_ballon5 img {
-  height: 150px;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial5 {
-  position: absolute;
-  text-align: center;
-  top: 30px; 
-  left: 8px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 14px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial5 p {
+.tutorial-ballon_5 {
+  width: 250px;
+  height: 160px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 17vw;
+  background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_5 p {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_5 {
+  width: 140px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 #arrow_tutorial5{
@@ -380,46 +432,53 @@
 
 /*---------stap 6---------*/
 
-#sun_tutorial6{
+.tutorial-ballon-container_6 {
   position: fixed;
-  top: 23vh;
-  right: 10vh;
+  top: 20vh;
+  left: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial6 img{
-  height: 200px;
-  width: auto;
-}
-
-#text_ballon6 {
-  position: fixed;
-  top: 8vh;
-  left: 5vh;
-  z-index: 2000;
-}
-
-#text_ballon6 img {
-  height: 180px;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial6 {
-  position: absolute;
-  text-align: center;
-  top: 32px; 
-  left: 8px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 16px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial6 p {
+.tutorial-ballon_6 {
+  width: 270px;
+  height: 170px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 20vw;
+  background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_6 p {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_6 {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 #arrow_tutorial6{
@@ -458,6 +517,26 @@
   height: 80px;
   width: auto;
 }
+
+.skip_tutorial_6 {
+  position: fixed;
+  bottom: 120px;
+  left: 20px;
+  z-index: 2000;
+  background: var(--orange);
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.skip_tutorial_6 a {
+  text-decoration: none;
+  color: var(--beige);
+}
+
 /*---------stap 7---------*/
 #arrow_tutorial7{
   position: fixed;
@@ -481,78 +560,105 @@
     left: 10px;
 }
 
-#sun_tutorial7{
+.tutorial-ballon-container_7 {
   position: fixed;
-  top: 35%;
-  left: 32%;
+  top: 30vh;
+  left: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
   z-index: 2000;
 }
 
-#sun_tutorial7 img{
-  height: 200px;
-  width: auto;
-}
-
-#text_ballon7 {
-  position: fixed;
-  top: 130px;
-  left: 60px;
-  z-index: 2000;
-}
-
-#text_ballon7 img {
-  height: 220px;
-  width: auto;
-}
-
-#text_tutorial7 {
-  position: absolute;
-  text-align: center;
-  top: 40px; 
-  left: 8px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 18px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial7 p {
+.tutorial-ballon_7 {
+  width: 270px;
+  height: 170px;
+  bottom: 15vh;
   margin: 0;
+  padding: 0;
+  left: 20vw;
+  background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tutorial-ballon_7 p {
+  position: absolute;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_7 {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 /*---------stap 8---------*/
 
-#text_ballon8 {
+.tutorial-ballon-container_8 {
   position: fixed;
-  top: 12%;
-  left: 25%;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; /* stapelt verticaal */
+  align-items: center;    /* horizontaal centreren */
+  gap: 10px;              /* ruimte tussen tekst en zon */
   z-index: 2000;
 }
 
-#text_ballon8 img {
-  height: 200px;
-  width: auto;
-}
-
-#text_tutorial8 {
-  position: absolute;
-  text-align: center;
-  top: 22px; 
-  left: 35px;
-  right: 6px;
-  color: var(--rood);
-  font-size: 18px;
-  line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
-}
-
-#text_tutorial8 p {
+.tutorial-ballon_8 {
+  width: 270px;
+  height: 170px;
   margin: 0;
+  padding: 0;
+  left: 20vw;
+  background-image: url('images/text_tutorial8.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
+.tutorial-ballon_8 p {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.4;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutorial-zon-icon_8 {
+  width: 180px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
 .btn_kaart {
   position: fixed;
   bottom: 20vh;

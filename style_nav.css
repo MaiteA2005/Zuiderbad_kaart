@@ -80,9 +80,9 @@ nav button {
 }
 
 nav button img {
-  width: 45px; /* of jouw gewenste grootte */
+  width: 45px;
   height: 45px;
-  margin-bottom: 5px; /* ruimte tussen img en p */
+  margin-bottom: 5px;
 }
 
 nav button p {
@@ -122,41 +122,41 @@ nav button p {
 }
   
 #custom-overlay h2 {
-    margin-bottom: 2rem;
-    color: var(--rood)
+  margin-bottom: 2rem;
+  color: var(--rood);
 }
   
 #custom-overlay button {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: var(--rood);
-    text-decoration: none;
-    font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--rood);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #open-custom-overlay p{
-    font-family: 'poppins', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 .link_arrow{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    gap: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  gap: 20px; 
 }
 
 .link_arrow img {
-    height: 20px;
-    width: auto;
-  }
+  height: 20px;
+  width: auto;
+}
 
 .line{
-    width:100%;
-    border-width:0.01px; 
-    text-align:left;
-    margin-left:0;
-    border-color: var(--rood);
+  width:100%;
+  border-width:0.01px; 
+  text-align:left;
+  margin-left:0;
+  border-color: var(--rood);
 }
 
 .submenu {
@@ -329,7 +329,11 @@ nav button p {
   .nav_down_btn{
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 10px;
+  }
+  .nav_down_btn img{
+    width: 30px;
+    height: 30px;
   }
   .nav_down_btn p{
     font-size: 1.5rem;
@@ -363,18 +367,17 @@ nav button p {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-
   .submenu.active {
     transform: translateX(0);
     pointer-events: auto;
   }
-
-
+  .submenu-list{
+    padding-left: 10px;
+  }
   .back-btn img {
     width: auto;
     height: 40px;
   }
-
   .back-btn {
     background: none;
     border: none;
