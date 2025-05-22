@@ -34,18 +34,17 @@ body {
 }
 
 .nav_up_tutorial_2{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2000;
-    background: none; 
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  background: none;  
 }
 
 #zoom-reset_tutorial {
@@ -58,7 +57,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  
 }
 
 #reset-map {
@@ -117,8 +115,8 @@ body {
   left: 0;
   width: 100%;
   height: 200px;
-  background: rgba(10, 9, 9, 0.4); /* zwarte waas met 40% dekking */
-  z-index: 1001; /* lager dan je nav, hoger dan je kaart */
+  background: rgba(10, 9, 9, 0.4);
+  z-index: 1001;
 }
 
 .overlay2 {
@@ -127,8 +125,8 @@ body {
   left: 0;
   width: 100%;
   height: 180px;
-  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
-  z-index: 500; /* lager dan je nav, hoger dan je kaart */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 500;
 }
 
 .overlay3 {
@@ -137,8 +135,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
-  z-index: 1001; /* lager dan je nav, hoger dan je kaart */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1001;
 }
 
 .overlay4 {
@@ -147,12 +145,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
-  z-index: 1; /* lager dan je nav, hoger dan je kaart */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1; 
 }
 
 /*---------stap 1---------*/
-
 .tutorial-ballon-container_1 {
   position: fixed;
   top: 4vh;
@@ -166,7 +163,7 @@ body {
 .tutorial-ballon_1 {
   width: 230px;
   height: 150px;
-  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -209,7 +206,7 @@ body {
   top: 5vh;
   width: 230px;
   height: 160px;
-  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -250,7 +247,6 @@ body {
 }
 
 /*---------stap 3---------*/
-
 .tutorial-ballon-container_3 {
   position: fixed;
   top: 4vh;
@@ -264,7 +260,7 @@ body {
 .tutorial-ballon_3 {
   width: 230px;
   height: 130px;
-  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -294,7 +290,6 @@ body {
 }
 
 /*---------stap 4---------*/
-
 .tutorial-ballon-container_4 {
   position: fixed;
   bottom: 40vh;
@@ -313,7 +308,7 @@ body {
   margin: 0;
   padding: 0;
   left: 80px;
-  background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial4.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -379,7 +374,7 @@ body {
   margin: 0;
   padding: 0;
   left: 80px;
-  background-image: url('images/text_tutorial4.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial4.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -423,21 +418,20 @@ body {
 }
 
 .nav_up_tutorial5{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 0;
-    background: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+  background: none; 
 }
 
 /*---------stap 6---------*/
-
 .tutorial-ballon-container_6 {
   position: fixed;
   top: 20vh;
@@ -456,7 +450,7 @@ body {
   margin: 0;
   padding: 0;
   left: 100px;
-  background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial6.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -500,15 +494,14 @@ body {
 }
 
 .tutorial_kaart_6 {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    
+  display: flex;
+  align-items: left;
+  justify-content: left;
 }
 
 .tutorial_kaart_6 img {
-    height: 850px;
-    width: auto;
+  height: 850px;
+  width: auto;
 }
 
 #icon_tutorial6{
@@ -516,7 +509,6 @@ body {
   z-index: 2000;
   bottom: 25vh;
   left: 250px;
-
 }
 
 #icon_tutorial6 img{
@@ -557,13 +549,13 @@ body {
 }
 
 #zon_logo_tutorial{
-    height: 90px;
-    width: auto;
-    margin: 0;
-    position: fixed;
-    z-index: 2000;
-    top: 10px;
-    left: 10px;
+  height: 90px;
+  width: auto;
+  margin: 0;
+  position: fixed;
+  z-index: 2000;
+  top: 10px;
+  left: 10px;
 }
 
 .tutorial-ballon-container_7 {
@@ -584,7 +576,7 @@ body {
   margin: 0;
   padding: 0;
   left: 100px;
-  background-image: url('images/text_tutorial6.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial6.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -616,16 +608,15 @@ body {
 }
 
 /*---------stap 8---------*/
-
 .tutorial-ballon-container_8 {
   position: fixed;
   top: 8vh;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  flex-direction: column; /* stapelt verticaal */
-  align-items: center;    /* horizontaal centreren */
-  gap: 10px;              /* ruimte tussen tekst en zon */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   z-index: 2000;
 }
 
@@ -635,7 +626,7 @@ body {
   margin: 0;
   padding: 0;
   left: 100px;
-  background-image: url('images/text_tutorial8.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-image: url('images/text_tutorial8.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -685,27 +676,27 @@ body {
   color: var(--beige);
 }
 
-
+/*responsive*/
 @media (min-width: 768px) {
-.button_tutorial_next{
-  z-index: 2001;
-  position: fixed;
-  bottom: 50%;
-  right: 50px;
-}
+  .button_tutorial_next{
+    z-index: 2001;
+    position: fixed;
+    bottom: 50%;
+    right: 50px;
+  }
 
- #open-custom-overlay_tutorial {
-     display: none;
+  #open-custom-overlay_tutorial {
+    display: none;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     text-align: left;
     color: #203336;
     border: none;
-}
+  }
 
-#custom-overlay_tutorial {
-   display: block !important;
+  #custom-overlay_tutorial {
+    display: block !important;
     transform: translateX(0) !important;
     pointer-events: auto;
     justify-self: flex-end;
@@ -727,45 +718,43 @@ body {
     border-bottom-left-radius: 20px;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
     background: #9C938C;
+  } 
 
-} 
+  #custom-overlay.active_tutorial {
+    transform: translateX(0);
+    pointer-events: auto;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
 
-#custom-overlay.active_tutorial {
-  transform: translateX(0);
-  pointer-events: auto;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-   
-}
+  #custom-overlay_tutorial.active {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+  }
 
-#custom-overlay_tutorial.active {
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
-}
+  #custom-overlay_tutorial h2 {
+    margin-bottom: 2rem;
+    color: var(--rood);
+  }
 
-#custom-overlay_tutorial h2 {
-  margin-bottom: 2rem;
-  color: var(--rood);
-}
+  #custom-overlay_tutorial button {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--rood);
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-#custom-overlay_tutorial button {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: var(--rood);
-  text-decoration: none;
-  font-weight: bold;
-}
+  #open-custom-overlay_tutorial p{
+    font-family: 'poppins', sans-serif;
+  }
 
-#open-custom-overlay_tutorial p{
-  font-family: 'poppins', sans-serif;
-}
+  .tutorial_kaart {
+    margin-right: 30%;
+    width: calc(100% - 30%);
+  }
 
-.tutorial_kaart {
-  margin-right: 30%;
-  width: calc(100% - 30%);
-}
-
-.nav_down {
+  .nav_down {
     width: 70%;
   }
   .nav_down_btn{
@@ -783,7 +772,7 @@ body {
     margin-right: 20px;
   }
 
-    .nav_up_tutorial{
+  .nav_up_tutorial{
     position: fixed;
     top: 0;
     left: -40%;
@@ -793,7 +782,7 @@ body {
    
     z-index: 3000;
     background: none; 
-}
+  }
 
   .nav_up_tutorial_2{
     position: fixed;
@@ -805,17 +794,18 @@ body {
    
     z-index: 3000;
     background: none; 
-}
-    #arrow_tutorial5{
+  }
+
+  #arrow_tutorial5{
     position: fixed;
     bottom: 120px;
     right: 45vw;
     z-index: 2000;
     transform: rotate(250deg); 
-}
+  }
 
-#custom-overlay_tutorial_5 {
-   display: block !important;
+  #custom-overlay_tutorial_5 {
+    display: block !important;
     transform: translateX(0) !important;
     pointer-events: auto;
     justify-self: flex-end;
@@ -837,48 +827,42 @@ body {
     border-bottom-left-radius: 20px;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
     background: var(--beige)
-} 
+  } 
 
-#custom-overlay.active_tutorial_5 {
-  transform: translateX(0);
-  pointer-events: auto;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-   
-}
+  #custom-overlay.active_tutorial_5 {
+    transform: translateX(0);
+    pointer-events: auto;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  }
 
-#custom-overlay_tutorial_5.active {
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
-}
+  #custom-overlay_tutorial_5.active {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+  }
 
-#custom-overlay_tutorial_5 h2 {
-  margin-bottom: 2rem;
-  color: var(--rood);
-}
+  #custom-overlay_tutorial_5 h2 {
+    margin-bottom: 2rem;
+    color: var(--rood);
+  }
 
-#custom-overlay_tutorial_5 button {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: var(--rood);
-  text-decoration: none;
-  font-weight: bold;
-}
+  #custom-overlay_tutorial_5 button {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--rood);
+    text-decoration: none;
+    font-weight: bold;
+  }
 
+  .tutorial-ballon-container_8 {
+    left: 25%;
+  }
 
-.tutorial-ballon-container_8 {
-  left: 25%;
+  .btn_kaart {
+    left: 25%;
+  }
 
-}
-
-.btn_kaart {
-  left: 25%;
-}
-
-.nav_up_tutorial{
+  .nav_up_tutorial{
     z-index: 200;
-
-    
-}
-
+  }
 }
