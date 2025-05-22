@@ -471,6 +471,59 @@ var allMarkers = [
   doucheMarker, toilet1Marker,toilet2Marker,toilet3Marker, toilet4Marker, kleedkamers1Marker, kleedkamers2Marker, EHBOMarker
 ];
 
+const markerByType = {
+  //Horeca
+  // strandbar: horecaMarkerStrandbar,
+  // zomerlust: horecaMarkerZomerlust,
+  // strandkiosk: horecaMarkerStrandkiosk,
+  // //Eventlocaties
+  // evenementenweide: eventMarkerEvenementenweide,
+  // sportimonium: eventMarkerSportimonium,
+  // vergaderzaal: eventMarkerVergaderzaal,
+  // serre: eventMarkerSerre,
+  // strandhuis: eventMarkerStrandhuis,
+  // strandzone: eventMarkerStrandzone,
+  // hoogtouwenEvent: eventHoogtouwenparcoursMarker,
+  // oudVoetbalveld: oudVoetbalveldMarker,
+  // //Parking
+  // parkingA: parkingMarkerA,
+  // parkingB: parkingMarkerB,
+  // parkingC: parkingMarkerC,
+  // parkingD: parkingMarkerD,
+  // parkingE: parkingMarkerE,
+  // parkingSportcomplex: parkingMarkerSportcomplex,
+  // ingangC: ingangMarkerC,
+  //Activiteiten & sport
+  basketVoetbal: basketVoetbalMarker,
+  boogschieten: boogschietenMarker,
+  finsePiste: finsePistMarker,
+  hoogtouwenactiviteit: hoogtouwenparcoursMarker,
+  megaspeeltuin: megaSpeeltuinMarker,
+  MTB: MTBMarker,
+  muurklimmen: muurklimmenMarker,
+  openwaterzwemmen: openwaterzwemmenMarker,
+  pingpong: pingpongMarker,
+  piratenspeeltuin: piratenSpeeltuinMarker,
+  skateramp: skaterampMarker,
+  voetbalveld: voetbalveldMarker,
+  waterpretpark: waterpretparkMarker,
+  zensportplatform: zensportplatformMarker,
+  //Cultuur & sportlocaties
+  documentatiecentrum: documentatiecentrumMarker,
+  hondenweide: hondenweideMarker,
+  sportcomplex: sportcomplexMarker,
+  sportverblijf: sportverblijfMarker,
+  sportweide: sportweideMarker,
+  survivalkamp: survivalkampMarker,
+  uitleendienst: uitleendienstMarker,
+  zeilclub: zeilclubMarker,
+  //Sanitair
+  // toilet: [toilet1Marker, toilet2Marker, toilet3Marker, toilet4Marker],
+  douche: doucheMarker,
+  // kleedkamers: [kleedkamers1Marker, kleedkamers2Marker],
+  EHBO: EHBOMarker
+};
+
 // ------------------- Filterfunctie -------------------
 function toggleMarkersByType(type) {
   allMarkers.forEach(marker => {
@@ -487,9 +540,17 @@ function toggleMarkersByType(type) {
 function showPin(id, type) {
   document.getElementById(id).addEventListener('click', () => {
     toggleMarkersByType(type);
-    overlay.classList.remove('active'); //het hoofmenu wordt gesloten
-});
+
+    const marker = markerByType[type];
+    if (marker) {
+      const coords = marker.getLatLng();
+      map.flyTo([coords.lat, coords.lng], 17); // Zoom in op de marker
+    }
+
+    overlay.classList.remove('active'); // sluit menu
+  });
 }
+
 // ------------------- Toggle functie voor wandelroutes -------------------
 function showWandelroute(id, kaart) {
   document.getElementById(id).addEventListener('click', () => {
