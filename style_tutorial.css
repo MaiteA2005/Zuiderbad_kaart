@@ -89,8 +89,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
-  height: 26vh;
+  width: 100%;
+  height: 200px;
   background: rgba(10, 9, 9, 0.4); /* zwarte waas met 40% dekking */
   z-index: 1001; /* lager dan je nav, hoger dan je kaart */
 }
@@ -99,8 +99,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vh;
-  height: 15vh;
+  width: 100%;
+  height: 180px;
   background: rgba(0, 0, 0, 0.4); /* zwarte waas met 40% dekking */
   z-index: 500; /* lager dan je nav, hoger dan je kaart */
 }
@@ -127,45 +127,47 @@
 
 /*---------stap 1---------*/
 
-#sun_tutorial1 {
+.tutorial-ballon-container_1 {
   position: fixed;
-  top: 4vh;     /* 8% van de hoogte van het scherm */
-  left: 10vw;    /* 2% van de breedte van het scherm */
+  top: 4vh;
+  left: 10vw;
   z-index: 2000;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-#sun_tutorial1 img {
-  height: 20vh; /* schaalbaar met schermhoogte */
-  width: auto;
+.tutorial-ballon_1 {
+  width: 230px;
+  height: 150px;
+  background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
-#text_ballon1 {
-  position: fixed;
-  top: 6vh;
-  left: 38vw;
-  z-index: 2000;
-}
-
-#text_ballon1 img {
-  height: 18vh;
-  width: auto;
-  display: block;
-}
-
-#text_tutorial1 {
+.tutorial-ballon_1 p {
   position: absolute;
-  top: 4vh;     
-  left: 7vw;
-  text-align: center;
-  color: var(--rood);
-  font-size: 1rem;
+  top: 30px;
+  left: 70px;
+  right: 40px;
+  bottom: 20px;
+  font-size: clamp(0.5rem, 2.7vw, 0.85rem);
   line-height: 1.4;
-  z-index: 2001;
-  max-width: 200px;
+  color: var(--rood);
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#text_tutorial1 p {
-  margin: 0;
+.tutorial-zon-icon_1 {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 
