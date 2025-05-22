@@ -130,12 +130,11 @@
 .tutorial-ballon-container_1 {
   position: fixed;
   top: 4vh;
-  left: 8vw;
+  left: 4vw;
   z-index: 2000;
 
   display: flex;
   align-items: flex-start;
-  gap: 10px;
 }
 
 .tutorial-ballon_1 {
