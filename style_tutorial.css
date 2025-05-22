@@ -1,4 +1,7 @@
 /*-----------tutorial-----------*/
+body {
+  overflow: hidden;
+}
 .tutorial_kaart {
     display: flex;
     align-items: center;
