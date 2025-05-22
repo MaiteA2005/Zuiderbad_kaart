@@ -205,7 +205,7 @@ body {
 
 .tutorial-ballon_2 {
   top: 5vh;
-  width: 230px;
+  width: 220px;
   height: 150px;
   background-image: url('images/text_tutorial1.png'); /* of 'images/ballon_advies.svg' als je die liever gebruikt */
   background-size: contain;
