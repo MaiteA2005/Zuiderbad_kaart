@@ -391,7 +391,7 @@ span.bold{
   border-bottom: none;
 }
 
-.bootshuis {
+.geschiedenis {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -402,27 +402,31 @@ span.bold{
   line-height: 1.6;
 }
 
-.bootshuis h2 {
+.geschiedenis h2 {
   font-size: 2rem;
   margin-bottom: 15px;
   color: var(--rood);
 }
 
-.bootshuis .status {
+.geschiedenis .status {
   font-weight: bold;
   color: #000;
   margin-bottom: 15px;
 }
 
-.bootshuis p {
+.geschiedenis p {
   margin-bottom: 15px;
 }
 
-.bootshuis strong {
+.geschiedenis strong {
   color: var(--orange);
 }
 
-.bootshuis em {
+.geschiedenis em {
   font-style: italic;
   color: #000;
+}
+
+.geschiedenis ul {
+  padding-top: 10px;
 }
