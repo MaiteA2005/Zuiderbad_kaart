@@ -288,7 +288,7 @@ button {
     align-items: center;
   }
 
-  /*-----------intro desktop-----------*/
+  /*-----------intro-----------*/
   .intro_tekst {
     display: flex;
     flex-direction: column;
